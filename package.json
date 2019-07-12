@@ -1,0 +1,19 @@
+{
+  "name": "svrx-docs",
+  "version": "1.0.0",
+  "description": "Documents for svrx",
+  "scripts": {
+    "start": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "keywords": [
+    "svrx",
+    "docs",
+    "gitbook"
+  ],
+  "author": "x-orpheus",
+  "license": "MIT",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
