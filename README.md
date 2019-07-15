@@ -15,7 +15,8 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 - 静态伺服
 - 代理
 - 自动重载页面
-- 更多的可能： 插件化
+- 支持 Hot Reloading 的[路由功能](./zh/guide/route.md)
+- 更多的可能： [插件化](./zh/guide/plugin.md)
 
 ## 安装和使用
 

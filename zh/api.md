@@ -24,6 +24,18 @@
 
 开启/关闭 https。默认是`false`。
 
+### route 
+
+`string`
+
+指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./route/route.md)
+
+```js
+svrx --routing route.md
+```
+
+它支持 __hot-reload__ ，即你可以在不重启 svrx 的情况下更新路由规则
+
 ### livereload
 
 `boolean`, `object`
@@ -35,6 +47,8 @@
 `string`, `string[]`
 
 设置文件忽略规则，如果文件符合任意匹配的 pattern，那么该文件的内容变动不会触发页面刷新。
+
+
 
 ### serve
 
