@@ -180,11 +180,22 @@ get('/svrx(.*)').to.send('Hello svrx')
 
 > 由于 rewrite 并不发送响应内容，你也可以串联其他 action
 
-### proxy
+### proxy(target\[, options])
 
-@TODO
+代理，将 path 代理到 target 服务器。
 
+- target: 目标服务器
+- options: 同 [proxy.options](/zh/api.md#proxy) 
+    - changeOrigin
+    - secure
+    - pathRewrite
 
+```js
+get('/api(.*)').to.proxy('http://mock.server.com/')
+get('/test(.*)').to.proxy('http://mock.server.com/', {
+  changeOrigin: true,
+})
+```
 
 ### handle {#handle}
 
