@@ -28,7 +28,7 @@
 
 `string`
 
-指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./route/route.md)
+指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./guide/route.md)
 
 ```js
 svrx --routing route.md

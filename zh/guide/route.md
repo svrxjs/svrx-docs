@@ -49,7 +49,7 @@ post('/blog').to.proxy('http://music.163.com');
 
 ### 路由方法
 
-svrx 路由支持 [methods](https://github.com/jshttp/methods/blob/master/index.js) 定义的http method
+svrx 路由支持 [methods](https://github.com/jshttp/methods/blob/master/index.js) 定义的 http methods
 
 > ⚠️ 由于 delete 与 js 保留字冲突，你可以使用 del() 来创建 DELETE 方法
 
@@ -77,7 +77,7 @@ svrx 路由基于 [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp)
 
 #### 参数快捷映射
 
-除 [Action:handle](#handle) 外，大部分 action 在语法上不具备操作 koa上下文(context) 的能力，部分 action 做了 参数快捷映射 的支持
+除 [Action:handle](#handle) 外，大部分 action 在语法上不具备操作 koa 上下文( context ) 的能力，部分 action 做了 参数快捷映射 的支持
 
 以 [sendFile](#send-file) 为例
 
@@ -108,9 +108,8 @@ send 是 koa 框架 `ctx.body` 的语法糖，当 payload 类型不同时有以�
 - `object` or `array` or `number` or `boolean` ...
   - 返回 `json`, `Content-Type` 为 `application/json`
 
-<a name='send-file' />
 
-### sendFile
+### sendFile {#send-file}
 
 发送文件内容，根据自动文件后缀设置 `Content-Type`
 
@@ -186,11 +185,10 @@ get('/svrx(.*)').to.send('Hello svrx')
 @TODO
 
 
-<a name='handle' />
 
-### handle
+### handle {#handle}
 
-handle 即定义一个 koa 的中间件，属于全能力action，以上所有功能都可以使用 handle 来实现，
+handle 即定义一个 koa 的中间件，属于全能力 action，以上所有功能都可以使用 handle 来实现，
 代价就是可读性的降低.
 
 ```js
@@ -202,11 +200,9 @@ get('/hello-world').to.handle((ctx)=>{
 
 ```
 
-> 尽可能抽取通用能力为自定义action，请参考「插件接口」小节
+> 尽可能抽取通用能力为自定义 action，请参考「插件接口」小节
 
-<a name='plugin' />
-
-## 插件接口
+## 插件接口 {#plugin}
 
 插件的 `hooks.onCreate` 会注入名为 `router` 对象, 包含三个方法
 
