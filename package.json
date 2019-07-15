@@ -4,7 +4,9 @@
   "description": "Documents for svrx",
   "scripts": {
     "start": "gitbook serve",
-    "build": "gitbook build"
+    "build": "gitbook build",
+    "lint": "lint-md zh en README.md",
+    "fix": "lint-md zh en README.md --fix"
   },
   "keywords": [
     "svrx",
@@ -14,6 +16,13 @@
   "author": "x-orpheus",
   "license": "MIT",
   "devDependencies": {
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "husky": "^3.0.0",
+    "lint-md": "^0.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
