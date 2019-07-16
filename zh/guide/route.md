@@ -195,6 +195,7 @@ get('/api(.*)').to.proxy('http://mock.server.com/')
 get('/test(.*)').to.proxy('http://mock.server.com/', {
   changeOrigin: true,
 })
+get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 ```
 
 ### handle {#handle}
@@ -236,6 +237,11 @@ get('/text(.*)').to.send('haha');
 get('/html(.*)').to.send('<html>haha</html>');
 get('/rewrite:path(.*)').to.rewrite('/query{path}');
 get('/redirect:path(.*)').to.redirect('localhost:9002/proxy{path}');
+get('/api(.*)').to.proxy('http://mock.server.com/')
+get('/test(.*)').to.proxy('http://mock.server.com/', {
+  changeOrigin: true,
+})
+get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 get('/query(.*)').to.handle((ctx) => {
   ctx.body = ctx.query;
 });
