@@ -180,11 +180,23 @@ get('/svrx(.*)').to.send('Hello svrx')
 
 > 由于 rewrite 并不发送响应内容，你也可以串联其他 action
 
-### proxy
+### proxy(target\[, options])
 
-@TODO
+代理，将 path 代理到 target 服务器。
 
+- target: 目标服务器
+- options: 同 [proxy.options](/zh/api.md#proxy) 
+    - changeOrigin
+    - secure
+    - pathRewrite
 
+```js
+get('/api(.*)').to.proxy('http://mock.server.com/')
+get('/test(.*)').to.proxy('http://mock.server.com/', {
+  changeOrigin: true,
+})
+get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
+```
 
 ### handle {#handle}
 
@@ -225,6 +237,11 @@ get('/text(.*)').to.send('haha');
 get('/html(.*)').to.send('<html>haha</html>');
 get('/rewrite:path(.*)').to.rewrite('/query{path}');
 get('/redirect:path(.*)').to.redirect('localhost:9002/proxy{path}');
+get('/api(.*)').to.proxy('http://mock.server.com/')
+get('/test(.*)').to.proxy('http://mock.server.com/', {
+  changeOrigin: true,
+})
+get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 get('/query(.*)').to.handle((ctx) => {
   ctx.body = ctx.query;
 });
