@@ -180,7 +180,7 @@ get('/svrx(.*)').to.send('Hello svrx')
 
 > 由于 rewrite 并不发送响应内容，你也可以串联其他 action
 
-### proxy(target\[, options])
+### proxy(target\[, options]) {#proxy}
 
 代理，将 path 代理到 target 服务器。
 
@@ -251,9 +251,6 @@ get('/header(.*)')
 get('/user').to.json({ user: 'svrx' });
 
 get('/sendFile/:path(.*)').to.sendFile('./{path}');
-get('/sendFile/:path(.*)').to.sendFile(
-  libPath.join(__dirname, '../fixture/plugin/serve/{path}'),
-);
 
 
 ```
