@@ -24,7 +24,7 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 
 ## 官方插件
 
-+ [svrx-plugin-webpack](https://github.com/x-orpheus/svrx/tree/hello-svrx/packages/svrx-plugin-webpack):
++ [svrx-plugin-webpack](https://github.com/x-orpheus/svrx-plugin-webpack):
     提供 webpack 相关功能，编译、hot-reload 等
 + [svrx-plugin-portal](https://github.com/x-orpheus/svrx-plugin-portal): 
     自动生成一个外部能够访问的域名映射到本地服务

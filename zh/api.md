@@ -4,7 +4,7 @@
 
 `string`
 
-启动 svrx 的路径。默认是当前工作目录。
+启动 svrx 的路径, 默认是当前工作目录。
 
 ### svrx
 
@@ -22,7 +22,7 @@
 
 `boolean`
 
-开启/关闭 https。默认是`false`。
+开启/关闭 https。默认是 `false`。
 
 ### route 
 
@@ -31,22 +31,12 @@
 指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./guide/route.md)
 
 ```js
-svrx --routing route.md
+svrx --route route.js
 ```
 
 它支持 __hot-reload__ ，即你可以在不重启 svrx 的情况下更新路由规则
 
-### route 
 
-`string`
-
-指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./route/route.md)
-
-```js
-svrx --routing route.md
-```
-
-它支持 __hot-reload__ ，即你可以在不重启 svrx 的情况下更新路由规则
 
 ### livereload
 
@@ -92,6 +82,21 @@ svrx --routing route.md
 
 访问根路径时，如果你的 index 文件不存在，`serveIndex middleware`可以提供一个目录中文件列表的视图，而不是返回 404。
 
+
+###  open
+
+`boolean`, `string`
+
+指定需要打开的页面，默认`true`.
+
+范例( 假设参数为 `{port: 3000}` )
+
+- `true`: 同 `'local'`
+- `'local'`: 打开本地地址，如`http://localhost:3000` 
+- `'external'`: 打开外部，`http://10.242.111.80:3000/` ( 根据你的内网 IP )
+- `'home.html'`: 同`'local/home.html'` 打开 `http://localhost:3000/home.html` 
+
+
 ### historyApiFallback
 
 `boolean`, `object`
@@ -102,6 +107,8 @@ svrx --routing route.md
 `historyApiFallback middleware`会在请求 404 后返回`index.html`页面。
 
 ### proxy
+
+> proxy 也支持在 [route 文件中动态配置](./guide/route.md#proxy)
 
 `boolean`, `object`, `object[]`
 
