@@ -1,5 +1,7 @@
 # svrx
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/x-orpheus/svrx-docs.svg)](https://greenkeeper.io/)
+
 svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工作台。
 
 作为前端开发，在不同的开发需求下，一般来说我们会有一套或者多套固定的开发环境。
