@@ -18,7 +18,7 @@
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
     "husky": "^3.0.0",
-    "lint-md": "^0.1.1"
+    "lint-md": "^0.2.0"
   },
   "husky": {
     "hooks": {
