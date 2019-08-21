@@ -26,8 +26,8 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 
 + [svrx-plugin-webpack](https://github.com/x-orpheus/svrx-plugin-webpack):
     提供 webpack 相关功能，编译、hot-reload 等
-+ [svrx-plugin-portal](https://github.com/x-orpheus/svrx-plugin-portal): 
-    自动生成一个外部能够访问的域名映射到本地服务
++ [svrx-plugin-localtunnel](https://github.com/x-orpheus/svrx-plugin-localtunnel): 
+    暴露你的本地服务为公开的外网域名
 + [svrx-plugin-weinre](https://github.com/x-orpheus/svrx-plugin-weinre): 
     基于 weinre，在电脑上远程调试手机页面
 + [svrx-plugin-eruda](https://github.com/x-orpheus/svrx-plugin-eruda): 
@@ -36,6 +36,11 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
     在页面上或 console 中展示当前页面的二维码
 + [svrx-plugin-markdown](https://github.com/x-orpheus/svrx-plugin-markdown): 
     展示 markdown 类型的文件，提供实时预览、hot-reload、自动滚动定位等功能
+
+#### 下列暂为网易内部可用插件
+
+> 待稳定后会开放给外部使用
+
 + [svrx-plugin-nei](https://g.hz.netease.com/cloudmusic-frontend/svrx-plugin-nei): 
     直接在开发页面一键开启某个 [NEI](https://nei.netease.com/) 接口的 mock 功能
     
