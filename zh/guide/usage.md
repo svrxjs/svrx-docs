@@ -44,7 +44,7 @@ svrx
 svrx --port 3000 --https --no-livereload
 ```
 
-详细的参数列表可以在[这里](/zh/api.md)查看。
+详细的参数列表可以在[这里](/zh/guide/api.md)查看。
 
 当然，你也可以在你的工程目录下建立 `.svrxrc.js` 或 `svrx.config.js` 文件，将上面的命令行参数持久化下来：
 
@@ -108,7 +108,6 @@ module.exports = {
 
 - [在静态页面启用服务器](https://github.com/x-orpheus/svrx/blob/master/examples/serve-static-page)
 - [代理](https://github.com/x-orpheus/svrx/blob/master/examples/proxy)
-- [webpack](https://github.com/x-orpheus/svrx/blob/master/examples/webpack)
+- [webpack](https://github.com/x-orpheus/svrx-plugin-webpack/tree/master/example)
 - [在移动端开启 eruda dev tool](https://github.com/x-orpheus/svrx/tree/master/examples/eruda)
-- [portal - 内网穿透](https://github.com/x-orpheus/svrx/blob/master/examples/portal)
 - [利用 weinre 进行远程调试](https://github.com/x-orpheus/svrx/blob/master/examples/weinre)

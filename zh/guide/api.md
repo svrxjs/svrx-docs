@@ -53,7 +53,6 @@ svrx --route route.js
 
 
 
-
 ### serve
 
 `boolean`, `object`
