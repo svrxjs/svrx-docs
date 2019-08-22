@@ -5,8 +5,8 @@
   "scripts": {
     "start": "gitbook serve",
     "build": "gitbook build",
-    "lint": "lint-md zh en README.md",
-    "fix": "lint-md zh en README.md --fix"
+    "lint": "lint-md zh en",
+    "fix": "lint-md zh en --fix"
   },
   "keywords": [
     "svrx",

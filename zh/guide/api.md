@@ -28,7 +28,7 @@
 
 `string`
 
-指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./guide/route.md)
+指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./route.md)
 
 ```js
 svrx --route route.js
@@ -49,10 +49,6 @@ svrx --route route.js
 `string`, `string[]`
 
 设置文件忽略规则，如果文件符合任意匹配的 pattern，那么该文件的内容变动不会触发页面刷新。
-
-
-
-
 
 ### serve
 
@@ -87,14 +83,15 @@ svrx --route route.js
 
 `boolean`, `string`
 
-指定需要打开的页面，默认`true`.
+是否在 svrx 启动后自动打开浏览器， 默认是自动打开本地地址`http://localhost:${port}`。
+ 
+你也可以用`open`指定需要打开的页面：
 
-范例( 假设参数为 `{port: 3000}` )
-
+- `false`: 禁用自动打开浏览器
 - `true`: 同 `'local'`
-- `'local'`: 打开本地地址，如`http://localhost:3000` 
-- `'external'`: 打开外部，`http://10.242.111.80:3000/` ( 根据你的内网 IP )
-- `'home.html'`: 同`'local/home.html'` 打开 `http://localhost:3000/home.html` 
+- `'local'`: 打开本地地址，如`http://localhost:${port}` 
+- `'external'`: 打开外部，`http://10.242.111.80:${port}/` ( 根据你的内网 IP )
+- `'home.html'`: 同`'local/home.html'` 打开 `http://localhost:${port}/home.html` 
 
 
 ### historyApiFallback
@@ -108,7 +105,7 @@ svrx --route route.js
 
 ### proxy
 
-> proxy 也支持在 [route 文件中动态配置](./guide/route.md#proxy)
+> proxy 也支持在 [route 文件中动态配置](./route.md#proxy)
 
 `boolean`, `object`, `object[]`
 
