@@ -86,33 +86,35 @@ When visiting the root location, if there's no index file exists, `serveIndex mi
 
 `boolean`, `string`
 
-是否在 svrx 启动后自动打开浏览器， 默认是自动打开本地地址`http://localhost:${port}`。
+Enable auto opening browser after svrx started. 
+By default, it will open `http://localhost:${port}` automatically.
  
-你也可以用`open`指定需要打开的页面：
+You can also specific the opening page by setting `open` to:
 
-- `false`: 禁用自动打开浏览器
-- `true`: 同 `'local'`
-- `'local'`: 打开本地地址，如`http://localhost:${port}` 
-- `'external'`: 打开外部，`http://10.242.111.80:${port}/` ( 根据你的内网 IP )
-- `'home.html'`: 同`'local/home.html'` 打开 `http://localhost:${port}/home.html` 
+- `true`: same as `'local'`
+- `'local'`: open local url, `http://localhost:${port}` 
+- `'external'`: open external url, `http://${your_ip}:${port}/`
+- `'home.html'`: same as `'local/home.html'`, open `http://localhost:${port}/home.html` 
+
+Set `open` to `false` to disable auto open browser.
 
 
 ### historyApiFallback
 
 `boolean`, `object`
 
-开启/关闭`historyApiFallback middleware`，默认是关闭的。
+Enable/disable `historyApiFallback middleware`. It is set to `false` by default.
 
-如果你的 app 使用了[HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History)，那么你可能需要开启这个选项。
-`historyApiFallback middleware`会在请求 404 后返回`index.html`页面。
+This option is necessary when your app is using [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History), 
+`historyApiFallback middleware` will serve a `index.html` page instead of 404 responses.
 
 ### proxy
 
-> proxy 也支持在 [route 文件中动态配置](./route.md#proxy)
+> proxy is also supported in [route configuration file](./route.md#proxy)
 
 `boolean`, `object`, `object[]`
 
-url 转发配置。 你可以在当前域名下设置`proxy`，将不同的 url 转发至不同的后端地址。
+Proxing urls when you want to send some requests to different backend servers on the same domain.
 
 ```js
 module.exports = {
@@ -124,9 +126,9 @@ module.exports = {
 }
 ```
 
-经过如上配置后，一个`/api/path`请求会被转发至`http://you.backend.server.com/api/path`。
+Now a request to `/api/path` will be proxied to `http://you.backend.server.com/api/path`.
 
-你也可以重写路径，就像这样：
+And you can also rewrite the path, eg:
 
 ```js
 module.exports = {
@@ -139,10 +141,10 @@ module.exports = {
 }
 ```
 
-现在你的`/api/path`请求会被转发至`http://you.backend.server.com/path`。
+Then your request to `/api/path` will be proxied to `http://you.backend.server.com/path`.
 
-如果 target 后端的 HTTPS 服务器的证书是无效的，那么请求默认不会被接收。
-你可以配置`secure`来改变这个默认设置:
+A backend server running on HTTPS with an invalid certificate will not be accepted by default.
+If you want to, modify your config like this:
 
 ```js
 module.exports = {
@@ -155,7 +157,7 @@ module.exports = {
 }
 ```
 
-如果你想同时把多个 path 转发到一个相同的地址，可以试试这样做：
+If you want to proxy multiple pathes to a same target, try:
 
 ```js
 module.exports = {
@@ -168,7 +170,7 @@ module.exports = {
 }
 ```
 
-如果你想改变 header 中的 origin 为目标域名，可以试试将`changeOrigin`设为`true`：
+If you want to change the origin of host header to the target hostname, just set `changeOrigin` to `true`:
 
 ```js
 module.exports = {
@@ -185,13 +187,19 @@ module.exports = {
 
 `boolean`, `object`
 
-开启/关闭跨域资源共享（[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)）支持。
-默认 Cors 是开启的。 
+Enable/disable cross-origin resource sharing([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)).
+Cors is enabled by default. 
 
-svrx 依赖[koa2-cors](https://github.com/zadzbw/koa2-cors)做跨域资源工程支持，更多使用方法和参数请阅读[koa2-cors 参数文档](https://github.com/zadzbw/koa2-cors#options)。
+svrx makes use of [koa2-cors](https://github.com/zadzbw/koa2-cors) package.
+Check out its [option documentation](https://github.com/zadzbw/koa2-cors#options) for more advanced usages.
 
 ### registry
 
 `string`
 
-`npm`源地址，设置此选项后，`svrx`将从此源下载插件。 默认的`registry`值是你工作目录下的源地址值，即`npm config get registry`的结果。
+Specific the npm registry where `svrx` should download plugins from.
+By default, `svrx` will use the registry set at your workspace, you can check with command:  
+
+```bash
+npm config get registry
+```

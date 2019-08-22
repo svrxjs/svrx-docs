@@ -87,12 +87,12 @@ svrx --route route.js
  
 你也可以用`open`指定需要打开的页面：
 
-- `false`: 禁用自动打开浏览器
 - `true`: 同 `'local'`
-- `'local'`: 打开本地地址，如`http://localhost:${port}` 
-- `'external'`: 打开外部，`http://10.242.111.80:${port}/` ( 根据你的内网 IP )
-- `'home.html'`: 同`'local/home.html'` 打开 `http://localhost:${port}/home.html` 
+- `'local'`: 打开本地地址，`http://localhost:${port}` 
+- `'external'`: 打开外部地址，`http://${your_ip}:${port}/` ( 根据你的内网 IP )
+- `'home.html'`: 同`'local/home.html'`, 打开 `http://localhost:${port}/home.html` 
 
+将`open`设为`false`可以禁用自动打开浏览器功能。
 
 ### historyApiFallback
 
