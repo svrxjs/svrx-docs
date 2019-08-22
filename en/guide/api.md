@@ -28,7 +28,7 @@
 
 `string`
 
-指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./route.md)
+指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./guide/route.md)
 
 ```js
 svrx --route route.js
@@ -49,6 +49,9 @@ svrx --route route.js
 `string`, `string[]`
 
 设置文件忽略规则，如果文件符合任意匹配的 pattern，那么该文件的内容变动不会触发页面刷新。
+
+
+
 
 ### serve
 
@@ -104,7 +107,7 @@ svrx --route route.js
 
 ### proxy
 
-> proxy 也支持在 [route 文件中动态配置](./route.md#proxy)
+> proxy 也支持在 [route 文件中动态配置](./guide/route.md#proxy)
 
 `boolean`, `object`, `object[]`
 
