@@ -1,99 +1,100 @@
-# 参数列表
+# API Reference
 
 ### root
 
 `string`
 
-启动 svrx 的路径, 默认是当前工作目录。
+Where to start svrx. Default to the current working directory.
 
 ### svrx
 
 `string`
 
-你想使用的 svrx 核心包的版本。默认会使用本地安装的最新版 svrx，如果未安装过，则会安装并使用当前发布过的最新版。
+The version of svrx you want to use.
+Default to the latest version installed locally, if not installed, it will the use the latest published version.
 
 ### port
 
 `number`
 
-端口号，默认是 8000。
+Specify a port number to listen for requests on, default to 8000.
 
 ### https
 
 `boolean`
 
-开启/关闭 https。默认是 `false`。
+Enable/disable https service. Default to `false`.
 
 ### route 
 
 `string`
 
-指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./guide/route.md)
+Specific the configuration file of __routing__, see [routing dsl guide](./route.md) for more detail.   
 
 ```js
 svrx --route route.js
 ```
 
-它支持 __hot-reload__ ，即你可以在不重启 svrx 的情况下更新路由规则
-
+It supports __hot-reload__, which means that you can update your routing rules without restarting svrx manually.
 
 
 ### livereload
 
 `boolean`, `object`
 
-开启/关闭页面自动刷新功能， 默认是开启的。
+Enable/disable auto page live reload.
+Livereload is enabled by default.
 
 #### livereload.exclude
 
 `string`, `string[]`
 
-设置文件忽略规则，如果文件符合任意匹配的 pattern，那么该文件的内容变动不会触发页面刷新。
-
-
-
+Specify patterns to exclude from file watchlist. 
+If a file matches any of the excluded patterns, the file change won’t trigger page reload.
 
 ### serve
 
 `boolean`, `object`
 
-本地服务器配置
+The set of dev server options. 
 
 #### serve.base
 
 `string`
 
-告诉服务器从哪里提供静态文件。 默认情况下，我们会先查找当前工作目录下的文件。
+Tell the server where to serve static content from. By default, we'll looking for contents at the current working path. 
 
-你只需要在你想伺服静态资源的时候设置这个选项。
+This option is necessary only when you want to serve static files. 
+
 
 #### serve.index
 
 `string`
 
-访问根路径时自动展示的 index 文件的文件名，默认是`index.html`。
+Name of the index file to serve automatically when visiting the root location, default to `index.html`.
 
 #### serve.directory 
 
 `boolean`
 
-开启/关闭`serveIndex middleware`， `directory`默认是开启的。
+Enable/disable `serveIndex middleware`. `directory` is enabled by default.
 
-访问根路径时，如果你的 index 文件不存在，`serveIndex middleware`可以提供一个目录中文件列表的视图，而不是返回 404。
+When visiting the root location, if there's no index file exists, `serveIndex middleware` displays a view of filelist in the directory instead of a 404 page.
 
 
 ###  open
 
 `boolean`, `string`
 
-指定需要打开的页面，默认`true`.
+是否在 svrx 启动后自动打开浏览器， 默认是自动打开本地地址`http://localhost:${port}`。
+ 
+你也可以用`open`指定需要打开的页面：
 
-范例( 假设参数为 `{port: 3000}` )
-
+- `false`: 禁用自动打开浏览器
 - `true`: 同 `'local'`
-- `'local'`: 打开本地地址，如`http://localhost:3000` 
-- `'external'`: 打开外部，`http://10.242.111.80:3000/` ( 根据你的内网 IP )
-- `'home.html'`: 同`'local/home.html'` 打开 `http://localhost:3000/home.html` 
+- `'local'`: 打开本地地址，如`http://localhost:${port}` 
+- `'external'`: 打开外部，`http://10.242.111.80:${port}/` ( 根据你的内网 IP )
+- `'home.html'`: 同`'local/home.html'` 打开 `http://localhost:${port}/home.html` 
 
 
 ### historyApiFallback
@@ -107,7 +108,7 @@ svrx --route route.js
 
 ### proxy
 
-> proxy 也支持在 [route 文件中动态配置](./guide/route.md#proxy)
+> proxy 也支持在 [route 文件中动态配置](./route.md#proxy)
 
 `boolean`, `object`, `object[]`
 

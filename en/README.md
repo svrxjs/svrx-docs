@@ -1,6 +1,6 @@
 # svrx
 
-> svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工作台。
+svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工作台。
 
 作为前端开发，在不同的开发需求下，一般来说我们会有一套或者多套固定的开发环境。
 它可能包括本地服务器以及各种用于调试工程的小工具。
@@ -16,12 +16,12 @@
 - 静态伺服
 - 代理
 - 自动重载页面
-- 支持 Hot Reloading 的[路由功能](./zh/guide/route.md)
-- 更多的可能： [插件化](./zh/contribute/plugin.md)
+- 支持 Hot Reloading 的[路由功能](./guide/route.md)
+- 更多的可能： [插件化](./guide/plugin.md)
 
 ## 安装和使用
 
-你可以在[这里](/zh/guide/usage.md)阅读使用指南。
+你可以在[这里](./guide/README.md)阅读使用指南。
 
 ## 官方插件
 

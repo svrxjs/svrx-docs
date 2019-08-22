@@ -1,5 +1,4 @@
-# Routing 使用指南
-
+# Routing 路由的使用
 
 ## 快速起步
 
@@ -185,7 +184,7 @@ get('/svrx(.*)').to.send('Hello svrx')
 代理，将 path 代理到 target 服务器。
 
 - target: 目标服务器
-- options: 同 [proxy.options](/zh/guide/api.md#proxy) 
+- options: 同 [proxy.options](./api.md#proxy) 
     - changeOrigin
     - secure
     - pathRewrite
@@ -222,13 +221,12 @@ get('/hello-world').to.handle((ctx)=>{
 - load: 加载一个 routing file
 - route: 脚本式的定义 router
 
-详细请参考 [插件开发指南](/zh/contribute/plugin.md#router)
+详细请参考 [插件开发指南](../contribute/plugin.md#router)
 
 
 ## 完整范例文件
 
 ```js
-
 get('/handle(.*)').to.handle((ctx) => { ctx.body = 'handle'; });
 get('/blog(.*)').to.json({ code: 200 });
 get('/code(.*)').to.send('code', 201);
@@ -254,8 +252,6 @@ get('/sendFile/:path(.*)').to.sendFile('./{path}');
 get('/sendFile/:path(.*)').to.sendFile(
   libPath.join(__dirname, '../fixture/plugin/serve/{path}'),
 );
-
-
 ```
 
 
