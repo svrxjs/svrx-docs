@@ -34,4 +34,4 @@ module.exports = {
 };
 ```
 
-然后在项目根目录执行`svrx`命令， `svrx`会自动帮你安装`markdown`和`qrcode`插件，并运行它们。
+然后在项目根目录执行`svrx`命令， `svrx`会自动帮你安装`markdown`，`qrcode`和`webpack`插件，并运行它们。
