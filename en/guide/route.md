@@ -192,7 +192,7 @@ get('/svrx(.*)').to.send('Hello svrx')
 ```js
 get('/api(.*)').to.proxy('http://mock.server.com/')
 get('/test(.*)').to.proxy('http://mock.server.com/', {
-  changeOrigin: true,
+  secure: false,
 })
 get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 ```
@@ -237,7 +237,7 @@ get('/rewrite:path(.*)').to.rewrite('/query{path}');
 get('/redirect:path(.*)').to.redirect('localhost:9002/proxy{path}');
 get('/api(.*)').to.proxy('http://mock.server.com/')
 get('/test(.*)').to.proxy('http://mock.server.com/', {
-  changeOrigin: true,
+  secure: false,
 })
 get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 get('/query(.*)').to.handle((ctx) => {

@@ -170,14 +170,16 @@ module.exports = {
 }
 ```
 
-If you want to change the origin of host header to the target hostname, just set `changeOrigin` to `true`:
+Please note that by default, the option value of `changeOrigin` is `true`, 
+which means `svrx` will always set the origin of host header to the target hostname during CORS. 
+If you dont't want this feature, just set `changeOrigin` to `false`:
 
 ```js
 module.exports = {
     proxy: {
         '/api': {
             target: 'https://you.https.server.com',
-            changeOrigin: true 
+            changeOrigin: false 
         }
     },
 }

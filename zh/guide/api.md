@@ -165,14 +165,14 @@ module.exports = {
 }
 ```
 
-如果你想改变 header 中的 origin 为目标域名，可以试试将`changeOrigin`设为`true`：
+另外请注意，默认地，`svrx`会将`changeOrigin`参数设为`true`， 这会使得在跨域情况下，header 中的 origin 会自动被改为目标域名。 如果你不需要这个功能，可以将`changeOrigin`设为`false`：
 
 ```js
 module.exports = {
     proxy: {
         '/api': {
             target: 'https://you.https.server.com',
-            changeOrigin: true 
+            changeOrigin: false 
         }
     },
 }
