@@ -1,36 +1,43 @@
-# 快速起步
+# Getting Started
 
-开始使用 svrx 吧！
 
----
-
-> 如果你还没有使用过 svrx ，你可能需要先阅读安装指南
-
-[**￫ 如何安装 svrx**](./install.md)
+Let's get started with svrx now!
 
 ---
 
-> 如果你想通过 svrx 快速启动你的开发环境，就从这里看起
+> If you never tried svrx before, you might need to install it first
 
-[**￫ 用 svrx 启动你的工程**](./usage.md)
+[**￫ How To Install svrx**](./install.md)
+
+---
+
+> If you want to quickly start your app with svrx, follow this guide 
+
+[**￫ Starting A Project With svrx**](./usage.md)
                                 
 ---
 
-> 如果你想尝试一些插件，这一节将会告诉你插件的使用方法
+> Wanna try some plugins? This chapter might help
 
-[**￫ 插件的使用**](./plugin.md)
+[**￫ How To Use Plugins**](./plugin.md)
    
 ---
-                             
-> 作为参考，我们列举了一些常见的 svrx 配置及插件的使用场景
 
-[**￫ 常用场景示例**](./examples.md)
+> Routing is a powerful feature in svrx, read this chapter for more information
+
+[**￫ How To Use Routes**](./route.md)
+
+---
+                             
+> Here is a list of examples showing you how to use svrx and some common plugins, enjoy!
+
+[**￫ Examples**](./examples.md)
      
 ---
                            
-> svrx 支持的全部选项及说明在这里可以查到
+> Please check api reference here
 
-[**￫ API 列表**](./api.md)
+[**￫ API Reference**](./api.md)
 
 
 

@@ -1,18 +1,18 @@
-# 贡献指南
+# Contributing to svrx
 
 > Show me your code!
 
-svrx 欢迎各种形式的贡献： 代码、[issue](https://github.com/x-orpheus/svrx/issues)、文档等等。 
-你有任何想法或建议，也请一定要告诉我们。
+All contributions are welcomed at [svrx repo](https://github.com/x-orpheus/svrx) and other svrx packages.
+And feel free to tell us your ideas and suggestion about svrx on our [issue page](https://github.com/x-orpheus/svrx/issues).   
 
 ---
 
-> 如果你想通过 pull request 向 svrx 核心仓库提交你的代码，请阅读这篇文档
+> If you want to commit your code to svrx through a pull request, please read the following page
 
-[**￫ 为 svrx 提交代码**](./pr.md)
+[**￫ Pushing Code To svrx**](./pr.md)
                                 
 ---
 
-> 如果你想实现自己的 svrx 插件，你可以在这里了解你需要的信息
+> If you want to write your own svrx plugin, you might find some help here
 
-[**￫ 如何写一个插件**](./plugin.md)
+[**￫ How To Write A Plugin**](./plugin.md)

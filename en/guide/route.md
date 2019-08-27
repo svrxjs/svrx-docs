@@ -1,161 +1,160 @@
-# Routing 路由的使用
+# [How To Use Routes
 
-## 快速起步
+## Getting Started
 
-你可通过以下命令来快速尝试 svrx 的动态路由功能
+You can try the following commands to start `svrx` routing quickly:
 
 ```bash
 touch route.js # create empty routing file
 svrx --route route.js 
 ```
 
-在 `route.js` 中
+In your `route.js`:
 
 ```js
 get('/blog').to.json({ title: 'svrx' });
 ```
 
-打开 `/blog`，你将看到 `{title: 'svrx'}` 的 json 输出
+Then open `/blog`, you'll see the json output `{title: 'svrx'}`.
 
-### 特性
+### Features
 
-- __支持 hot reloading__ ( 通过编辑 `route.js` 来验证 )
-- 简单的书写，直观的阅读
-- 支持通过[插件](#plugin)来扩展和分发
+- __support hot reloading__ ( check it out by editing your `route.js` now)
+- easy writing, clear reading
+- support expanding through [plugin](#plugin)
 
-## 语法
+## Syntax
 
 `[method](selector).to.[action](payload)` 
 
-
-举个例子
+For example:
 
 ```js
 post('/blog').to.proxy('http://music.163.com');
 ```
 
-分别对应
+This rule can be translate into:
 
 - method: post
 - selector: /blog
 - action: proxy
 - payload: 'http://music.163.com'
 
-> _其中 to 只是一个连贯助词，可以省略_
+> _'to' is just a preposition word here, which can be omitted_
 
 
-## 路由
+## Route
 
-### 路由方法
+### Route Methods
 
-svrx 路由支持 [methods](https://github.com/jshttp/methods/blob/master/index.js) 定义的 http methods
+`svrx` route supports all the http methods defined by [methods](https://github.com/jshttp/methods/blob/master/index.js). 
 
-> ⚠️ 由于 delete 与 js 保留字冲突，你可以使用 del() 来创建 DELETE 方法
-
-
-### 路由匹配
-
-svrx 路由基于 [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp) 匹配, 
-和两大平民 Node 框架 [express](https://expressjs.com/en/guide/routing.html) 和 [koa](https://github.com/ZijianHe/koa-router) 相同.
-
-查看 [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp) 来了解更详尽的匹配规则，以下做简要概述
-
-#### 规则解析举例
-
-- `/svrx/:id`: 具名匹配，规则默认为 `(\w+)`
-- `/svrx/:id(hello|world)`: 具名且指定匹配规则 
-- `/svrx(.*)`: 不具名匹配 
-- `/\/svrx\/(.*)$/`: __对于复杂规则的路由，也可以直接使用正则表达式__
-
-#### 匹配参数
-
-- 具名匹配如`/:id`, 可以通过 `ctx.params.id` 获得
-- 匿名匹配如`/(hello|world)/(.*).html`，可以通过 `ctx.params[0]` 以及 `ctx.params[1]` 依次获得匹配参数
-- 正则匹配如`/\/svrx\/(.*)$/`，`ctx.params[i]` 依次获得正则的子匹配结果
+> ⚠️ 'delete' is a reserved word of javascript, so you might use del() to create a DELETE method.
 
 
-#### 参数快捷映射
+### Route Matching
 
-除 [Action:handle](#handle) 外，大部分 action 在语法上不具备操作 koa 上下文( context ) 的能力，部分 action 做了 参数快捷映射 的支持
+The match rule of `svrx` route is based on [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp), 
+which is also used by [express](https://expressjs.com/en/guide/routing.html) and [koa](https://github.com/ZijianHe/koa-router).
 
-以 [sendFile](#send-file) 为例
+The following is just some briefs of matching rules, 
+please check [`path-to-regexp` doc](https://github.com/pillarjs/path-to-regexp) for more detail. 
+
+
+#### Common Rules
+
+- `/svrx/:id`: named parameters matching, default parameter rule is `(\w+)`
+- `/svrx/:id(hello|world)`: named parameters matching with custom parameter matching rule 
+- `/svrx(.*)`: unnamed parameters matching 
+- `/\/svrx\/(.*)$/`: __use regexp directly for complicated routes__
+
+#### Parameters
+
+- named parameters like `/:id`, can be accessed through `ctx.params.id`
+- unnamed parameters like `/(hello|world)/(.*).html`, can be accessed through `ctx.params[0]` and `ctx.params[1]`
+- regexp like `/\/svrx\/(.*)$/`, can be accessed through `ctx.params[i]` in order
+
+#### Parameters Mapping
+
+In fact, except [Action:handle](#handle), 
+most actions do not have the ability to access the koa context, 
+so we need `parameters mapping` for some actions.
+
+Take [sendFile](#send-file) as an example:
 
 ```js
 get('/html/:path.(html|htm)').to.sendFile('./{path}.{0}')
 ```
 
-- `/html/index.html` 会发送 `${root}/html/index.html`
-- `/html/home.htm` 会发送 `${root}/html/home.htm`
+- `/html/index.html` will send `${root}/html/index.html`
+- `/html/home.htm` will send `${root}/html/home.htm`
 
-## Action 清单
+## Action List
 
-你可以使用路由的 [__插件接口__](#plugin) 来扩展 Action
+You can use [__Route API for Plugins__](#plugin) to write your own action.
 
 ### send
 
-发送响应内容
+Send response content.
 
 ```js
 get('/blog').to.send({ title: 'this is a blog' });
 ```
 
-send 是 koa 框架 `ctx.body` 的语法糖，当 payload 类型不同时有以下默认行为
+`send` is a syntactic sugar for `ctx.body` of koa. 
+And there're some default behaviors for different payload types.
 
 - `string`
-  - 如果包含以`<`开头的字符比如`<html>`, `Content-Type` 头会设置为 `text/html`, 浏览器会渲染为 html
-  - 否则返回`text/plain`
+  - if started with `<`, like `<html>`, the `Content-Type` header will be set as `text/html`
+  - if not, return `text/plain`
 - `object` or `array` or `number` or `boolean` ...
-  - 返回 `json`, `Content-Type` 为 `application/json`
+  - return `json`, the `Content-Type` will be `application/json`
 
 
 ### sendFile {#send-file}
 
-发送文件内容，根据自动文件后缀设置 `Content-Type`
+Send file content,
+and it will auto set the `Content-Type` header according to the file extension.
 
 ```js
-
 get('/index.html').to.sendFile('./index.html');
-
 ```
 
-- 根路径 = `serve.base` || `root`
-- __⚠️支持参数映射__, 如下例
-
-```js
-get('/file/:id.html').to.sendFile('./assets/{id}.html')
-```
-
+- root path = `serve.base` || `root`
+- __⚠️support parameters mapping__, for example:
+    ```js
+    get('/file/:id.html').to.sendFile('./assets/{id}.html')
+    ```
 
 ### json
 
-无论 payload 为什么类型，都发送 `json` 响应
+Send `json` response, despite the type of payload.
 
 ```js
 get('/blog').to.json({title: 'svrx'});
 ```
 
-
 ### redirect(target\[, code])
 
-服务端跳转
+Server side redirecting.
 
-- target: 目标 path
-- code: http code, default `302`
-
-
+- target: target path
+- code: http code, default is `302`
 
 ```js
 get('/blog').to.redirect('/user');
 ```
 
-> __⚠️支持参数映射__, 如下例
+> __⚠️support parameters mapping__, for example:
 
 `get('/blog/:path(.*)').to.redirect('/user/{path}')`
 
 
 ### header
 
-设置响应头，由于 header 并不发送响应内容，你可以串联其他 action
+Set response headers. 
+`header` doesn't send any response content, 
+so you can chain this action to other actions.
 
 ```js
 get('/blog')
@@ -163,28 +162,28 @@ get('/blog')
   .json({ code: 200 });
 ```
 
-
 ### rewrite
 
-路由重写
+Rewrite routes.
 
-> __⚠️支持参数映射__
+> __⚠️support parameters mapping__
 
 ```js
 get('/old/rewrite:path(.*)').to.rewrite('/svrx/{path}')
 get('/svrx(.*)').to.send('Hello svrx')
 ```
 
-则`/old/1`和`/svrx/1` 都会返回`Hello svrx`
+Both `/old/1` and `/svrx/1` will return `Hello svrx`.
 
-> 由于 rewrite 并不发送响应内容，你也可以串联其他 action
+> `rewrite` doesn't send any response content, 
+you can chain this action to other actions.
 
 ### proxy(target\[, options]) {#proxy}
 
-代理，将 path 代理到 target 服务器。
+Proxy path to target server.
 
-- target: 目标服务器
-- options: 同 [proxy.options](./api.md#proxy) 
+- target: target server
+- options: same as [proxy.options](./api.md#proxy) 
     - changeOrigin
     - secure
     - pathRewrite
@@ -192,39 +191,42 @@ get('/svrx(.*)').to.send('Hello svrx')
 ```js
 get('/api(.*)').to.proxy('http://mock.server.com/')
 get('/test(.*)').to.proxy('http://mock.server.com/', {
-  changeOrigin: true,
+  secure: false,
 })
 get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 ```
 
 ### handle {#handle}
 
-handle 即定义一个 koa 的中间件，属于全能力 action，以上所有功能都可以使用 handle 来实现，
-代价就是可读性的降低.
+`handle` is a powerful action, it defines a middleware of koa, 
+which means all actions above can be implemented by`handle`,
+but the cost is the reduction of code readability.
 
 ```js
-
 get('/hello-world').to.handle((ctx)=>{
   ctx.type = 'html'
   ctx.body = '<body>Hello World</body>'
 });
-
 ```
 
-> 尽可能抽取通用能力为自定义 action，请参考「插件接口」小节
+> Instead of using handle, 
+it is recommended to use 'smaller' actions,
+you can customize your own actions using route api for plugins,
+see next section.
 
-## 插件接口 {#plugin}
+## Route API for Plugins {#plugin}
 
-插件的 `hooks.onCreate` 会注入名为 `router` 对象, 包含三个方法
+You can create a new action in your own plugin.
+There's a `router` object in your `hooks.onCreate`,
+which has 3 methods inside:
 
-- action: 注册一个与 proxy、json 等同级的 action
-- load: 加载一个 routing file
-- route: 脚本式的定义 router
+- action: register an action just like `proxy`, `json`, ...
+- load: load a routing file
+- route: define a router in scripts
 
-详细请参考 [插件开发指南](../contribute/plugin.md#router)
+Please read [How To Write A Plugin](../contribute/plugin.md#router) for more information.
 
-
-## 完整范例文件
+## Examples
 
 ```js
 get('/handle(.*)').to.handle((ctx) => { ctx.body = 'handle'; });
@@ -237,7 +239,7 @@ get('/rewrite:path(.*)').to.rewrite('/query{path}');
 get('/redirect:path(.*)').to.redirect('localhost:9002/proxy{path}');
 get('/api(.*)').to.proxy('http://mock.server.com/')
 get('/test(.*)').to.proxy('http://mock.server.com/', {
-  changeOrigin: true,
+  secure: false,
 })
 get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 get('/query(.*)').to.handle((ctx) => {
