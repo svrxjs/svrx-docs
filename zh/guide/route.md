@@ -41,7 +41,7 @@ post('/blog').to.proxy('http://music.163.com');
 - action: proxy
 - payload: 'http://music.163.com'
 
-> _其中 to 只是一个连贯助词，可以省略_
+> _其中 to 只是一个介词，可以省略_
 
 
 ## 路由
