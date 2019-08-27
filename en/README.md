@@ -1,47 +1,52 @@
 # svrx
 
-svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工作台。
+svrx(server-x) is a pluggable platform built for efficient front-end development.
 
-作为前端开发，在不同的开发需求下，一般来说我们会有一套或者多套固定的开发环境。
-它可能包括本地服务器以及各种用于调试工程的小工具。
-维护这样的开发环境是很麻烦的：你不仅需要单独安装每一个工具，还需要对每一个工具进行设置。
-此外，针对不同的工程，你还需要有选择地去开启或关闭某个功能。
+As a front-end developer, to meet different kind of development requirements, usually we will have one or more set of fixed development environment,
+in which may include a local dev server and many other debug tools.
+It's difficult to maintain a development environment: you need to install and configure every tool separately.
+Besides, you may also need to enable or disable a tool when switching among projects.
 
-`svrx` 做的，就是利用插件机制来整合各种前端开发服务，
-让前端开发者可以自由挑选所需的功能，如静态伺服、代理、远程调试等，且无需关心这些功能插件的安装过程。
-有了`svrx`这样一个前端开发工作台，我们可以轻松做到一份配置对应一套开发环境，实现真正的一键启动开发服务。
+To solve the problem, 
+we plan to integrate all the development services into a pluggable platform, 
+and name it `svrx`.
+With `svrx`, you can freely pick and combine any services(plugins) you want, 
+like static serve, proxy, remote debugging and etc, without concerning about plugin installation.
+ 
+Now, `svrx` makes it possible for us to easily customize the development environment for each project,
+and instead of downloading many other packages, all you need to do is just install `svrx`.
 
-## 特性预览
+## Features
 
-- 静态伺服
-- 代理
-- 自动重载页面
-- 支持 Hot Reloading 的[路由功能](./guide/route.md)
-- 更多的可能： [插件化](./guide/plugin.md)
+- static serve
+- proxy
+- page live reload
+- [routing](./guide/route.md) with hot reloading 
+- and you can do more: [plugin](./guide/plugin.md)
 
-## 安装和使用
+## Install & Usage
 
-你可以在[这里](./guide/README.md)阅读使用指南。
+You can read our docs [here](./guide/README.md).
 
-## 官方插件
+## Official Plugins
 
 + [svrx-plugin-webpack](https://github.com/x-orpheus/svrx-plugin-webpack):
-    提供 webpack 相关功能，编译、hot-reload 等
+    support of webpack, including building, hot-reload and etc.
 + [svrx-plugin-localtunnel](https://github.com/x-orpheus/svrx-plugin-localtunnel): 
-    暴露你的本地服务为公开的外网域名
+    expose your localhost to the world for easy testing and sharing.
 + [svrx-plugin-weinre](https://github.com/x-orpheus/svrx-plugin-weinre): 
-    基于 weinre，在电脑上远程调试手机页面
+    remote debugging based on weinre.
 + [svrx-plugin-eruda](https://github.com/x-orpheus/svrx-plugin-eruda): 
-    基于 eruda，直接在手机上开启 dev tool 进行调试
+    open a dev tool on mobile based on eruda
 + [svrx-plugin-qrcode](https://github.com/x-orpheus/svrx-plugin-qrcode): 
-    在页面上或 console 中展示当前页面的二维码
+    display the qrcode of current page.
 + [svrx-plugin-markdown](https://github.com/x-orpheus/svrx-plugin-markdown): 
-    展示 markdown 类型的文件，提供实时预览、hot-reload、自动滚动定位等功能
+    preview markdown file, support hot-reload, auto-scroll...
 
-#### 下列暂为网易内部可用插件
+#### Netease ONLY
 
-> 待稳定后会开放给外部使用
+> will be open-source soon
 
 + [svrx-plugin-nei](https://g.hz.netease.com/cloudmusic-frontend/svrx-plugin-nei): 
-    直接在开发页面一键开启某个 [NEI](https://nei.netease.com/) 接口的 mock 功能
+    enable/disable data mock of some api in [NEI](https://nei.netease.com/).
     
