@@ -1,6 +1,6 @@
 # Examples
 
-Thanks to the plugin system, now we can easily add plugins to most projects to simplify our development process.   
+ we can easily add plugins to most projects to simplify our development process.   
 
 Here are some examples of how to use `svrx` and some common plugins, hope it helps.
 

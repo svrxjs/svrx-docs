@@ -251,9 +251,6 @@ get('/header(.*)')
 get('/user').to.json({ user: 'svrx' });
 
 get('/sendFile/:path(.*)').to.sendFile('./{path}');
-get('/sendFile/:path(.*)').to.sendFile(
-  libPath.join(__dirname, '../fixture/plugin/serve/{path}'),
-);
 ```
 
 
