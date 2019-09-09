@@ -1,6 +1,6 @@
 # Examples
 
- we can easily add plugins to most projects to simplify our development process.   
+We can easily add plugins to most projects to simplify our development flow.   
 
 Here are some examples of how to use `svrx` and some common plugins, hope it helps.
 

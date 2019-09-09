@@ -12,8 +12,8 @@
 
 ## 第一个 svrx 插件
 
-首先来尝试第一个插件 [`svrx-plugin-hello-world`](https://github.com/svrxjs/svrx-plugin-hello-world)，
-简便起见，它的功能仅仅只是在命令行终端和浏览器端分别打印用户的欢迎语
+让我们实现第一个插件 —— [`svrx-plugin-hello-world`](https://github.com/svrxjs/svrx-plugin-hello-world)，
+它用来在终端和浏览器器端分别打印用户欢迎语
 
 ### **文件结构**
 
@@ -44,7 +44,7 @@
 
 - `name`: 包名要求必须是 `svrx-plugin` 开头，这是为了方便使用 npm 服务来进行插件查找
 - `engines.svrx`: 定义此插件的可运行 svrx 版本，svrx 会自动加载最新的匹配插件，
-  **engines.svrx** 可以是一个 [semver version](https://www.npmjs.com/package/semver)，如`0.1.x`或`~0.1`等
+  **engines.svrx** 可以是一个 [semver](https://www.npmjs.com/package/semver)，如`0.1.x`或`~0.1`等
 
 #### - `index.js`
 
@@ -72,7 +72,7 @@ module.exports = {
 
 其中
 
-1. `configSchema` 插件参数定义，请参考[参数定义](#schema)了解更多,这里我们定义了一个默认为'svrx'的字符串类型的参数 user
+1. `configSchema` 插件参数定义，请参考[参数定义](#schema)了解更多,这里我们定义了一个默认为`'svrx'`的字符串类型的参数 `user`
 2. `assets`: 前端资源配置，他们会被自动注入到前端脚本中
 
    - `style`: css 脚本注入，默认注入 html 头部，本例没有使用
@@ -231,7 +231,7 @@ injector.add('script', {
 });
 ```
 
-上例会往
+上例会往`/svrx/svrx-client.js` 注入 content 字段中的脚本内容
 
 **Param**
 
@@ -411,7 +411,7 @@ config.get('a.b.c'); //=> undefined
 
 从插件层面扩展或注册[Routing 模块](../guide/route.md#plugin)
 
-#### - `router.route(regist)`
+#### - `router.route(register)`
 
 快捷注册路由，与[Routing DSL](../guide/route.md)一致
 
@@ -431,7 +431,7 @@ route({all, get, post}=>{
 
 **Param**
 
-- regist(methods): 注册回调
+- register(methods): 注册回调
   - methods: 与 [HTTP methods 对应的注册方法](../guide/route.md#method)
 
 #### - `router.action(name, builder)`
@@ -563,7 +563,7 @@ hooks: {
 - `type`: 事件名
 - `payload`: 事件参数
 
-> 注意时间参数必须是可序列化的，因为要通过网络传输
+> 注意事件参数必须是可序列化的，因为要通过网络传输
 
 #### - `io.off(type[, handler])`
 
@@ -576,22 +576,22 @@ io.off('hello'); //=> remove all hello handlers
 io.off('hello', handler); //=> remove specific handler
 ```
 
-#### - `io.regist(name, handler)`
+#### - `io.register(name, handler)`
 
 注册一个 io 服务， 它可以在客户端或服务端以`io.call`的方式调用
 
 **Usage**
 
 ```js
-io.regist('hello.world', async payload => {
+io.register('hello.world', async payload => {
   return `Hello ${payload}`;
 });
 ```
 
 **Param**
 
-- `name`:
-- `handler`:
+- `name` \[String]: 服务名，`call` 中会被使用
+- `handler`: 服务逻辑实现，异步请返回 Promise 或使用 async/await
 
 #### - `io.call(name, payload)` {#call}
 
@@ -675,11 +675,13 @@ io.emit('hello', 1);
 server side
 
 ```js
-hooks: {
-  async onCreate({io}){
-    io.on('hello', payload=>{
-      console.log(payload) // =>1
-    })
+{
+  hooks: {
+    async onCreate({io}){
+      io.on('hello', payload=>{
+        console.log(payload) // =>1
+      })
+    }
   }
 }
 ```
@@ -774,7 +776,7 @@ config.set('a.b', 1).then(() => {
 
 ### 参数定义 {#schema}
 
-svrx 支持一种基于 [json-schema] 扩展的参数定义，以内部定义的参数为例
+svrx 支持一种基于 [json-schema](https://json-schema.org/) 扩展的参数定义，以内部定义的参数为例
 
 **Usage**
 
