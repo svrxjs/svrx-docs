@@ -1,4 +1,4 @@
-# Starting A Project With svrx
+# Starting A Project With Svrx
 
 ## Common Commands
 
@@ -15,7 +15,7 @@ svrx --help             # print help info
 
 #### Start svrx
 
-Before we start, you need to cd into your project root path first. 
+Before we start, you need to cd into the root of your project first.
 Let's say you've already got an `index.html` in your project:
 
 ```bash
