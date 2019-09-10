@@ -10,6 +10,8 @@
 
 # 插件开发指南
 
+> 使用[`svrx-create-plugin`](https://github.com/svrxjs/svrx-create-plugin)帮助你更容易的开发插件
+
 ## 第一个 svrx 插件
 
 让我们实现第一个插件 —— [`svrx-plugin-hello-world`](https://github.com/svrxjs/svrx-plugin-hello-world)，
@@ -207,9 +209,6 @@ middleware.del('hello-world-middleware');
 
 - `name`: 传入`add`的名称
 
-> 说明：middleware 的 priority {#priority}
-> svrx 的插件以 10 作为权重基准
-
 ### injector
 
 `injector`用来改写响应流或注入前端资源
@@ -256,7 +255,7 @@ injector.replace(/svrx/g, 'server-x');
 **Param**
 
 - `pattern` \[String|RegExp]
-- `pattern` \[String|Function]
+- `replacement` \[String|Function]
 
 > `injector.replace`的使用与`String.prototype.replace`完全一致
 > 资源注入就是通过`injector.replace`实现的
@@ -304,7 +303,7 @@ events.emit('hello', { param1: 'world' }).then(() => {
 **Param**
 
 - `type` \[String]: 事件名
-- `payload`: 事件参数，会`on`注册的回调函数接收到
+- `payload`: 事件参数，被`on`中注册的回调函数接收到
 - `sorted` \[Boolean]: 默认`false`, 是否串行阻塞的触发事件
 
 **Return**
@@ -322,6 +321,7 @@ events.on('hello', handler); // remove specific handler
 
 #### 内置事件
 
+- `plugin`: 当插件准备完毕后触发
 - `file:change`: 当文件发生变更时被触发
 - `ready`: 当服务启动时触发，如果你需要在服务启动处理部分逻辑(如获取服务端口)，请注册这个事件
 
@@ -351,13 +351,13 @@ config.get('$.root'); // get the svrx working directory
 
 **Param**
 
-- `key`: 配置名，深层配置用`.`分割，比如`user.name`
+- `field`: 配置名，深层配置用`.`分割，比如`user.name`
 
 **Return**
 
 配置值
 
-#### - `config.set(key, value)`
+#### - `config.set(field, value)`
 
 设置配置项
 
@@ -370,10 +370,10 @@ config.get('a'); // => { b: { c: 'hello' } }
 
 **Param**
 
-- `key`: 配置名，深层配置用`.`分割，比如`user.name`
+- `field`: 配置名，深层配置用`.`分割，比如`user.name`
 - `value` 配置值
 
-#### - `config.watch(key, handler)`
+#### - `config.watch([field, ]handler)`
 
 监听配置变化, 配置变化检查会在`set`、`del`、`splice`方法后被触发
 
@@ -386,7 +386,13 @@ config.watch('a.b.c', (evt)=>{
 config.set('a.b.c', 'hello');
 ```
 
-#### - `config.del(key)`
+**Param**
+
+- `field`: 字段名, `field`是可选的，如不传入则所有 config 变更都会触发
+- handler(evt): 监听回调
+  - evt.affect \[Function]: 判断本次变更是否影响某字段
+
+#### - `config.del(field)`
 
 删除某个配置项
 
@@ -401,11 +407,11 @@ config.get('a.b.c'); //=> undefined
 
 配置名
 
-#### - `config.splice(key, start[, delCount[, items...])`
+#### - `config.splice(field, start[, delCount[, items...])`
 
 数组 splice 的 config 版本
 
-除了指定字段之外，[其他参数与 Array.prototype.splice 一致](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+除了`field`外，[其他参数与 Array.prototype.splice 一致](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 ### router
 
@@ -431,12 +437,12 @@ route({all, get, post}=>{
 
 **Param**
 
-- register(methods): 注册回调
+- register(...methods): 注册回调
   - methods: 与 [HTTP methods 对应的注册方法](../guide/route.md#method)
 
 #### - `router.action(name, builder)`
 
-注册一个与 proxy、json 等同级的 action
+注册一个与 proxy、json 等类似的 action
 
 **Usage**
 
@@ -504,11 +510,9 @@ svrx 提供了多种级别的日志，分别是`slient`, `notify`, `error` , `wa
 **Usage**
 
 ```js
-logger.notify('notify'); // show when level <= notify
-logger.error('error'); // show when level <= error
-logger.warn('warn'); // show when level <= warn
-logger.info('info'); // show when level <= info
-logger.debug('debug'); // show when level <= debug
+logger.notify('notify'); // show `nofity`
+logger.error('error'); // show `error` and `notify`
+logger.warn('warn'); // show `warn`、`error` and `norify`
 ```
 
 > `logger.notify` 由于会非常常用，所以它有一个 alias `logger.log`
@@ -607,6 +611,8 @@ io.call('hello.world', 'svrx').then(data => {
 });
 ```
 
+
+
 **Param**
 
 - `name` \[String]: 服务名
@@ -691,7 +697,7 @@ server side
 - `type`: 事件名
 - `payload`: 事件参数
 
-> 注意时间参数必须是可序列化的，因为要通过网络传输
+> 注意事件参数必须是可序列化的，因为要通过网络传输
 
 #### - `io.off(type[, handler])`
 
@@ -744,7 +750,7 @@ events.off('type');
 
 客户端的`config`模块与服务端几乎一致，唯一区别是从同步接口编程了 Promise 化的异步接口(因为 socket 的网络通信)
 
-#### - `config.get(key)`
+#### - `config.get(field)`
 
 **Usage**
 
@@ -842,4 +848,4 @@ svrx({
 
 ## 更容易的插件开发 —— [`svrx-create-plugin`](https://github.com/x-orpheus/svrx-create-plugin)
 
-⚠️ **svrx-create-plugin** 目前正在急速开发中...
+svrx 官方提供的脚手架帮助你更容易的开发和发布你的插件
