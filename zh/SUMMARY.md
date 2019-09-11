@@ -7,6 +7,7 @@
   * [插件的使用](./guide/plugin.md)
   * [Routing 路由的使用](./guide/route.md)
   * [常用场景示例](./guide/examples.md)
+  * [Option 列表](./guide/option.md)
   * [API 列表](./guide/api.md)
 * [贡献](./contribute/README.md)
   * [为 svrx 提交代码](./contribute/pr.md)
