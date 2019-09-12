@@ -19,6 +19,7 @@
 
 ### **文件结构**
 
+
 ```js
 └── svrx-plugin-hello-world
   ├── client.js
@@ -209,6 +210,7 @@ middleware.del('hello-world-middleware');
 
 - `name`: 传入`add`的名称
 
+
 ### injector
 
 `injector`用来改写响应流或注入前端资源
@@ -257,6 +259,7 @@ injector.replace(/svrx/g, 'server-x');
 - `pattern` \[String|RegExp]
 - `replacement` \[String|Function]
 
+
 > `injector.replace`的使用与`String.prototype.replace`完全一致
 > 资源注入就是通过`injector.replace`实现的
 
@@ -303,7 +306,7 @@ events.emit('hello', { param1: 'world' }).then(() => {
 **Param**
 
 - `type` \[String]: 事件名
-- `payload`: 事件参数，被`on`中注册的回调函数接收到
+- `payload`: 事件参数，被`on`中注册的回调函数接收
 - `sorted` \[Boolean]: 默认`false`, 是否串行阻塞的触发事件
 
 **Return**
@@ -353,11 +356,13 @@ config.get('$.root'); // get the svrx working directory
 
 - `field`: 配置名，深层配置用`.`分割，比如`user.name`
 
+
 **Return**
 
 配置值
 
 #### - `config.set(field, value)`
+
 
 设置配置项
 
@@ -374,6 +379,7 @@ config.get('a'); // => { b: { c: 'hello' } }
 - `value` 配置值
 
 #### - `config.watch([field, ]handler)`
+
 
 监听配置变化, 配置变化检查会在`set`、`del`、`splice`方法后被触发
 
@@ -394,6 +400,7 @@ config.set('a.b.c', 'hello');
 
 #### - `config.del(field)`
 
+
 删除某个配置项
 
 **Usage**
@@ -412,6 +419,7 @@ config.get('a.b.c'); //=> undefined
 数组 splice 的 config 版本
 
 除了`field`外，[其他参数与 Array.prototype.splice 一致](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
 
 ### router
 
@@ -438,11 +446,14 @@ route({all, get, post}=>{
 **Param**
 
 - register(...methods): 注册回调
-  - methods: 与 [HTTP methods 对应的注册方法](../guide/route.md#method)
+=======
+- register(methods): 注册回调
+
 
 #### - `router.action(name, builder)`
 
-注册一个与 proxy、json 等类似的 action
+注册一个与 `proxy`、`json` 类似的 action
+
 
 **Usage**
 
@@ -513,6 +524,7 @@ svrx 提供了多种级别的日志，分别是`slient`, `notify`, `error` , `wa
 logger.notify('notify'); // show `nofity`
 logger.error('error'); // show `error` and `notify`
 logger.warn('warn'); // show `warn`、`error` and `norify`
+
 ```
 
 > `logger.notify` 由于会非常常用，所以它有一个 alias `logger.log`
@@ -612,7 +624,6 @@ io.call('hello.world', 'svrx').then(data => {
 ```
 
 
-
 **Param**
 
 - `name` \[String]: 服务名
@@ -699,6 +710,7 @@ server side
 
 > 注意事件参数必须是可序列化的，因为要通过网络传输
 
+
 #### - `io.off(type[, handler])`
 
 解除监听
@@ -751,6 +763,7 @@ events.off('type');
 客户端的`config`模块与服务端几乎一致，唯一区别是从同步接口编程了 Promise 化的异步接口(因为 socket 的网络通信)
 
 #### - `config.get(field)`
+
 
 **Usage**
 
@@ -849,3 +862,4 @@ svrx({
 ## 更容易的插件开发 —— [`svrx-create-plugin`](https://github.com/x-orpheus/svrx-create-plugin)
 
 svrx 官方提供的脚手架帮助你更容易的开发和发布你的插件
+
