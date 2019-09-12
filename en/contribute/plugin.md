@@ -70,17 +70,17 @@ module.exports = {
 
 Where
 
-1. `configSchema` Plugin param definition based json-schema ，checkout [json-schema](#schema) for more detail.
+1. `configSchema` Plugin param definition based on JSON Schema ，checkout [JSON Schema](#schema) for more detail.
    Here we just set a `user` field, it is a string
 2. `assets`: client resource setting，they will be automatically injected into the page
 
    - `style`: css resource injection
    - `script`: script resource injection
 
-     > All resources will be merged into one link
+     > All resources will be merged into a single file.
 
 3. `hook.onCreate`: a function invoke when plugin been creating, we can control it by injected service
-   in this example, we only use two service
+   in this example, we only use two services
 
    - `logger`: logger service
    - `config`: config service
@@ -89,7 +89,7 @@ Check out setion [service](#server) to find other services that available in `ho
 
 #### - `client.js`
 
-There is a global variable named `svrx` wiil be injected to every page,
+There is a global variable named `svrx` wiil be injected into all pages,
 it has some built-in services
 
 > `svrx` is only accessible inside the plugin script, don't worry about global pollution
@@ -110,7 +110,7 @@ Unlike in server side, config in client is passed through websocket, so api is a
 
 ### publish && running
 
-When try to publish package by `npm publish`， we will find it fails. beacuse `svrx-plugin-hello-world` has beed published by [offical team](https://github.com/svrxjs/svrx-plugin-hello-world)
+There'll be a failure when trying to publish it by `npm publish`. beacuse `svrx-plugin-hello-world` has beed published by [offical team](https://github.com/svrxjs/svrx-plugin-hello-world)
 
 So we skip this step and try the plugin directly
 
@@ -118,10 +118,10 @@ So we skip this step and try the plugin directly
 svrx -p hello-world
 ```
 
-check the terminal and browser console log, we will find `Hello svrx from browser`.
+Check the terminal and browser console log, we will find `Hello svrx from browser`.
 which means plugin has worked successfully.
 
-You can also run it by programmatical way
+You can also run it in programmatical way
 
 ```js
 const svrx = require('svrx');
@@ -797,7 +797,7 @@ config.set('a.b', 1).then(() => {
 
 参数定义
 
-Svrx config schema is based on [json-schema](https://json-schema.org/)
+Svrx config schema is based on [JSON Schema](https://json-schema.org/)
 
 **Usage**
 
