@@ -2,7 +2,7 @@
 
 ## Common Commands
 
-There are several commands in `svrx-cli` you might use frequently:
+There are several commands in `@svrx/cli` you might use frequently:
 
 ```bash
 svrx                    # start svrx service
