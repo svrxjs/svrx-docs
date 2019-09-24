@@ -127,10 +127,10 @@ svrx -p hello-world
 也可以通过脚本的方式来启动
 
 ```js
-const svrx = require('svrx');
+const svrx = require('@svrx/svrx');
 
 svrx({
-  plguins: ['hello-world']
+  plugins: ['hello-world']
 }).start();
 ```
 
@@ -848,7 +848,7 @@ module.exports = {
 
 ```js
 svrx({
-  plguins: [
+  plugins: [
     {
       name: 'hello-world',
       path: '/path/to/svrx-plugin-hello-world'
