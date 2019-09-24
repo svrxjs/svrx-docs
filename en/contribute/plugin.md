@@ -85,11 +85,11 @@ Where
    - `logger`: logger service
    - `config`: config service
 
-Check out setion [service](#server) to find other services that available in `hook.onCreate`
+Check out setion [service](#server) to find out other services that available in `hook.onCreate`
 
 #### - `client.js`
 
-There is a global variable named `svrx` wiil be injected into all pages,
+There is a global variable named `svrx` will be injected into all pages,
 it has some built-in services
 
 > `svrx` is only accessible inside the plugin script, don't worry about global pollution
@@ -110,7 +110,8 @@ Unlike in server side, config in client is passed through websocket, so api is a
 
 ### publish && running
 
-There'll be a failure when trying to publish it by `npm publish`. beacuse `svrx-plugin-hello-world` has beed published by [offical team](https://github.com/svrxjs/svrx-plugin-hello-world)
+There'll be a failure when trying to publish it by `npm publish`. 
+Beacuse `svrx-plugin-hello-world` has been published by [offical team](https://github.com/svrxjs/svrx-plugin-hello-world)
 
 So we skip this step and try the plugin directly
 
@@ -118,7 +119,8 @@ So we skip this step and try the plugin directly
 svrx -p hello-world
 ```
 
-Check the terminal and browser console log, we will find `Hello svrx from browser`.
+Check the terminal and browser console log, 
+we will find `Hello svrx from browser`, 
 which means plugin has worked successfully.
 
 You can also run it in programmatical way
@@ -173,7 +175,7 @@ Middleware is used for adding [koa-style middleware](https://koajs.com/) to impl
 
 #### - `middleware.add(name, definition)`
 
-adding [koa-style middleware](https://koajs.com/)
+Adding [koa-style middleware](https://koajs.com/)
 
 _Usage_
 
@@ -196,7 +198,7 @@ _Param_
 
 #### - `middleware.del(name)`
 
-delele a middleware
+Delele a middleware with the specified name
 
 _Usage_
 
@@ -219,9 +221,9 @@ Add a resource for injection , only js and css has been supported.
 The rule as follow.
 
 - The style will be merged into `/svrx/svrx-client.css` and
-  been injected before the closing 'head` tag
+  injected before the closing `head` tag
 - The script will be merged into `/svrx/svrx-client.js` and
-  been injected before the closing 'body` tag
+  injected before the closing `body` tag
 
 **Usage**
 
@@ -241,7 +243,7 @@ The `content` will be merged into `bundle script`
 - `resource.content` \[String]: resource content
 - `resource.filename` \[String]: the path of resource file, must be a absolute path
 
-> content has a higher priority than filename, so you can take one of them.
+> Content has a higher priority than filename, so you can take one of them.
 
 #### - `injector.replace(pattern, replacement)`
 
@@ -321,8 +323,8 @@ Remove event watcher
 **Usage**
 
 ```js
-events.on('hello'); // remove all hello's handler
-events.on('hello', handler); // remove specific handler
+events.off('hello'); // remove all hello's handler
+events.off('hello', handler); // remove specific handler
 ```
 
 #### builtin events
@@ -333,13 +335,13 @@ events.on('hello', handler); // remove specific handler
 
 ### config
 
-config service used to modify or query the options passed by user;
+Config service used to modify or query the options passed by user;
 
 #### - `config.get(path)`
 
-获取一个插件配置
+Get the config of this plugin.
 
-**config is based on immutable data** , you must always use `config.get` to ensure getting the latest config.
+**Config is based on immutable data** , you must always use `config.get` to ensure getting the latest config.
 
 **Usage**
 
@@ -361,11 +363,11 @@ config.get('$.root'); // get the svrx working directory
 
 **Return**
 
-the value of the field
+The value of the field
 
 #### - `config.set(field, value)`
 
-modify the config
+Modify the config
 
 **Usage**
 
@@ -406,7 +408,7 @@ config.set('a.b.c', 'hello');
 
 #### - `config.del(field)`
 
-remove some field
+Remove some field
 
 **Usage**
 
@@ -435,7 +437,7 @@ Extending [Routing DSL](../guide/route.md#plugin)
 
 #### - `router.route(register)`
 
-register route，as same as [Routing DSL](../guide/route.md)
+Register route，as same as [Routing DSL](../guide/route.md)
 
 **Usage**
 
@@ -456,9 +458,10 @@ route({all, get, post}=>{
 - register({...methods}):
   - methods: corresponding to [HTTP methods](../guide/route.md#method)
 
+
 #### - `router.action(name, builder)`
 
-Register a action , like [`proxy`](../guide/route.md#proxy) or [`json`](../guide/route.md#json)
+Register an action , like [`proxy`](../guide/route.md#proxy) or [`json`](../guide/route.md#json)
 
 **Usage**
 
@@ -477,7 +480,7 @@ route(({ all }) => {
 - `name` \[String]: action name
 - `builder(payload)`
   - payload: payload that passed to action，like `'svrx'` in above example
-  - Return: builder returns 的[koa style](https://koajs.com) middleware
+  - Return: builder must return a [koa style](https://koajs.com) middleware
 
 #### - `router.load(filename)`
 
@@ -511,7 +514,7 @@ svrx({
 });
 ```
 
-or cli way
+Or cli way
 
 ```bash
 svrx --logger.level error
@@ -535,7 +538,7 @@ logger.warn('warn'); // show `warn`、`error` and `norify`
 
 ### io
 
-io used for the communication between server and client ， Please check it with [client-side io](#client-io)
+io is used for the communication between server and client. Please check it out in [client-side io](#client-io)
 
 #### - `io.on( type, handler )`
 
@@ -555,18 +558,18 @@ io.on('hello', payload => {
 
 #### - `io.emit(type, payload)`
 
-send message to client
+Send message to client
 
 **Usage**
 
-client side
+Client side
 
 ```js
 const { io } = svrx;
 io.emit('hello', 1);
 ```
 
-server side
+Server side
 
 ```js
 hooks: {
@@ -583,11 +586,11 @@ hooks: {
 - `type`: message type
 - `payload`: message data
 
-> message payload must be serializable because they are transmitted over the network
+> Message payload must be serializable because they are transmitted over the network
 
 #### - `io.off(type[, handler])`
 
-解除监听
+Remove the message watcher
 
 **Usage**
 
@@ -598,7 +601,7 @@ io.off('hello', handler); //=> remove specific handler
 
 #### - `io.register(name, handler)`
 
-register io service， which can be invoked by `io.call` in client and server.
+Register io service， which can be invoked by `io.call` in client and server.
 
 **Usage**
 
@@ -615,7 +618,7 @@ io.register('hello.world', async payload => {
 
 #### - `io.call(name, payload)` {#call}
 
-invoke registered service
+Invoke registered service
 
 **Usage**
 
@@ -644,7 +647,7 @@ const { io, events, config } = svrx;
 
 ### io
 
-responsible for communicating with the server
+Responsible for communicating with the server
 
 #### - `io.on(type, handler)`
 
@@ -652,13 +655,13 @@ Listening server-side message
 
 **Usage**
 
-server side
+Server side
 
 ```js
 io.emit('hello', 1);
 ```
 
-client side
+Client side
 
 ```js
 const { io } = svrx;
@@ -678,18 +681,18 @@ io.on('hello', payload => {
 
 #### - `io.emit(type, payload)` {#client-io}
 
-send client message to server side
+Send client message to server side
 
 **Usage**
 
-client side
+Client side
 
 ```js
 const { io } = svrx;
 io.emit('hello', 1);
 ```
 
-server side
+Server side
 
 ```js
 {
@@ -712,7 +715,7 @@ server side
 
 #### - `io.off(type[, handler])`
 
-remove io watcher
+Remove io watcher
 
 **Usage**
 
@@ -795,8 +798,6 @@ config.set('a.b', 1).then(() => {
 
 ### config schema {#schema}
 
-参数定义
-
 Svrx config schema is based on [JSON Schema](https://json-schema.org/)
 
 **Usage**
@@ -830,7 +831,7 @@ module.exports = {
 
 **Field Details**
 
-- `type` \[String]: [JSON-Schema field type](https://json-schema.org/understanding-json-schema/reference/type.html) ，可以是`array`、`string`、`number`、`boolean`、`object`、`null`
+- `type` \[String]: [JSON-Schema field type](https://json-schema.org/understanding-json-schema/reference/type.html) ，can be an `array`,`string`,`number`,`boolean`,`object` or `null`
 - `default` \[Any]: default value
 - `required` \[Boolean]: whether it is required, default is`false`
 - `properties` \[Object]: child fields
