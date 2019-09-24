@@ -1,194 +1,108 @@
-# 参数列表
+# API 索引
 
-### root
+### svrx(option)
 
-`string`
+获得 svrx 实例
 
-启动 svrx 的路径, 默认是当前工作目录。
-
-### svrx
-
-`string`
-
-你想使用的 svrx 核心包的版本。默认会使用本地安装的最新版 svrx，如果未安装过，则会安装并使用当前发布过的最新版。
-
-### port
-
-`number`
-
-端口号，默认是 8000。
-
-### https
-
-`boolean`
-
-开启/关闭 https。默认是 `false`。
-
-### route 
-
-`string`
-
-指定 __routing__ 配置文件 ，详细说明请点击 [routing dsl 详细指南](./route.md)
+**Usage**
 
 ```js
-svrx --route route.js
+const svrx = require('svrx');
+
+const server = svrx({
+  port: 8002
+});
 ```
 
-它支持 __hot-reload__ ，即你可以在不重启 svrx 的情况下更新路由规则
+**Param**
 
+- option: [查看 option 索引](./option.md)
 
+**Return**
 
-### livereload
+Svrx 实例
 
-`boolean`, `object`
+### server.start()
 
-开启/关闭页面自动刷新功能， 默认是开启的。
+启动 Svrx
 
-#### livereload.exclude
-
-`string`, `string[]`
-
-设置文件忽略规则，如果文件符合任意匹配的 pattern，那么该文件的内容变动不会触发页面刷新。
-
-### serve
-
-`boolean`, `object`
-
-本地服务器配置
-
-#### serve.base
-
-`string`
-
-告诉服务器从哪里提供静态文件。 默认情况下，我们会先查找当前工作目录下的文件。
-
-你只需要在你想伺服静态资源的时候设置这个选项。
-
-#### serve.index
-
-`string`
-
-访问根路径时自动展示的 index 文件的文件名，默认是`index.html`。
-
-#### serve.directory 
-
-`boolean`
-
-开启/关闭`serveIndex middleware`， `directory`默认是开启的。
-
-访问根路径时，如果你的 index 文件不存在，`serveIndex middleware`可以提供一个目录中文件列表的视图，而不是返回 404。
-
-
-###  open
-
-`boolean`, `string`
-
-是否在 svrx 启动后自动打开浏览器， 默认是自动打开本地地址`http://localhost:${port}`。
- 
-你也可以用`open`指定需要打开的页面：
-
-- `true`: 同 `'local'`
-- `'local'`: 打开本地地址，`http://localhost:${port}` 
-- `'external'`: 打开外部地址，`http://${your_ip}:${port}/` ( 根据你的内网 IP )
-- `'home.html'`: 同`'local/home.html'`, 打开 `http://localhost:${port}/home.html` 
-
-将`open`设为`false`可以禁用自动打开浏览器功能。
-
-### historyApiFallback
-
-`boolean`, `object`
-
-开启/关闭`historyApiFallback middleware`，默认是关闭的。
-
-如果你的 app 使用了[HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History)，那么你可能需要开启这个选项。
-`historyApiFallback middleware`会在请求 404 后返回`index.html`页面。
-
-### proxy
-
-> proxy 也支持在 [route 文件中动态配置](./route.md#proxy)
-
-`boolean`, `object`, `object[]`
-
-url 转发配置。 你可以在当前域名下设置`proxy`，将不同的 url 转发至不同的后端地址。
+**Usage**
 
 ```js
-module.exports = {
-    proxy: {
-        '/api': {
-            target: 'http://you.backend.server.com'  
-        }
-    },
-}
+server.start().then(port => {
+  console.log(port);
+});
 ```
 
-经过如上配置后，一个`/api/path`请求会被转发至`http://you.backend.server.com/api/path`。
+**Return**
 
-你也可以重写路径，就像这样：
+Promise
+
+## server.close()
+
+**Usage**
 
 ```js
-module.exports = {
-    proxy: {
-        '/api': {
-            target: 'http://you.backend.server.com',
-            pathRewrite: {'^/api' : ''} 
-        }
-    },
-}
+server.close().then(() => {
+  console.log('Svrx has closed');
+});
 ```
 
-现在你的`/api/path`请求会被转发至`http://you.backend.server.com/path`。
+**Param**
 
-如果 target 后端的 HTTPS 服务器的证书是无效的，那么请求默认不会被接收。
-你可以配置`secure`来改变这个默认设置:
+**Return**
+
+Promise
+
+## server.reload()
+
+主动刷新浏览器
+
+**Usage**
 
 ```js
-module.exports = {
-    proxy: {
-        '/api': {
-            target: 'https://you.https.server.com',
-            secure: false 
-        }
-    },
-}
+server.reload();
 ```
 
-如果你想同时把多个 path 转发到一个相同的地址，可以试试这样做：
+## server.on
+
+绑定事件
+
+### 内置事件
+
+#### 1. `ready`
+
+在服务启动时触发
 
 ```js
-module.exports = {
-    proxy: [
-        {
-            context: ['/api', '/wapi', '/pub'],
-            target: 'http://you.backend.server.com',
-        }  
-    ],
-}
+server.on('ready', port => {});
 ```
 
-另外请注意，默认地，`svrx`会将`changeOrigin`参数设为`true`， 这会使得在跨域情况下，header 中的 origin 会自动被改为目标域名。 如果你不需要这个功能，可以将`changeOrigin`设为`false`：
+#### 2. `plugin`
+
+在 build 插件后触发，与插件开发的`hook.onCreate`钩子接受同样的参数，请参考[插件开发指南](../contribute/plugin.md)
 
 ```js
-module.exports = {
-    proxy: {
-        '/api': {
-            target: 'https://you.https.server.com',
-            changeOrigin: false 
-        }
-    },
-}
+server.on('plugin', async ({io, events, config, router, injector, logger, middleware }=>{
+    // you logic here
+}))
 ```
 
-### cors
+#### 3. `file:change`
 
-`boolean`, `object`
+在文件变化后触发(必须 livereload 为 true)
 
-开启/关闭跨域资源共享（[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)）支持。
-默认 Cors 是开启的。 
+## server.off
 
-svrx 依赖[koa2-cors](https://github.com/zadzbw/koa2-cors)做跨域资源工程支持，更多使用方法和参数请阅读[koa2-cors 参数文档](https://github.com/zadzbw/koa2-cors#options)。
+解绑事件
 
-### registry
+```js
+server.on('file:change', handler);
+server.off('file:change', handler);
+```
 
-`string`
+## server.emit
 
-`npm`源地址，设置此选项后，`svrx`将从此源下载插件。 默认的`registry`值是你工作目录下的源地址值，即`npm config get registry`的结果。
+```js
+server.emit('custom-event', { param1: 1 });
+```

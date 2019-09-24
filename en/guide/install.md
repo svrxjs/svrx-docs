@@ -1,6 +1,6 @@
 # Install svrx
 
-We strongly recommand to use our cli tool to manage `svrx`.
+We strongly recommand to use official cli tool to manage `svrx`.
 You can use `svrx` at any place in your system after installing `@svrx/cli` globally. 
 
 ```bash

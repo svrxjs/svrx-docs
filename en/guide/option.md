@@ -1,4 +1,4 @@
-# API Reference
+# Option Reference
 
 ### root
 
@@ -23,7 +23,7 @@ Specify a port number to listen for requests on, default to 8000.
 
 `boolean`
 
-Enable/disable https service. Default to `false`.
+Enable/Disable https service. Default to `false`.
 
 ### route 
 
@@ -42,7 +42,7 @@ It supports __hot-reload__, which means that you can update your routing rules w
 
 `boolean`, `object`
 
-Enable/disable auto page live reload.
+Enable/Disable auto page live reload.
 Livereload is enabled by default.
 
 #### livereload.exclude

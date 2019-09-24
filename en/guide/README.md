@@ -37,7 +37,7 @@ Let's get started with svrx now!
                            
 > Please check api reference here
 
-[**￫ API Reference**](./api.md)
+[**￫ Option Reference**](./option.md)
 
 
 
