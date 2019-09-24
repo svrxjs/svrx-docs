@@ -30,17 +30,17 @@ You can read our docs [here](./guide/README.md).
 
 ## Official Plugins
 
-+ [svrx-plugin-webpack](https://github.com/x-orpheus/svrx-plugin-webpack):
++ [svrx-plugin-webpack](https://github.com/svrxjs/svrx-plugin-webpack):
     support of webpack, including building, hot-reload and etc.
-+ [svrx-plugin-localtunnel](https://github.com/x-orpheus/svrx-plugin-localtunnel): 
++ [svrx-plugin-localtunnel](https://github.com/svrxjs/svrx-plugin-localtunnel): 
     expose your localhost to the world for easy testing and sharing.
-+ [svrx-plugin-weinre](https://github.com/x-orpheus/svrx-plugin-weinre): 
++ [svrx-plugin-weinre](https://github.com/svrxjs/svrx-plugin-weinre): 
     remote debugging based on weinre.
-+ [svrx-plugin-eruda](https://github.com/x-orpheus/svrx-plugin-eruda): 
++ [svrx-plugin-eruda](https://github.com/svrxjs/svrx-plugin-eruda): 
     open a dev tool on mobile based on eruda
-+ [svrx-plugin-qrcode](https://github.com/x-orpheus/svrx-plugin-qrcode): 
++ [svrx-plugin-qrcode](https://github.com/svrxjs/svrx-plugin-qrcode): 
     display the qrcode of current page.
-+ [svrx-plugin-markdown](https://github.com/x-orpheus/svrx-plugin-markdown): 
++ [svrx-plugin-markdown](https://github.com/svrxjs/svrx-plugin-markdown): 
     preview markdown file, support hot-reload, auto-scroll...
 
 #### Netease ONLY

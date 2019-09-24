@@ -13,7 +13,7 @@
     "docs",
     "gitbook"
   ],
-  "author": "x-orpheus",
+  "author": "svrxjs",
   "license": "MIT",
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
