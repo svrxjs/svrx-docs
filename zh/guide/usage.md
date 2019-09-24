@@ -2,7 +2,7 @@
 
 ## 常用指令
 
-`svrx-cli` 提供了以下几个常用指令：
+`@svrx/cli` 提供了以下几个常用指令：
 
 ```bash
 svrx                    # 启动svrx服务
