@@ -126,10 +126,10 @@ which means plugin has worked successfully.
 You can also run it in programmatical way
 
 ```js
-const svrx = require('svrx');
+const svrx = require('@svrx/svrx');
 
 svrx({
-  plguins: ['hello-world']
+  plugins: ['hello-world']
 }).start();
 ```
 
@@ -852,7 +852,7 @@ You can do local testing in the following ways.
 
 ```js
 svrx({
-  plguins: [
+  plugins: [
     {
       name: 'hello-world',
       path: '/path/to/svrx-plugin-hello-world'
