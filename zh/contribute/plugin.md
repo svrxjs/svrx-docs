@@ -384,7 +384,7 @@ config.get('a'); // => { b: { c: 'hello' } }
 监听配置变化, 配置变化检查会在`set`、`del`、`splice`方法后被触发
 
 ```js
-config.watch('a.b.c', (evt)=>{
+config.watch( (evt)=>{
   console.log(evt.affect('a.b.c')) => true
   console.log(evt.affect('a')) // => true
   console.log(evt.affect('a.c')) // => false

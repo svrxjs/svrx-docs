@@ -8,6 +8,7 @@
   * [How To Use Routes](./guide/route.md)
   * [Examples](./guide/examples.md)
   * [Option Reference](./guide/option.md)
+  * [API Reference](./guide/api.md)
 * [Contributing](./contribute/README.md)
   * [Pushing Code To svrx](./contribute/pr.md)
   * [How To Write A Plugin](./contribute/plugin.md)
