@@ -7,7 +7,7 @@
 **Usage**
 
 ```js
-const svrx = require('svrx');
+const svrx = require('@svrx/svrx');
 
 const server = svrx({
   port: 8002

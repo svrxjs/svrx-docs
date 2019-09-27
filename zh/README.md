@@ -25,17 +25,17 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 
 ## 官方插件
 
-+ [svrx-plugin-webpack](https://github.com/x-orpheus/svrx-plugin-webpack):
++ [svrx-plugin-webpack](https://github.com/svrxjs/svrx-plugin-webpack):
     提供 webpack 相关功能，编译、hot-reload 等
-+ [svrx-plugin-localtunnel](https://github.com/x-orpheus/svrx-plugin-localtunnel): 
++ [svrx-plugin-localtunnel](https://github.com/svrxjs/svrx-plugin-localtunnel): 
     暴露你的本地服务为公开的外网域名
-+ [svrx-plugin-weinre](https://github.com/x-orpheus/svrx-plugin-weinre): 
++ [svrx-plugin-weinre](https://github.com/svrxjs/svrx-plugin-weinre): 
     基于 weinre，在电脑上远程调试手机页面
-+ [svrx-plugin-eruda](https://github.com/x-orpheus/svrx-plugin-eruda): 
++ [svrx-plugin-eruda](https://github.com/svrxjs/svrx-plugin-eruda): 
     基于 eruda，直接在手机上开启 dev tool 进行调试
-+ [svrx-plugin-qrcode](https://github.com/x-orpheus/svrx-plugin-qrcode): 
++ [svrx-plugin-qrcode](https://github.com/svrxjs/svrx-plugin-qrcode): 
     在页面上或 console 中展示当前页面的二维码
-+ [svrx-plugin-markdown](https://github.com/x-orpheus/svrx-plugin-markdown): 
++ [svrx-plugin-markdown](https://github.com/svrxjs/svrx-plugin-markdown): 
     展示 markdown 类型的文件，提供实时预览、hot-reload、自动滚动定位等功能
 
 #### 下列暂为网易内部可用插件
