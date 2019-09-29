@@ -1,0 +1,46 @@
+{
+    "title": "Docs of Server-X",
+    "description": "svrx(server-x) is a pluggable platform built for efficient front-end development",
+    "language": "en",
+    "plugins": [
+        "theme-comscore",
+        "code",
+        "chapter-fold",
+        "todo",
+        "-lunr", "-search", "search-pro",
+        "github",
+        "-sharing", "sharing-plus",
+        "tbfed-pagefooter",
+        "anchor-navigation-ex",
+        "edit-link",
+        "hide-published-with"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/svrxjs/svrx"
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": true,
+            "twitter": true,
+            "pocket": true,
+            "qq": false,
+            "qzone": false,
+            "weibo": true,
+            "all": [
+                "douban", "facebook", "twitter", "instapaper", "linkedin", "weibo",
+                "messenger","qq", "qzone","viber","whatsapp"
+            ]
+        },
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy 2019, NetEase, Inc."
+        },
+        "edit-link": {
+            "base": "https://github.com/svrxjs/svrx-docs/blob/master",
+            "label": "Edit This Page"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        }
+    }
+}
