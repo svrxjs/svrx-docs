@@ -1,6 +1,6 @@
 # API 索引
 
-### svrx(option)
+## svrx(option)
 
 获得 svrx 实例
 
@@ -22,7 +22,7 @@ const server = svrx({
 
 Svrx 实例
 
-### server.start()
+## server.start()
 
 启动 Svrx
 

@@ -1,6 +1,6 @@
 # API Reference
 
-### svrx(option)
+## svrx(option)
 
 Get the instance of Svrx
 
@@ -22,7 +22,7 @@ const server = svrx({
 
 the instance of Svrx 
 
-### server.start()
+## server.start()
 
 Start svrx
 
