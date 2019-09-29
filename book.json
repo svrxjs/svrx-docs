@@ -12,7 +12,8 @@
         "-sharing", "sharing-plus",
         "tbfed-pagefooter",
         "anchor-navigation-ex",
-        "edit-link"
+        "edit-link",
+        "hide-published-with"
     ],
     "pluginsConfig": {
         "github": {
