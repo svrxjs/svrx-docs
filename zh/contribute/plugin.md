@@ -445,9 +445,8 @@ route({all, get, post}=>{
 
 **Param**
 
-- register(...methods): 注册回调
-=======
-- register(methods): 注册回调
+- register({...methods}): 注册回调
+  - methods: 对应[HTTP methods](../guide/route.md#method)
 
 
 #### - `router.action(name, builder)`
