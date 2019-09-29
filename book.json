@@ -40,7 +40,7 @@
             "label": "Edit This Page"
         },
         "anchor-navigation-ex": {
-            "showLevel": true
+            "showLevel": false
         }
     }
 }
