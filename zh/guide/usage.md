@@ -63,4 +63,5 @@ module.exports = {
 svrx ls                 # 查看所有本地已安装的svrx版本
 svrx ls-remote          # 查看所有已发布的svrx版本
 svrx install <version>  # 安装某个<版本>的svrx
+svrx remove <version>   # 从本地移除某个<版本>的svrx
 ```
