@@ -522,7 +522,7 @@ svrx --logger.level error
 
 Above example will output log that more than `warn`, such as `notify`, `error`
 
-### - `logger[level](msg)`
+### `logger[level](msg)`
 
 Svrx provides multiple levels of logging: `slient`, `notify`, `error`, `warn` (default), `info`, `debug`
 
