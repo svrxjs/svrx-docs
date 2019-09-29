@@ -3,7 +3,6 @@
     "description": "svrx(server-x) is a pluggable platform built for efficient front-end development",
     "language": "en",
     "plugins": [
-        "theme-comscore",
         "code",
         "chapter-fold",
         "todo",
