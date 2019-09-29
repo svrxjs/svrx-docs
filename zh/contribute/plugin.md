@@ -445,9 +445,8 @@ route({all, get, post}=>{
 
 **Param**
 
-- register(...methods): 注册回调
-=======
-- register(methods): 注册回调
+- register({...methods}): 注册回调
+  - methods: 对应[HTTP methods](../guide/route.md#method)
 
 
 #### - `router.action(name, builder)`
@@ -514,7 +513,7 @@ svrx --logger.level error
 
 上例将会输出`warn`以上的日志，如`notify`、`error`
 
-### - `logger[level](msg)`
+### `logger[level](msg)`
 
 svrx 提供了多种级别的日志，分别是`slient`, `notify`, `error` , `warn`(默认日志分级), `info`, `debug`
 

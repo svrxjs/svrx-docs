@@ -1,4 +1,4 @@
-# [How To Use Routes
+# How To Use Routes
 
 ## Getting Started
 
