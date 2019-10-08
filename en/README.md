@@ -29,7 +29,7 @@ and instead of downloading many other packages, all you need to do is just insta
 
 ## Install & Usage
 
-View [guide section](./guide/README.md) for more details.
+View [quick start](./quick-start.md) for more details.
 
 
 ## Official Plugins
