@@ -1,4 +1,5 @@
-# Examples
+# Recipes
+
 
 We can easily add plugins to most projects to simplify our development flow.   
 

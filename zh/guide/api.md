@@ -80,7 +80,7 @@ server.on('ready', port => {});
 
 #### 2. `plugin`
 
-在 build 插件后触发，与插件开发的`hook.onCreate`钩子接受同样的参数，请参考[插件开发指南](../contribute/plugin.md)
+在 build 插件后触发，与插件开发的`hook.onCreate`钩子接受同样的参数，请参考[插件开发指南](../plugin/contribution.md)
 
 ```js
 server.on('plugin', async ({io, events, config, router, injector, logger, middleware }=>{

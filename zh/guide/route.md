@@ -221,7 +221,7 @@ get('/hello-world').to.handle((ctx)=>{
 - load: 加载一个 routing file
 - route: 脚本式的定义 router
 
-详细请参考 [插件开发指南](../contribute/plugin.md#router)
+详细请参考 [插件开发指南](../plugin/contribution.md#router)
 
 
 ## 完整范例文件

@@ -1,6 +1,26 @@
-# Starting A Project With Svrx
+# Getting Started
 
-## Common Commands
+
+Let's get started with svrx now!
+
+## Install svrx
+
+We strongly recommand to use official cli tool to manage `svrx`.
+You can use `svrx` at any place in your system after installing `@svrx/cli` globally. 
+
+```bash
+npm install -g @svrx/cli
+```
+
+HINT: `@svrx/cli` is used to install and load `svrx` with a specific version(default to the latest one),
+which has nothing to do with the version of `@svrx/cli` itself. 
+You can specify the svrx version you want in command line or the `.svrxrc.js` file.  
+
+`@svrx/cli` stored the versions of `svrx` into `~/.svrx`, you can use another directory by setting the `SVRX_DIR` environment variable.
+
+## Starting A Project With Svrx
+
+### Common Commands
 
 There are several commands in `@svrx/cli` you might use frequently:
 
@@ -11,7 +31,7 @@ svrx --version          # check the version of cli and svrx currently use
 svrx --help             # print help info
 ```
 
-## Usage 
+### Usage 
 
 #### Start svrx
 
@@ -39,7 +59,7 @@ You can pass options to change the default behavior through command line:
 svrx --port 3000 --https --no-livereload
 ```
 
-Check out the full option reference doc [here](./api.md).
+Check out the full option reference doc [here](./guide/option.md).
 
 #### .svrxrc.js
 
@@ -56,7 +76,7 @@ module.exports = {
 
 And then run `serve` command, `svrx` will read your options from the config file automatically.
 
-## Other Commands
+### Other Commands
 
 If you want to know the installed versions of `svrx`, 
 or want to install a specific version, you might need the following commands:

@@ -224,7 +224,7 @@ which has 3 methods inside:
 - load: load a routing file
 - route: define a router in scripts
 
-Please read [How To Write A Plugin](../contribute/plugin.md#router) for more information.
+Please read [How To Write A Plugin](../plugin/contribution.md#router) for more information.
 
 ## Examples
 

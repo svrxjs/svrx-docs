@@ -80,7 +80,7 @@ server.on('ready', port => {});
 
 #### 2. `plugin`
 
-Emit after plugin building, as same as `hook.onCreate`, see [How to create plugin](../contribute/plugin.md) for more details
+Emit after plugin building, as same as `hook.onCreate`, see [How to create plugin](../plugin/contribution.md) for more details
 
 ```js
 server.on('plugin', async ({io, events, config, router, injector, logger, middleware }=>{
