@@ -59,7 +59,7 @@ You can pass options to change the default behavior through command line:
 svrx --port 3000 --https --no-livereload
 ```
 
-Check out the full option reference doc [here](./guide/api.md).
+Check out the full option reference doc [here](./guide/option.md).
 
 #### .svrxrc.js
 

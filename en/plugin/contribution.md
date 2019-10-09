@@ -1,13 +1,3 @@
-<style>
-.markdown-body h4{
-  font-size: 1.2em;
-  padding-top: 1em;
-}
-.markdown-body h3{
-  font-size: 1.45em;
-}
-</style>
-
 # How To Write A Plugin
 
 >**Use [`svrx-create-plugin`](https://github.com/svrxjs/svrx-create-plugin)** to help you create plugins more easily

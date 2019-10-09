@@ -1,14 +1,4 @@
-<style>
-.markdown-body h4{
-  font-size: 1.2em;
-  padding-top: 1em;
-}
-.markdown-body h3{
-  font-size: 1.45em;
-}
-</style>
-
-# 插件开发指南
+# 如何写一个插件
 
 > 使用[`svrx-create-plugin`](https://github.com/svrxjs/svrx-create-plugin)帮助你更容易的开发插件
 

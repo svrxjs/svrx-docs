@@ -25,7 +25,7 @@ and instead of downloading many other packages, all you need to do is just insta
 - proxy
 - page live reload
 - [routing](./guide/route.md) with hot reloading 
-- and you can do more: [plugin](./guide/plugin.md)
+- and you can do more: [plugin](./plugin/usage.md)
 
 ## Install & Usage
 

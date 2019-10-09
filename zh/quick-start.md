@@ -54,7 +54,7 @@ svrx
 svrx --port 3000 --https --no-livereload
 ```
 
-详细的参数列表可以在[这里](./guide/api.md)查看。
+详细的参数列表可以在[这里](./guide/option.md)查看。
 
 #### 配置持久化
 
