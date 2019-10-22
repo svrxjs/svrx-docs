@@ -101,7 +101,7 @@ Unlike in server side, config in client is passed through websocket, so api is a
 ### publish && running
 
 There'll be a failure when trying to publish it by `npm publish`. 
-Beacuse `svrx-plugin-hello-world` has been published by [offical team](https://github.com/svrxjs/svrx-plugin-hello-world)
+Because `svrx-plugin-hello-world` has been published by [official team](https://github.com/svrxjs/svrx-plugin-hello-world)
 
 So we skip this step and try the plugin directly
 
@@ -127,7 +127,7 @@ svrx({
 
 ## Server Side Service {#server}
 
-You can use serivce in two places
+You can use service in two places
 
 - `hooks.onCreate`
 
@@ -184,11 +184,11 @@ _Param_
 
 * `definition.priority` \[Number]: default is `10`.
   Svrx will assemble the middleware according to the priority from high to low, that is, the request will be passed to the high priority plugin first.
-* `definition.onRoute` \[Function]: A [koa-style](https://koajs.com) middleware .If `definition` is a function, it will automatically become `definenition.onRoute`
+* `definition.onRoute` \[Function]: A [koa-style](https://koajs.com) middleware .If `definition` is a function, it will automatically become `definition.onRoute`
 
 #### - `middleware.del(name)`
 
-Delele a middleware with the specified name
+Delete a middleware with the specified name
 
 _Usage_
 
@@ -237,7 +237,7 @@ The `content` will be merged into `bundle script`
 
 #### - `injector.replace(pattern, replacement)`
 
-`injector.repalce` will transform response body with some or all matches of a pattern replaced by a replacement.
+`injector.replace` will transform response body with some or all matches of a pattern replaced by a replacement.
 
 **Usage**
 
@@ -252,7 +252,7 @@ The above example replace all `svrx` with `server-x`
 - `pattern` \[String|RegExp]
 - `replacement` \[String|Function]
 
-> The usage of `injector.replace`is exactly the same as [`String.prototype.replace`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+> The usage of `injector.replace` is exactly the same as [`String.prototype.replace`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 >
 > resource injection is based upon `injector.replace`
 
@@ -514,14 +514,14 @@ Above example will output log that more than `warn`, such as `notify`, `error`
 
 ### `logger[level](msg)`
 
-Svrx provides multiple levels of logging: `slient`, `notify`, `error`, `warn` (default), `info`, `debug`
+Svrx provides multiple levels of logging: `silent`, `notify`, `error`, `warn` (default), `info`, `debug`
 
 **Usage**
 
 ```js
-logger.notify('notify'); // show `nofity`
+logger.notify('notify'); // show `notify`
 logger.error('error'); // show `error` and `notify`
-logger.warn('warn'); // show `warn`、`error` and `norify`
+logger.warn('warn'); // show `warn`、`error` and `notify`
 ```
 
 > `logger.log` is an alias for `logger.notify`
@@ -819,7 +819,7 @@ module.exports = {
 
 - `type` \[String]: [JSON-Schema field type](https://json-schema.org/understanding-json-schema/reference/type.html) ，can be an `array`,`string`,`number`,`boolean`,`object` or `null`
 - `default` \[Any]: default value
-- `required` \[Boolean]: whether it is required, default is`false`
+- `required` \[Boolean]: whether it is required, default is `false`
 - `properties` \[Object]: child fields
 - `ui`: svrx extension ，whether show the config in [svrx-ui](https://github.com/x-orpheus/svrx-ui)
 - `anyOf`: Choose one of the items, such as
