@@ -199,7 +199,7 @@ get('/test/:id').to.proxy('http://{id}.dynamic.server.com/')
 ### handle {#handle}
 
 `handle` is a powerful action, it defines a middleware of koa, 
-which means all actions above can be implemented by`handle`,
+which means all actions above can be implemented by `handle`,
 but the cost is the reduction of code readability.
 
 ```js
