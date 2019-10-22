@@ -114,7 +114,7 @@ This option is necessary when your app is using [HTML5 History API](https://deve
 
 `boolean`, `object`, `object[]`
 
-Proxing urls when you want to send some requests to different backend servers on the same domain.
+Proxying urls when you want to send some requests to different backend servers on the same domain.
 
 ```js
 module.exports = {
@@ -172,7 +172,7 @@ module.exports = {
 
 Please note that by default, the option value of `changeOrigin` is `true`, 
 which means `svrx` will always set the origin of host header to the target hostname during CORS. 
-If you dont't want this feature, just set `changeOrigin` to `false`:
+If you don't want this feature, just set `changeOrigin` to `false`:
 
 ```js
 module.exports = {
