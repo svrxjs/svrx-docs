@@ -5,7 +5,7 @@
 ## 第一个 svrx 插件
 
 让我们实现第一个插件 —— [`svrx-plugin-hello-world`](https://github.com/svrxjs/svrx-plugin-hello-world)，
-它用来在终端和浏览器器端分别打印用户欢迎语
+它用来在终端和浏览器端分别打印用户欢迎语
 
 ### **文件结构**
 
