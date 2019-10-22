@@ -43,12 +43,12 @@ Svrx plugin also support [npm-scope](https://docs.npmjs.com/misc/scope).
 You can specific a scoped plugin with `@<scope>/<name>`.
 
 For example, if the package name of a plugin is `svrx-plugin-foo`,
-and the scope name is `music`, then you can use it like so:
+and the scope name is `bar`, then you can use it like so:
 
 ```bash
-svrx --@music/foo 
-svrx -p @music/foo
-svrx -p "@music/foo@0.0.3"
+svrx --@bar/foo 
+svrx -p @bar/foo
+svrx -p "@bar/foo@0.0.3"
 ```
 
 Or:
@@ -57,9 +57,9 @@ Or:
 // .svrxrc.js
 module.exports = {
   plugins: [
-    '@music/foo',
+    '@bar/foo',
     {
-      name: '@music/foo',
+      name: '@bar/foo',
       options: {
         bar: false,
       },

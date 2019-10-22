@@ -42,12 +42,12 @@ svrx 插件支持 [npm-scope](https://docs.npmjs.com/misc/scope)。
 
 在使用这样的 scope 插件时，你可以通过 `@<scope>/<name>` 的格式来声明这个插件。
 
-比如有一个插件包名为 `svrx-plugin-foo`，且它的 scope 为 `music`，那么你可以通过下面的方式使用它：
+比如有一个插件包名为 `svrx-plugin-foo`，且它的 scope 为 `bar`，那么你可以通过下面的方式使用它：
 
 ```bash
-svrx --@music/foo 
-svrx -p @music/foo
-svrx -p "@music/foo@0.0.3"
+svrx --@bar/foo 
+svrx -p @bar/foo
+svrx -p "@bar/foo@0.0.3"
 ```
 
 或者：
@@ -56,9 +56,9 @@ svrx -p "@music/foo@0.0.3"
 // .svrxrc.js
 module.exports = {
   plugins: [
-    '@music/foo',
+    '@bar/foo',
     {
-      name: '@music/foo',
+      name: '@bar/foo',
       options: {
         bar: false,
       },
