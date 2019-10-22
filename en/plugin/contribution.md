@@ -434,7 +434,7 @@ Register route，as same as [Routing DSL](../guide/route.md)
 ```js
 const {route} = router;
 
-route({all, get, post}=>{
+route(({all, get, post})=>{
 
   all('/blog').to.send('Hi, Blog')
   get('/user').to.send('Hi, user')
@@ -456,7 +456,7 @@ Register an action , like [`proxy`](../guide/route.md#proxy) or [`json`](../guid
 **Usage**
 
 ```js
-const { action } = router;
+const { action, route } = router;
 action('hello', user => ctx => {
   ctx.body = `hello ${user}`;
 });
@@ -552,23 +552,19 @@ Send message to client
 
 **Usage**
 
+Server side
+
+```js
+io.emit('hello', 1);
+```
+
 Client side
 
 ```js
 const { io } = svrx;
-io.emit('hello', 1);
-```
-
-Server side
-
-```js
-hooks: {
-  async onCreate({io}){
-    io.on('hello', payload=>{
-      console.log(payload) // =>1
-    })
-  }
-}
+io.on('hello', payload => {
+  console.log(payload); //=>1
+});
 ```
 
 **Param**
@@ -765,7 +761,7 @@ config.get('$.port').then(port => {
   // get the server port
 });
 
-config.get('user').then(port => {
+config.get('user').then(user => {
   //get the param belongs to current plugin
 });
 ```

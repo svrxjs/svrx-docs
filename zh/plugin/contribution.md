@@ -308,8 +308,8 @@ events.emit('hello', { param1: 'world' }).then(() => {
 **Usage**
 
 ```js
-events.on('hello'); // remove all hello's handler
-events.on('hello', handler); // remove specific handler
+events.off('hello'); // remove all hello's handler
+events.off('hello', handler); // remove specific handler
 ```
 
 #### 内置事件
@@ -424,7 +424,7 @@ config.get('a.b.c'); //=> undefined
 ```js
 const {route} = router;
 
-route({all, get, post}=>{
+route(({all, get, post})=>{
 
   all('/blog').to.send('Hi, Blog')
   get('/user').to.send('Hi, user')
@@ -447,7 +447,7 @@ route({all, get, post}=>{
 **Usage**
 
 ```js
-const { action } = router;
+const { action, route } = router;
 action('hello', user => ctx => {
   ctx.body = `hello ${user}`;
 });
@@ -477,7 +477,7 @@ await router.load('/path/to/route.md');
 
 **Param**
 
-- `filename`: 路由文件文件的绝对路径
+- `filename`: 路由文件的绝对路径
 
 **Return**
 
@@ -538,29 +538,25 @@ io.on('hello', payload => {
 - `handler(payload)`: 事件回调
   - `payload`: 事件参数
 
-#### - `io.emit(type, payload)` {#client-io}
+#### - `io.emit(type, payload)` {#server-io}
 
-发送 io 事件到服务端
+发送 io 事件到客户端
 
 **Usage**
+
+server side
+
+```js
+io.emit('hello', 1);
+```
 
 client side
 
 ```js
 const { io } = svrx;
-io.emit('hello', 1);
-```
-
-server side
-
-```js
-hooks: {
-  async onCreate({io}){
-    io.on('hello', payload=>{
-      console.log(payload) // =>1
-    })
-  }
-}
+io.on('hello', payload => {
+  console.log(payload); //=>1
+});
 ```
 
 **Param**
@@ -749,7 +745,7 @@ events.off('type');
 
 ### config
 
-客户端的`config`模块与服务端几乎一致，唯一区别是从同步接口编程了 Promise 化的异步接口(因为 socket 的网络通信)
+客户端的`config`模块与服务端几乎一致，唯一区别是从同步接口变成了 Promise 化的异步接口(因为 socket 的网络通信)
 
 #### - `config.get(field)`
 
@@ -761,12 +757,12 @@ config.get('$.port').then(port => {
   // get the server port
 });
 
-config.get('user').then(port => {
+config.get('user').then(user => {
   //get the param belongs to current plugin
 });
 ```
 
-> 注意获取的参数是属于脚本的，如果获取全局请假`$.`前缀
+> 注意获取的参数是属于脚本的，如果获取全局请加`$.`前缀
 
 #### - `config.set`、`config.splice`、`config.del`
 
