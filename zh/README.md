@@ -27,15 +27,45 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 
 ## 官方插件
 
-+ [svrx-plugin-webpack](https://github.com/svrxjs/svrx-plugin-webpack):
-    提供 webpack 相关功能，编译、hot-reload 等
-+ [svrx-plugin-localtunnel](https://github.com/svrxjs/svrx-plugin-localtunnel): 
-    暴露你的本地服务为公开的外网域名
+### Debug 
+
 + [svrx-plugin-weinre](https://github.com/svrxjs/svrx-plugin-weinre): 
     基于 weinre，在电脑上远程调试手机页面
 + [svrx-plugin-eruda](https://github.com/svrxjs/svrx-plugin-eruda): 
     基于 eruda，直接在手机上开启 dev tool 进行调试
-+ [svrx-plugin-qrcode](https://github.com/svrxjs/svrx-plugin-qrcode): 
-    在页面上或 console 中展示当前页面的二维码
+
+### Mock
+
++ [svrx-plugin-json-server](https://github.com/svrxjs/svrx-plugin-mock): 
+    基于[json-server](https://github.com/typicode/json-server),快速实现REST API
++ [svrx-plugin-mock](https://github.com/svrxjs/svrx-plugin-mock): 
+    基于[mock.js](http://mockjs.com/)来便捷的实现数据mock
+
+### Build & Compile
+
++ [svrx-plugin-webpack](https://github.com/svrxjs/svrx-plugin-webpack):
+    提供 webpack 相关功能，编译、hot-reload 等
+
+### Serve
+
 + [svrx-plugin-markdown](https://github.com/svrxjs/svrx-plugin-markdown): 
     展示 markdown 类型的文件，提供实时预览、hot-reload、自动滚动定位等功能
+
+### Network
+
++ [svrx-plugin-localtunnel](https://github.com/svrxjs/svrx-plugin-localtunnel): 
+    暴露你的本地服务为公开的外网域名
+
+### Utility
+
++ [svrx-plugin-qrcode](https://github.com/svrxjs/svrx-plugin-qrcode): 
+    在页面上或 console 中展示当前页面的二维码
+
+
+### More...
+
+- 来[插件集合](https://svrx.io/plugin?query=svrx-plugin-) 看看是否有你感兴趣的插件吧!
+
+- 阅读下[插件开发手册吧](./plugin/contribution.md)，发布属于你的插件其实一点都不难。
+
+
