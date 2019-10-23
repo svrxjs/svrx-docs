@@ -184,7 +184,7 @@ _Param_
   > debug 模式下根据此命名可以 track 请求响应的管线
 
 - `definition.priority` \[Number]: 默认为 10. svrx 会根据 priority 由高到低的组装中间件，即请求会先经过高优先级的插件
-- `definition.onRoute` \[Function]: 满足 koa 规范的中间件定义，如果 `definition` 是一个函数，则会自动成为 `definenition.onRoute`
+- `definition.onRoute` \[Function]: 满足 koa 规范的中间件定义，如果 `definition` 是一个函数，则会自动成为 `definition.onRoute`
 
 #### - `middleware.del(name)`
 
@@ -505,14 +505,14 @@ svrx --logger.level error
 
 ### `logger[level](msg)`
 
-svrx 提供了多种级别的日志，分别是`slient`, `notify`, `error` , `warn`(默认日志分级), `info`, `debug`
+svrx 提供了多种级别的日志，分别是`silent`, `notify`, `error` , `warn`(默认日志分级), `info`, `debug`
 
 **Usage**
 
 ```js
-logger.notify('notify'); // show `nofity`
+logger.notify('notify'); // show `notify`
 logger.error('error'); // show `error` and `notify`
-logger.warn('warn'); // show `warn`、`error` and `norify`
+logger.warn('warn'); // show `warn`、`error` and `notify`
 
 ```
 
