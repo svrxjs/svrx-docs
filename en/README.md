@@ -34,17 +34,45 @@ View [quick start](./quick-start.md) for more details.
 
 ## Official Plugins
 
-+ [svrx-plugin-webpack](https://github.com/svrxjs/svrx-plugin-webpack):
-    support of webpack, including building, hot-reload and etc.
-+ [svrx-plugin-localtunnel](https://github.com/svrxjs/svrx-plugin-localtunnel): 
-    expose your localhost to the world for easy testing and sharing.
+
+### Debug 
+
 + [svrx-plugin-weinre](https://github.com/svrxjs/svrx-plugin-weinre): 
     remote debugging based on weinre.
 + [svrx-plugin-eruda](https://github.com/svrxjs/svrx-plugin-eruda): 
     open a dev tool on mobile based on eruda
-+ [svrx-plugin-qrcode](https://github.com/svrxjs/svrx-plugin-qrcode): 
-    display the qrcode of current page.
+
+### Mock
+
++ [svrx-plugin-json-server](https://github.com/svrxjs/svrx-plugin-mock): 
+    based on [json-server](https://github.com/typicode/json-server), help us to get a full fake REST API with zero coding.
++ [svrx-plugin-mock](https://github.com/svrxjs/svrx-plugin-mock): 
+    Provide us with a convenient way to mock data
+
+
+### Build & Compile
+
++ [svrx-plugin-webpack](https://github.com/svrxjs/svrx-plugin-webpack):
+    support of webpack, including building, hot-reload and etc.
+
+### Serve
+
 + [svrx-plugin-markdown](https://github.com/svrxjs/svrx-plugin-markdown): 
     preview markdown file, support hot-reload, auto-scroll...
 
+### Network
+
++ [svrx-plugin-localtunnel](https://github.com/svrxjs/svrx-plugin-localtunnel): 
+    expose your localhost to the world for easy testing and sharing.
+
+### Utility
+
++ [svrx-plugin-qrcode](https://github.com/svrxjs/svrx-plugin-qrcode): 
+    display the qrcode of current page.
+
     
+### More ...
+
+- See [plugin list](https://svrx.io/plugin?query=svrx-plugin-) for more plugins that available in community.
+- Reading [plugin development guide](./plugin/contribution.md)，
+It’s not difficult to publish your own plugin
