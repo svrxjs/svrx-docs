@@ -29,7 +29,7 @@ Enable/Disable https service. Default to `false`.
 
 `string`
 
-Specific the configuration file of __routing__, see [routing dsl guide](./route.md) for more detail.   
+Specify the configuration file of __routing__, see [routing dsl guide](./route.md) for more detail.   
 
 ```js
 svrx --route route.js
@@ -157,7 +157,7 @@ module.exports = {
 }
 ```
 
-If you want to proxy multiple pathes to a same target, try:
+If you want to proxy multiple paths to a same target, try:
 
 ```js
 module.exports = {
