@@ -4,7 +4,6 @@
     "language": "en",
     "plugins": [
         "code",
-        "chapter-fold",
         "todo",
         "-lunr", "-search", "search-pro",
         "github",

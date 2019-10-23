@@ -14,3 +14,5 @@
   * [API 列表](./guide/api.md)
   * [Option 列表](./guide/option.md)
 * [贡献指南](./contribution.md)
+* [Blog](./blog/README.md)
+  * [Server-X：一个介绍](./blog/introduction.md)
