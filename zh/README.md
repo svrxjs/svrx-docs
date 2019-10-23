@@ -37,9 +37,9 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 ### Mock
 
 + [svrx-plugin-json-server](https://github.com/svrxjs/svrx-plugin-mock): 
-    基于[json-server](https://github.com/typicode/json-server),快速实现REST API
+    基于[json-server](https://github.com/typicode/json-server),快速实现 REST API
 + [svrx-plugin-mock](https://github.com/svrxjs/svrx-plugin-mock): 
-    基于[mock.js](http://mockjs.com/)来便捷的实现数据mock
+    基于[mock.js](http://mockjs.com/)来便捷的实现数据 mock
 
 ### Build & Compile
 
@@ -62,7 +62,7 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
     在页面上或 console 中展示当前页面的二维码
 
 
-### More...
+### More
 
 - 来[插件集合](https://svrx.io/plugin?query=svrx-plugin-) 看看是否有你感兴趣的插件吧!
 

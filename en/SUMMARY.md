@@ -14,3 +14,5 @@
   * [API Reference](./guide/api.md)
   * [Option Reference](./guide/option.md)
 * [Contributing](./contribution.md)
+* [Blog](./blog/README.md)
+  * [Server-X：An Introduction](./blog/introduction.md)
