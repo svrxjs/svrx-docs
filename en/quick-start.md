@@ -76,6 +76,27 @@ module.exports = {
 
 And then run `serve` command, `svrx` will read your options from the config file automatically.
 
+#### Global Settings
+
+Sometimes, you might want some global settings on svrx.
+Let's say, all your projects need `https` protocol,
+it's really unnecessary to set `https` to `true` in every project.
+You can put the global config file to the directory in which we stored the svrx packages,
+the default path is, as mentioned before, `~/.svrx/config`.
+
+```js
+// ~/.svrx/config/.svrxrc.js
+module.exports = {
+  https: true,
+};
+```
+
+Yes, the structure of global config file is same as those in each project.
+And next time, wherever you start svrx, the `https` protocol will be enabled by default.
+
+Moreover, the global configs have the lowest priority,
+you can overwrite global configs in your project at any time.
+
 ### Other Commands
 
 If you want to know the installed versions of `svrx`, 
