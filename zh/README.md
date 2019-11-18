@@ -50,6 +50,10 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 
 + [svrx-plugin-markdown](https://github.com/svrxjs/svrx-plugin-markdown): 
     展示 markdown 类型的文件，提供实时预览、hot-reload、自动滚动定位等功能
++ [svrx-plugin-json-viewer](https://github.com/svrxjs/svrx-plugin-json-viewer): 
+    切换JSON响应为更友好的展示界面，并且它只影响到直接用页面访问的情况，不影响fetch或xhr的请求。
+
+    
 
 ### Network
 

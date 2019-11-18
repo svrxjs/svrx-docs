@@ -59,6 +59,9 @@ View [quick start](./quick-start.md) for more details.
 
 + [svrx-plugin-markdown](https://github.com/svrxjs/svrx-plugin-markdown): 
     preview markdown file, support hot-reload, auto-scroll...
++ [svrx-plugin-json-viewer](https://github.com/svrxjs/svrx-plugin-json-viewer): 
+    Convert the JSON response to a json viewer's page, but it won't affect the response via ajax or fetch.
+
 
 ### Network
 
