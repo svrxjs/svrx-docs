@@ -44,7 +44,7 @@ View [quick start](./quick-start.md) for more details.
 
 ### Mock
 
-+ [svrx-plugin-json-server](https://github.com/svrxjs/svrx-plugin-mock): 
++ [svrx-plugin-json-server](https://github.com/svrxjs/svrx-plugin-json-server): 
     based on [json-server](https://github.com/typicode/json-server), help us to get a full fake REST API with zero coding.
 + [svrx-plugin-mock](https://github.com/svrxjs/svrx-plugin-mock): 
     Provide us with a convenient way to mock data

@@ -36,7 +36,7 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 
 ### Mock
 
-+ [svrx-plugin-json-server](https://github.com/svrxjs/svrx-plugin-mock): 
++ [svrx-plugin-json-server](https://github.com/svrxjs/svrx-plugin-json-server): 
     基于[json-server](https://github.com/typicode/json-server),快速实现 REST API
 + [svrx-plugin-mock](https://github.com/svrxjs/svrx-plugin-mock): 
     基于[mock.js](http://mockjs.com/)来便捷的实现数据 mock
