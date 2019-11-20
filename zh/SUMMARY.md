@@ -15,4 +15,5 @@
   * [Option 列表](./guide/option.md)
 * [贡献指南](./contribution.md)
 * [Blog](./blog/README.md)
-  * [Server-X：一个介绍](./blog/introduction.md)
+  * [Server-X：一款可能提升你十倍工作效率的工具](./blog/introduction.md)
+  * [使用 svrx 实现更优雅的接口 Mock](./blog/mock.md)
