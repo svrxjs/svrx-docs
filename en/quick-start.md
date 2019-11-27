@@ -103,8 +103,11 @@ If you want to know the installed versions of `svrx`,
 or want to install a specific version, you might need the following commands:
 
 ```bash
-svrx ls                 # list all installed versions of svrx
-svrx ls-remote          # list all published versions of svrx
-svrx install <version>  # install a specific <version> of svrx
-svrx remove <version>   # remove a specific <version> of svrx
+svrx ls                   # list all installed versions of svrx
+svrx ls-remote            # list all published versions of svrx
+svrx install <version>    # install a specific <version> of svrx
+svrx remove <version>     # remove a specific <version> of svrx
+svrx remove <pluginName>  # remove local cache of a plugin
 ```
+
+> You can use `svrx <command> -h` to see more help info of a command
