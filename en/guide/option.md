@@ -205,3 +205,10 @@ By default, `svrx` will use the registry set at your workspace, you can check wi
 ```bash
 npm config get registry
 ```
+
+### path 
+
+`string` 
+
+The local path of the svrx core package. 
+ONLY in development mode, to load a local svrx core package.    

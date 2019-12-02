@@ -95,8 +95,11 @@ module.exports = {
 另外，如果你需要关心 `svrx` 的版本安装情况，或是想安装某个特定的 `svrx` 版本，那么你还可以使用下面这些指令：
 
 ```bash
-svrx ls                 # 查看所有本地已安装的svrx版本
-svrx ls-remote          # 查看所有已发布的svrx版本
-svrx install <version>  # 安装某个<版本>的svrx
-svrx remove <version>   # 从本地移除某个<版本>的svrx
+svrx ls                   # 查看所有本地已安装的svrx版本
+svrx ls-remote            # 查看所有已发布的svrx版本
+svrx install <version>    # 安装某个<版本>的svrx
+svrx remove <version>     # 从本地移除某个<版本>的svrx
+svrx remove <pluginName>  # 从本地移除某个插件包的缓存文件
 ```
+
+> 可以使用 `svrx <command> -h` 查看指令详情及提示信息

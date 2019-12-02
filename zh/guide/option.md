@@ -192,3 +192,9 @@ svrx 依赖[koa2-cors](https://github.com/zadzbw/koa2-cors)做跨域资源工程
 `string`
 
 `npm`源地址，设置此选项后，`svrx`将从此源下载插件。 默认的`registry`值是你工作目录下的源地址值，即`npm config get registry`的结果。
+
+### path 
+
+`string` 
+
+svrx 核心包的本地路径。仅用于开发模式下加载本地 svrx 核心包。
