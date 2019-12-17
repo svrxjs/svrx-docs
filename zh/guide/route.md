@@ -171,7 +171,7 @@ get('/blog')
 > __⚠️支持参数映射__
 
 ```js
-get('/old/rewrite:path(.*)').to.rewrite('/svrx/{path}')
+get('/old/:path(.*)').to.rewrite('/svrx/{path}')
 get('/svrx(.*)').to.send('Hello svrx')
 ```
 
