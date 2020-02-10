@@ -112,11 +112,11 @@ webView.loadUrl("javascript:" + injectjs);
 
 前端拦截有个两个天然优势：
 
-- **可提供配置界面**：由于是在浏览器端拦截，可使用 DOM API 提供例如[ Interceptor 插件](https://github.com/code-mancers/interceptor)的可配置界面。
+- **可提供配置界面**：由于是在浏览器端拦截，可使用 DOM API 提供例如[Interceptor 插件](https://github.com/code-mancers/interceptor)的可配置界面。
 - **就地生效**：修改后无需重启服务。
 
 但无论是浏览器插件还是定制 Webview 容器，实际上我们都忽略了一个重要事实：**浏览器环境其实是多种多样的**。
-这导致了前端拦截的一个典型缺陷：**无法跨浏览器使用**，如上例的[Intercepror插件](https://github.com/code-mancers/interceptor)就无法在微信浏览器中使用。
+这导致了前端拦截的一个典型缺陷：**无法跨浏览器使用**，如上例的[Intercepror 插件](https://github.com/code-mancers/interceptor)就无法在微信浏览器中使用。
 
 如果是通过服务端拦截的话就可以避免这种情况。
 
