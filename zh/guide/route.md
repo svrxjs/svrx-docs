@@ -6,7 +6,7 @@
 
 ```bash
 touch route.js # create empty routing file
-svrx --route route.js 
+svrx --route route.js
 ```
 
 在 `route.js` 中
@@ -25,7 +25,7 @@ get('/blog').to.json({ title: 'svrx' });
 
 ## 语法
 
-`[method](selector).to.[action](payload)` 
+`[method](selector).to.[action](payload)`
 
 
 举个例子
@@ -55,7 +55,7 @@ svrx 路由支持 [methods](https://github.com/jshttp/methods/blob/master/index.
 
 ### 路由匹配
 
-svrx 路由基于 [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp) 匹配, 
+svrx 路由基于 [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp) 匹配,
 和两大平民 Node 框架 [express](https://expressjs.com/en/guide/routing.html) 和 [koa](https://github.com/ZijianHe/koa-router) 相同.
 
 查看 [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp) 来了解更详尽的匹配规则，以下做简要概述
@@ -63,8 +63,8 @@ svrx 路由基于 [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp)
 #### 规则解析举例
 
 - `/svrx/:id`: 具名匹配，规则默认为 `(\w+)`
-- `/svrx/:id(hello|world)`: 具名且指定匹配规则 
-- `/svrx(.*)`: 不具名匹配 
+- `/svrx/:id(hello|world)`: 具名且指定匹配规则
+- `/svrx(.*)`: 不具名匹配
 - `/\/svrx\/(.*)$/`: __对于复杂规则的路由，也可以直接使用正则表达式__
 
 #### 匹配参数
@@ -184,7 +184,7 @@ get('/svrx(.*)').to.send('Hello svrx')
 代理，将 path 代理到 target 服务器。
 
 - target: 目标服务器
-- options: 同 [proxy.options](./api.md#proxy) 
+- options: 同 [proxy.options](./api.md#proxy)
     - changeOrigin
     - secure
     - pathRewrite
@@ -209,6 +209,17 @@ get('/hello-world').to.handle((ctx)=>{
   ctx.body = '<body>Hello World</body>'
 });
 
+```
+
+此外，handle 也可以接收一个 `require` 引入的 koa 中间件，比如：
+
+```js
+const bodyParser = require('koa-bodyparser');
+
+post('/test/post').to.handle(bodyParser()).handle((ctx) => {
+  ctx.type = 'html';
+  ctx.body = ctx.request.body;
+});
 ```
 
 > 尽可能抽取通用能力为自定义 action，请参考「插件接口」小节
