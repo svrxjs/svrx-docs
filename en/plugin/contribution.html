@@ -1,0 +1,1116 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>How To Write A Plugin · Docs of Server-X</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../practice/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    What is svrx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quick-start.html">
+            
+                <a href="../quick-start.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="usage.html">
+            
+                <a href="usage.html">
+            
+                    
+                    How To Use Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <a target="_blank" href="https://svrx.io/plugin?query=svrx-plugin-">
+            
+                    
+                    The List of Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="contribution.html">
+            
+                <a href="contribution.html">
+            
+                    
+                    How To Write A Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../practice/">
+            
+                <a href="../practice/">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../practice/recipe.html">
+            
+                <a href="../practice/recipe.html">
+            
+                    
+                    Recipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../practice/integration.html">
+            
+                <a href="../practice/integration.html">
+            
+                    
+                    Integrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../guide/">
+            
+                <a href="../guide/">
+            
+                    
+                    Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../guide/route.html">
+            
+                <a href="../guide/route.html">
+            
+                    
+                    How To Use Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../guide/api.html">
+            
+                <a href="../guide/api.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../guide/option.html">
+            
+                <a href="../guide/option.html">
+            
+                    
+                    Option Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../contribution.html">
+            
+                <a href="../contribution.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    Blog
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../blog/introduction.html">
+            
+                <a href="../blog/introduction.html">
+            
+                    
+                    Server-X：An Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >How To Write A Plugin</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#how-to-write-a-plugin"><b></b>How To Write A Plugin</a></li><ul><ul><li><span class="title-icon "></span><a href="#first-plugin"><b></b>First Plugin</a></li><li><span class="title-icon "></span><a href="#file-structure"><b></b>File Structure</a></li><li><span class="title-icon "></span><a href="#publish--running"><b></b>publish &amp;&amp; running</a></li></ul><li><span class="title-icon "></span><a href="#server"><b></b>Server Side Service </a></li><ul><li><span class="title-icon "></span><a href="#middleware"><b></b>middleware</a></li><li><span class="title-icon "></span><a href="#injector"><b></b>injector</a></li><li><span class="title-icon "></span><a href="#events"><b></b>events</a></li><li><span class="title-icon "></span><a href="#config"><b></b>config</a></li><li><span class="title-icon "></span><a href="#router"><b></b>router</a></li><li><span class="title-icon "></span><a href="#logger"><b></b>logger</a></li><li><span class="title-icon "></span><a href="#loggerlevelmsg"><b></b>logger[level](msg)</a></li><li><span class="title-icon "></span><a href="#io"><b></b>io</a></li></ul><li><span class="title-icon "></span><a href="#client"><b></b>Client API </a></li><ul><li><span class="title-icon "></span><a href="#io_1"><b></b>io</a></li><li><span class="title-icon "></span><a href="#events_1"><b></b>events</a></li><li><span class="title-icon "></span><a href="#config_1"><b></b>config</a></li><li><span class="title-icon "></span><a href="#schema"><b></b>config schema </a></li></ul><li><span class="title-icon "></span><a href="#test"><b></b>How to test plugin? </a></li><li><span class="title-icon "></span><a href="#more-easier-plugin-development"><b></b>More easier plugin development</a></li></ul></ul></div><a href="#how-to-write-a-plugin" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="how-to-write-a-plugin"><a name="how-to-write-a-plugin" class="anchor-navigation-ex-anchor" href="#how-to-write-a-plugin"><i class="fa fa-link" aria-hidden="true"></i></a>How To Write A Plugin</h1>
+<blockquote>
+<p><strong>Use <a href="https://github.com/svrxjs/svrx-create-plugin" target="_blank"><code>svrx-create-plugin</code></a></strong> to help you create plugins more easily</p>
+</blockquote>
+<h3 id="first-plugin"><a name="first-plugin" class="anchor-navigation-ex-anchor" href="#first-plugin"><i class="fa fa-link" aria-hidden="true"></i></a>First Plugin</h3>
+<p>Let&apos;s create our first plugin &#x2014;&#x2014; <a href="https://github.com/svrxjs/svrx-plugin-hello-world" target="_blank"><code>svrx-plugin-hello-world</code></a></p>
+<h3 id="file-structure"><a name="file-structure" class="anchor-navigation-ex-anchor" href="#file-structure"><i class="fa fa-link" aria-hidden="true"></i></a>File Structure</h3>
+<pre><code class="lang-js">&#x2514;&#x2500;&#x2500; svrx-plugin-hello-world
+  &#x251C;&#x2500;&#x2500; client.js
+  &#x251C;&#x2500;&#x2500; index.js
+  &#x2514;&#x2500;&#x2500; package.json
+</code></pre>
+<blockquote>
+<p><em>Only <code>package.json</code> and <code>index.js</code></em> are required</p>
+</blockquote>
+<ul>
+<li><code>package.json</code></li>
+</ul>
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;svrx-plugin-hello-world&quot;</span>,
+  <span class="hljs-string">&quot;engines&quot;</span>: {
+    <span class="hljs-string">&quot;svrx&quot;</span> : <span class="hljs-string">&quot;0.0.x&quot;</span>
+  }
+}
+</code></pre>
+<p>Only two fields are required by <code>package.json</code></p>
+<ul>
+<li><code>name</code>: package name must be a string beginning with <code>svrx-plugin</code>, to help <code>svrx</code> find it in npm.</li>
+<li><code>engines.svrx</code>: Define the runnable svrx version of this plugin&#xFF0C;svrx will automatically load the latest matching plugin
+<strong>engines.svrx</strong> can be a valid <a href="https://www.npmjs.com/package/semver" target="_blank">semver</a>&#xFF0C;like <code>0.1.x</code> or <code>~0.1</code></li>
+</ul>
+<h4 id="-indexjs"><a name="-indexjs" class="anchor-navigation-ex-anchor" href="#-indexjs"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>index.js</code></h4>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  configSchema: {
+    user: {
+      type: <span class="hljs-string">&apos;string&apos;</span>,
+      <span class="hljs-keyword">default</span>: <span class="hljs-string">&apos;svrx&apos;</span>,
+      description: <span class="hljs-string">&apos;username for hello world&apos;</span>
+    }
+  },
+
+  assets: {
+    script: [<span class="hljs-string">&apos;./client.js&apos;</span>]
+  },
+
+  hooks: {
+    <span class="hljs-keyword">async</span> onCreate({ logger, config }) {
+      logger.log(<span class="hljs-string">`Hello <span class="hljs-subst">${config.get(&apos;user&apos;)}</span> from server`</span>);
+    }
+  }
+};
+</code></pre>
+<p>Where</p>
+<ol>
+<li><code>configSchema</code> Plugin param definition based on JSON Schema &#xFF0C;checkout <a href="#schema">JSON Schema</a> for more detail.
+Here we just set a <code>user</code> field, it is a string</li>
+<li><p><code>assets</code>: client resource setting&#xFF0C;they will be automatically injected into the page</p>
+<ul>
+<li><code>style</code>: css resource injection</li>
+<li><p><code>script</code>: script resource injection</p>
+<blockquote>
+<p>All resources will be merged into a single file.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>hook.onCreate</code>: a function invoke when plugin been creating, we can control it by injected service
+in this example, we only use two services</p>
+<ul>
+<li><code>logger</code>: logger service</li>
+<li><code>config</code>: config service</li>
+</ul>
+</li>
+</ol>
+<p>Check out setion <a href="#server">service</a> to find out other services that available in <code>hook.onCreate</code></p>
+<h4 id="-clientjs"><a name="-clientjs" class="anchor-navigation-ex-anchor" href="#-clientjs"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>client.js</code></h4>
+<p>There is a global variable named <code>svrx</code> will be injected into all pages,
+it has some built-in services</p>
+<blockquote>
+<p><code>svrx</code> is only accessible inside the plugin script, don&apos;t worry about global pollution</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { config } = svrx;
+
+config.get(<span class="hljs-string">&apos;user&apos;</span>).then(user =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Hello <span class="hljs-subst">${user}</span> from browser`</span>);
+});
+</code></pre>
+<p>You will see <code>Hello svrx from browser</code> in console panel</p>
+<p>Unlike in server side, config in client is passed through websocket, so api is async, and return a promise</p>
+<blockquote>
+<p>svrx also provide other client services, please check out <a href="#client">client api</a> for help</p>
+</blockquote>
+<h3 id="publish--running"><a name="publish--running" class="anchor-navigation-ex-anchor" href="#publish--running"><i class="fa fa-link" aria-hidden="true"></i></a>publish &amp;&amp; running</h3>
+<p>There&apos;ll be a failure when trying to publish it by <code>npm publish</code>. 
+Because <code>svrx-plugin-hello-world</code> has been published by <a href="https://github.com/svrxjs/svrx-plugin-hello-world" target="_blank">official team</a></p>
+<p>So we skip this step and try the plugin directly</p>
+<pre><code class="lang-js">svrx -p hello-world
+</code></pre>
+<p>Check the terminal and browser console log, 
+we will find <code>Hello svrx from browser</code>, 
+which means plugin has worked successfully.</p>
+<p>You can also run it in programmatical way</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> svrx = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@svrx/svrx&apos;</span>);
+
+svrx({
+  plugins: [<span class="hljs-string">&apos;hello-world&apos;</span>]
+}).start();
+</code></pre>
+<blockquote>
+<p>Further reading: <a href="#test">How to test plugin?</a></p>
+</blockquote>
+<h2 id="server"><a name="server" class="anchor-navigation-ex-anchor" href="#server"><i class="fa fa-link" aria-hidden="true"></i></a>Server Side Service </h2>
+<p>You can use service in two places</p>
+<ul>
+<li><code>hooks.onCreate</code></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  hooks: {
+    <span class="hljs-keyword">async</span> onCreate({
+      middleware,
+      injector,
+      events,
+      router,
+      config,
+      logger,
+      io
+    }) {
+      <span class="hljs-comment">// use service here</span>
+    }
+  }
+};
+</code></pre>
+<ul>
+<li><code>plugin</code> event</li>
+</ul>
+<pre><code class="lang-js">svrx(config).on(<span class="hljs-string">&apos;plugin&apos;</span>, <span class="hljs-keyword">async</span> ({ logger, io }) =&gt; {
+  <span class="hljs-comment">// use service here</span>
+});
+</code></pre>
+<p>We will explain these 7 services in turn</p>
+<h3 id="middleware"><a name="middleware" class="anchor-navigation-ex-anchor" href="#middleware"><i class="fa fa-link" aria-hidden="true"></i></a>middleware</h3>
+<p>Middleware is used for adding <a href="https://koajs.com/" target="_blank">koa-style middleware</a> to implement backend logic injection</p>
+<h4 id="-middlewareaddname-definition"><a name="-middlewareaddname-definition" class="anchor-navigation-ex-anchor" href="#-middlewareaddname-definition"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>middleware.add(name, definition)</code></h4>
+<p>Adding <a href="https://koajs.com/" target="_blank">koa-style middleware</a></p>
+<p><em>Usage</em></p>
+<pre><code class="lang-js">middleware.add(<span class="hljs-string">&apos;hello-world-middleware&apos;</span>, {
+  priority: <span class="hljs-number">100</span>,
+  <span class="hljs-keyword">async</span> onRoute(ctx, next) {}
+});
+</code></pre>
+<p><em>Param</em></p>
+<ul>
+<li><p><code>name</code> [String]: A unique middleware name</p>
+<blockquote>
+<p>in debug mode, it can be used to track the middleware call process</p>
+</blockquote>
+</li>
+<li><p><code>definition.priority</code> [Number]: default is <code>10</code>.
+Svrx will assemble the middleware according to the priority from high to low, that is, the request will be passed to the high priority plugin first.</p>
+</li>
+<li><code>definition.onRoute</code> [Function]: A <a href="https://koajs.com" target="_blank">koa-style</a> middleware .If <code>definition</code> is a function, it will automatically become <code>definition.onRoute</code></li>
+</ul>
+<h4 id="-middlewaredelname"><a name="-middlewaredelname" class="anchor-navigation-ex-anchor" href="#-middlewaredelname"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>middleware.del(name)</code></h4>
+<p>Delete a middleware with the specified name</p>
+<p><em>Usage</em></p>
+<pre><code class="lang-js">middleware.del(<span class="hljs-string">&apos;hello-world-middleware&apos;</span>);
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code>: middleware name</li>
+</ul>
+<h3 id="injector"><a name="injector" class="anchor-navigation-ex-anchor" href="#injector"><i class="fa fa-link" aria-hidden="true"></i></a>injector</h3>
+<p><code>injector</code> is used for rewriting the response and inject client resources.</p>
+<h4 id="-injectoraddtype-resource"><a name="-injectoraddtype-resource" class="anchor-navigation-ex-anchor" href="#-injectoraddtype-resource"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>injector.add(type, resource)</code></h4>
+<p>Add a resource for injection , only js and css has been supported.</p>
+<p>The rule as follow.</p>
+<ul>
+<li>The style will be merged into <code>/svrx/svrx-client.css</code> and
+injected before the closing <code>head</code> tag</li>
+<li>The script will be merged into <code>/svrx/svrx-client.js</code> and
+injected before the closing <code>body</code> tag</li>
+</ul>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">injector.add(<span class="hljs-string">&apos;script&apos;</span>, {
+  content: <span class="hljs-string">`
+    console.log(&apos;hello world&apos;)
+  `</span>
+});
+</code></pre>
+<p>The <code>content</code> will be merged into <code>bundle script</code></p>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: Only support <code>script</code> and <code>style</code></li>
+<li><code>resource.content</code> [String]: resource content</li>
+<li><code>resource.filename</code> [String]: the path of resource file, must be a absolute path</li>
+</ul>
+<blockquote>
+<p>Content has a higher priority than filename, so you can take one of them.</p>
+</blockquote>
+<h4 id="-injectorreplacepattern-replacement"><a name="-injectorreplacepattern-replacement" class="anchor-navigation-ex-anchor" href="#-injectorreplacepattern-replacement"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>injector.replace(pattern, replacement)</code></h4>
+<p><code>injector.replace</code> will transform response body with some or all matches of a pattern replaced by a replacement.</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">injector.replace(<span class="hljs-regexp">/svrx/g</span>, <span class="hljs-string">&apos;server-x&apos;</span>);
+</code></pre>
+<p>The above example replace all <code>svrx</code> with <code>server-x</code></p>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>pattern</code> [String|RegExp]</li>
+<li><code>replacement</code> [String|Function]</li>
+</ul>
+<blockquote>
+<p>The usage of <code>injector.replace</code> is exactly the same as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace" target="_blank"><code>String.prototype.replace</code></a></p>
+<p>resource injection is based upon <code>injector.replace</code></p>
+</blockquote>
+<h3 id="events"><a name="events" class="anchor-navigation-ex-anchor" href="#events"><i class="fa fa-link" aria-hidden="true"></i></a>events</h3>
+<p>Built-in event listener, support async&amp;sorted emitter, , which can call the listen function in turn, and can terminate the event delivery at any time.</p>
+<h4 id="-eventsontype-fn"><a name="-eventsontype-fn" class="anchor-navigation-ex-anchor" href="#-eventsontype-fn"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>events.on(type, fn)</code></h4>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">events.on(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-keyword">async</span> payload =&gt; {});
+
+events.on(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-keyword">async</span> (payload, ctrl) =&gt; {
+  ctrl.stop(); <span class="hljs-comment">// stop events emit, only works in sorted emit mode</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code> [String]: event name</li>
+<li><code>fn(payload, ctrl)</code>: callback that has two params<ul>
+<li><code>payload</code> [String]: event data that pass through <code>emit</code></li>
+<li><code>ctrl</code> [Object]: control object, call <code>ctrl.stop()</code> to stop &apos;sorted emit&apos;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>If the callback returns a <code>Promise</code> (such as async function), it will be treated as an asynchronous watcher.</p>
+</blockquote>
+<h4 id="-eventsemittype-param-sorted"><a name="-eventsemittype-param-sorted" class="anchor-navigation-ex-anchor" href="#-eventsemittype-param-sorted"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>events.emit(type, param, sorted)</code></h4>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-comment">// sorted emit, handler will be called one by one</span>
+events.emit(<span class="hljs-string">&apos;hello&apos;</span>, { param1: <span class="hljs-string">&apos;world&apos;</span> }, <span class="hljs-literal">true</span>).then(() =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;emit is done&apos;</span>);
+});
+<span class="hljs-comment">// parallel emit</span>
+events.emit(<span class="hljs-string">&apos;hello&apos;</span>, { param1: <span class="hljs-string">&apos;world&apos;</span> }).then(() =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;emit is done&apos;</span>);
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code> [String]: event name</li>
+<li><code>payload</code>: event data</li>
+<li><code>sorted</code> [Boolean]: default is <code>false</code>, whether to pass events serially</li>
+</ul>
+<p><strong>Return</strong></p>
+<p><code>Promise</code></p>
+<h4 id="-eventsoffname-handler"><a name="-eventsoffname-handler" class="anchor-navigation-ex-anchor" href="#-eventsoffname-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>events.off(name, handler)</code></h4>
+<p>Remove event watcher</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">events.off(<span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">// remove all hello&apos;s handler</span>
+events.off(<span class="hljs-string">&apos;hello&apos;</span>, handler); <span class="hljs-comment">// remove specific handler</span>
+</code></pre>
+<h4 id="builtin-events"><a name="builtin-events" class="anchor-navigation-ex-anchor" href="#builtin-events"><i class="fa fa-link" aria-hidden="true"></i></a>builtin events</h4>
+<ul>
+<li><code>plugin</code>: triggered after plugin building.</li>
+<li><code>file:change</code>: triggered when any file changes</li>
+<li><code>ready</code>: triggered when server starts, if you need to handle logic after server startup (such as getting the server port), you can register this event</li>
+</ul>
+<h3 id="config"><a name="config" class="anchor-navigation-ex-anchor" href="#config"><i class="fa fa-link" aria-hidden="true"></i></a>config</h3>
+<p>Config service used to modify or query the options passed by user;</p>
+<h4 id="-configgetpath"><a name="-configgetpath" class="anchor-navigation-ex-anchor" href="#-configgetpath"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.get(path)</code></h4>
+<p>Get the config of this plugin.</p>
+<p><strong>Config is based on immutable data</strong> , you must always use <code>config.get</code> to ensure getting the latest config.</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.get(<span class="hljs-string">&apos;user&apos;</span>); <span class="hljs-comment">// get the user param  belong to this plugin</span>
+config.get(<span class="hljs-string">&apos;user.name&apos;</span>); <span class="hljs-comment">// get the user.name param  belong to this plugin</span>
+</code></pre>
+<p><strong>if you need to get global config&#xFF0C;just add prefix <code>$.</code></strong></p>
+<pre><code class="lang-js">config.get(<span class="hljs-string">&apos;$.port&apos;</span>); <span class="hljs-comment">// get the server&apos;s port</span>
+config.get(<span class="hljs-string">&apos;$.root&apos;</span>); <span class="hljs-comment">// get the svrx working directory</span>
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>field</code>: field path&#xFF0C;deep getter must be separated by <code>.</code>, such as <code>user.name</code></li>
+</ul>
+<p><strong>Return</strong></p>
+<p>The value of the field</p>
+<h4 id="-configsetfield-value"><a name="-configsetfield-value" class="anchor-navigation-ex-anchor" href="#-configsetfield-value"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.set(field, value)</code></h4>
+<p>Modify the config</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.set(<span class="hljs-string">&apos;a.b.c&apos;</span>, <span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">// deep set</span>
+config.get(<span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">// =&gt; { b: { c: &apos;hello&apos; } }</span>
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>field</code>: field path&#xFF0C;deep setter must be separated by <code>.</code>, such as <code>user.name</code></li>
+<li><code>value</code>: field value</li>
+</ul>
+<h4 id="-configwatchfield-handler"><a name="-configwatchfield-handler" class="anchor-navigation-ex-anchor" href="#-configwatchfield-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.watch(field, handler)</code></h4>
+<p>Listening for configuration changes,
+change digest will be triggered after the <code>set</code>, <code>del</code>, <code>splice</code> method calls</p>
+<pre><code class="lang-js">config.watch((evt)=&gt;{
+  <span class="hljs-built_in">console</span>.log(evt.affect(<span class="hljs-string">&apos;a.b.c&apos;</span>)) =&gt; <span class="hljs-literal">true</span>
+  <span class="hljs-built_in">console</span>.log(evt.affect(<span class="hljs-string">&apos;a&apos;</span>)) <span class="hljs-comment">// =&gt; true</span>
+  <span class="hljs-built_in">console</span>.log(evt.affect(<span class="hljs-string">&apos;a.c&apos;</span>)) <span class="hljs-comment">// =&gt; false</span>
+})
+
+config.watch(<span class="hljs-string">&apos;a.b&apos;</span>, (evt)=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;a.b has been changed&apos;</span>)
+})
+config.set(<span class="hljs-string">&apos;a.b.c&apos;</span>, <span class="hljs-string">&apos;hello&apos;</span>);
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>field</code>: field path&#xFF0C;deep watcher must be separated by <code>.</code>, such as <code>user.name</code></li>
+<li><code>handler(evt)</code>: watch handler<ul>
+<li><code>evt.affect(field)</code> [Function]:
+detect whether specific field has been changed</li>
+</ul>
+</li>
+</ul>
+<h4 id="-configdelfield"><a name="-configdelfield" class="anchor-navigation-ex-anchor" href="#-configdelfield"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.del(field)</code></h4>
+<p>Remove some field</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.del(<span class="hljs-string">&apos;a.b.c&apos;</span>);
+config.get(<span class="hljs-string">&apos;a.b.c&apos;</span>); <span class="hljs-comment">//=&gt; undefined</span>
+</code></pre>
+<h4 id="-configsplicefield-start-delcount-items"><a name="-configsplicefield-start-delcount-items" class="anchor-navigation-ex-anchor" href="#-configsplicefield-start-delcount-items"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.splice(field, start[, delCount[, items...])</code></h4>
+<p>The <code>Array.prototype.slice</code></p>
+<p>Except for <code>field</code>&#xFF0C;params are identical to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">Array.prototype.splice</a></p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-js">config.set(<span class="hljs-string">&apos;a.b.c&apos;</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);
+config.splice(<span class="hljs-string">&apos;a.b.c&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+config.get(<span class="hljs-string">&apos;a.b.c&apos;</span>); <span class="hljs-comment">// =&gt; [1,3]</span>
+</code></pre>
+<h3 id="router"><a name="router" class="anchor-navigation-ex-anchor" href="#router"><i class="fa fa-link" aria-hidden="true"></i></a>router</h3>
+<p>Extending <a href="../guide/route.html#plugin">Routing DSL</a></p>
+<h4 id="-routerrouteregister"><a name="-routerrouteregister" class="anchor-navigation-ex-anchor" href="#-routerrouteregister"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>router.route(register)</code></h4>
+<p>Register route&#xFF0C;as same as <a href="../guide/route.html">Routing DSL</a></p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {route} = router;
+
+route(({all, get, post})=&gt;{
+
+  all(<span class="hljs-string">&apos;/blog&apos;</span>).to.send(<span class="hljs-string">&apos;Hi, Blog&apos;</span>)
+  get(<span class="hljs-string">&apos;/user&apos;</span>).to.send(<span class="hljs-string">&apos;Hi, user&apos;</span>)
+  post(<span class="hljs-string">&apos;/user&apos;</span>).to.send({code: <span class="hljs-number">200</span>, data: <span class="hljs-string">&apos;Success!&apos;</span>})
+
+})
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li>register({...methods}):<ul>
+<li>methods: corresponding to <a href="../guide/route.html#method">HTTP methods</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="-routeractionname-builder"><a name="-routeractionname-builder" class="anchor-navigation-ex-anchor" href="#-routeractionname-builder"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>router.action(name, builder)</code></h4>
+<p>Register an action , like <a href="../guide/route.html#proxy"><code>proxy</code></a> or <a href="../guide/route.html#json"><code>json</code></a></p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { action, route } = router;
+action(<span class="hljs-string">&apos;hello&apos;</span>, user =&gt; ctx =&gt; {
+  ctx.body = <span class="hljs-string">`hello <span class="hljs-subst">${user}</span>`</span>;
+});
+route(({ all }) =&gt; {
+  all(<span class="hljs-string">&apos;/blog&apos;</span>).hello(<span class="hljs-string">&apos;svrx&apos;</span>); <span class="hljs-comment">//=&gt; response &apos;hello svrx&apos;</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: action name</li>
+<li><code>builder(payload)</code><ul>
+<li>payload: payload that passed to action&#xFF0C;like <code>&apos;svrx&apos;</code> in above example</li>
+<li>Return: builder must return a <a href="https://koajs.com" target="_blank">koa style</a> middleware</li>
+</ul>
+</li>
+</ul>
+<h4 id="-routerloadfilename"><a name="-routerloadfilename" class="anchor-navigation-ex-anchor" href="#-routerloadfilename"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>router.load(filename)</code></h4>
+<p>Load routing file manually &#xFF0C;Same as <a href="../guide/route#start">options <code>--route</code></a></p>
+<p><em>Also support hot reloading</em></p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">await</span> router.load(<span class="hljs-string">&apos;/path/to/route.md&apos;</span>);
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>filename</code>: absolute path for routing file</li>
+</ul>
+<p><strong>Return</strong></p>
+<p><code>Promise</code></p>
+<h3 id="logger"><a name="logger" class="anchor-navigation-ex-anchor" href="#logger"><i class="fa fa-link" aria-hidden="true"></i></a>logger</h3>
+<p>Logger module, who&apos;s level can be controlled by <code>logger.level</code> (default is <code>warn</code>)</p>
+<pre><code class="lang-js">svrx({
+  logger: {
+    level: <span class="hljs-string">&apos;error&apos;</span>
+  }
+});
+</code></pre>
+<p>Or cli way</p>
+<pre><code class="lang-bash">svrx --logger.level error
+</code></pre>
+<p>Above example will output log that more than <code>warn</code>, such as <code>notify</code>, <code>error</code></p>
+<h3 id="loggerlevelmsg"><a name="loggerlevelmsg" class="anchor-navigation-ex-anchor" href="#loggerlevelmsg"><i class="fa fa-link" aria-hidden="true"></i></a><code>logger[level](msg)</code></h3>
+<p>Svrx provides multiple levels of logging: <code>silent</code>, <code>notify</code>, <code>error</code>, <code>warn</code> (default), <code>info</code>, <code>debug</code></p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">logger.notify(<span class="hljs-string">&apos;notify&apos;</span>); <span class="hljs-comment">// show `notify`</span>
+logger.error(<span class="hljs-string">&apos;error&apos;</span>); <span class="hljs-comment">// show `error` and `notify`</span>
+logger.warn(<span class="hljs-string">&apos;warn&apos;</span>); <span class="hljs-comment">// show `warn`&#x3001;`error` and `notify`</span>
+</code></pre>
+<blockquote>
+<p><code>logger.log</code> is an alias for <code>logger.notify</code></p>
+</blockquote>
+<h3 id="io"><a name="io" class="anchor-navigation-ex-anchor" href="#io"><i class="fa fa-link" aria-hidden="true"></i></a>io</h3>
+<p>io is used for the communication between server and client. Please check it out in <a href="#client-io">client-side io</a></p>
+<h4 id="-ioon-type-handler-"><a name="-ioon-type-handler-" class="anchor-navigation-ex-anchor" href="#-ioon-type-handler-"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.on( type, handler )</code></h4>
+<p>Listening for client messages (send by <a href="#client-io">client side <code>io.emit</code></a>)</p>
+<pre><code class="lang-js">io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload =&gt; {
+  <span class="hljs-built_in">console</span>.log(payload); <span class="hljs-comment">// =&gt;1</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: message type</li>
+<li><code>handler(payload)</code>: handler for message<ul>
+<li><code>payload</code>: message data</li>
+</ul>
+</li>
+</ul>
+<h4 id="-ioemittype-payload"><a name="-ioemittype-payload" class="anchor-navigation-ex-anchor" href="#-ioemittype-payload"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.emit(type, payload)</code></h4>
+<p>Send message to client</p>
+<p><strong>Usage</strong></p>
+<p>Server side</p>
+<pre><code class="lang-js">io.emit(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>Client side</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io } = svrx;
+io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload =&gt; {
+  <span class="hljs-built_in">console</span>.log(payload); <span class="hljs-comment">//=&gt;1</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: message type</li>
+<li><code>payload</code>: message data</li>
+</ul>
+<blockquote>
+<p>Message payload must be serializable because they are transmitted over the network</p>
+</blockquote>
+<h4 id="-ioofftype-handler"><a name="-ioofftype-handler" class="anchor-navigation-ex-anchor" href="#-ioofftype-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.off(type[, handler])</code></h4>
+<p>Remove the message watcher</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.off(<span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">//=&gt; remove all hello handlers</span>
+io.off(<span class="hljs-string">&apos;hello&apos;</span>, handler); <span class="hljs-comment">//=&gt; remove specific handler</span>
+</code></pre>
+<h4 id="-ioregistername-handler"><a name="-ioregistername-handler" class="anchor-navigation-ex-anchor" href="#-ioregistername-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.register(name, handler)</code></h4>
+<p>Register io service&#xFF0C; which can be invoked by <code>io.call</code> in client and server.</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.register(<span class="hljs-string">&apos;hello.world&apos;</span>, <span class="hljs-keyword">async</span> payload =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">${payload}</span>`</span>;
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: service name used by <code>io.call</code></li>
+<li><code>handler</code>: a Function return Promise, implement service logic</li>
+</ul>
+<h4 id="call"><a name="call" class="anchor-navigation-ex-anchor" href="#call"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.call(name, payload)</code> </h4>
+<p>Invoke registered service</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.call(<span class="hljs-string">&apos;hello.world&apos;</span>, <span class="hljs-string">&apos;svrx&apos;</span>).then(data =&gt; {
+  <span class="hljs-built_in">console</span>.log(data); <span class="hljs-comment">// =&gt; Hello svrx</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: service name</li>
+<li><code>payload</code> [Any]: service payload will passed to service handler</li>
+</ul>
+<p><strong>Return</strong></p>
+<p>Promise</p>
+<h2 id="client"><a name="client" class="anchor-navigation-ex-anchor" href="#client"><i class="fa fa-link" aria-hidden="true"></i></a>Client API </h2>
+<p>The client APIs are uniformly exposed through global variable <code>svrx</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io, events, config } = svrx;
+</code></pre>
+<h3 id="io_1"><a name="io_1" class="anchor-navigation-ex-anchor" href="#io_1"><i class="fa fa-link" aria-hidden="true"></i></a>io</h3>
+<p>Responsible for communicating with the server</p>
+<h4 id="-ioontype-handler"><a name="-ioontype-handler" class="anchor-navigation-ex-anchor" href="#-ioontype-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.on(type, handler)</code></h4>
+<p>Listening server-side message</p>
+<p><strong>Usage</strong></p>
+<p>Server side</p>
+<pre><code class="lang-js">io.emit(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>Client side</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io } = svrx;
+io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload =&gt; {
+  <span class="hljs-built_in">console</span>.log(payload); <span class="hljs-comment">//=&gt;1</span>
+});
+</code></pre>
+<blockquote>
+<p><strong>Note that the <code>io.emit()</code> in server-side is a broadcast</strong>
+and all pages will receive a message for server.</p>
+</blockquote>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: message type</li>
+<li><code>handler(payload)</code>: message handler<ul>
+<li><code>payload</code>: message payload passed by <code>io.emit</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="client-io"><a name="client-io" class="anchor-navigation-ex-anchor" href="#client-io"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.emit(type, payload)</code> </h4>
+<p>Send client message to server side</p>
+<p><strong>Usage</strong></p>
+<p>Client side</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io } = svrx;
+io.emit(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>Server side</p>
+<pre><code class="lang-js">{
+  hooks: {
+    <span class="hljs-keyword">async</span> onCreate({io}){
+      io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload=&gt;{
+        <span class="hljs-built_in">console</span>.log(payload) <span class="hljs-comment">// =&gt;1</span>
+      })
+    }
+  }
+}
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: message type</li>
+<li><code>payload</code>: message data passed to message handler</li>
+</ul>
+<blockquote>
+<p><code>payload</code> must be serializable because it is transmitted over the network.</p>
+</blockquote>
+<h4 id="-ioofftype-handler_1"><a name="-ioofftype-handler_1" class="anchor-navigation-ex-anchor" href="#-ioofftype-handler_1"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.off(type[, handler])</code></h4>
+<p>Remove io watcher</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.off(<span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">//=&gt; remove all hello handlers</span>
+io.off(<span class="hljs-string">&apos;hello&apos;</span>, handler); <span class="hljs-comment">//=&gt; remove specific handler</span>
+</code></pre>
+<h4 id="-iocallname-payload"><a name="-iocallname-payload" class="anchor-navigation-ex-anchor" href="#-iocallname-payload"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.call(name, payload)</code></h4>
+<p><a href="#call">io.call</a> on the client side is exactly the same as the server, but make sure the payload is serializable** because it will be transmitted over the network</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.call(<span class="hljs-string">&apos;hello.world&apos;</span>, <span class="hljs-string">&apos;svrx&apos;</span>).then(data =&gt; {
+  <span class="hljs-built_in">console</span>.log(data);
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: service name</li>
+<li><code>payload</code> [Any]: service payload</li>
+</ul>
+<p><strong>Return</strong></p>
+<p>Promise</p>
+<h3 id="events_1"><a name="events_1" class="anchor-navigation-ex-anchor" href="#events_1"><i class="fa fa-link" aria-hidden="true"></i></a>events</h3>
+<p>This part is exactly the same as <a href="#events">server events</a>, no retelling</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { events } = svrx;
+events.on(<span class="hljs-string">&apos;type&apos;</span>, handler);
+events.emit(<span class="hljs-string">&apos;type&apos;</span>, <span class="hljs-number">1</span>);
+events.off(<span class="hljs-string">&apos;type&apos;</span>);
+</code></pre>
+<blockquote>
+<p>The difference between events and io is that
+io is used for the communication between the server and the client,
+but events is a single-ended communication.</p>
+</blockquote>
+<h3 id="config_1"><a name="config_1" class="anchor-navigation-ex-anchor" href="#config_1"><i class="fa fa-link" aria-hidden="true"></i></a>config</h3>
+<p><code>config</code> in client is almost identical to the server, the only difference is: the client version is asynchronous (because of network communication)</p>
+<h4 id="-configgetfield"><a name="-configgetfield" class="anchor-navigation-ex-anchor" href="#-configgetfield"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.get(field)</code></h4>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.get(<span class="hljs-string">&apos;$.port&apos;</span>).then(port =&gt; {
+  <span class="hljs-comment">// get the server port</span>
+});
+
+config.get(<span class="hljs-string">&apos;user&apos;</span>).then(user =&gt; {
+  <span class="hljs-comment">//get the param belongs to current plugin</span>
+});
+</code></pre>
+<blockquote>
+<p><em>if you need to get global config&#xFF0C;just add prefix <code>$.</code></em></p>
+</blockquote>
+<h4 id="-configset&#x3001;configsplice&#x3001;configdel"><a name="-configset&#x3001;configsplice&#x3001;configdel" class="anchor-navigation-ex-anchor" href="#-configset&#x3001;configsplice&#x3001;configdel"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.set</code>&#x3001;<code>config.splice</code>&#x3001;<code>config.del</code></h4>
+<p>The above three methods are the same as <code>get</code>, which is consistent with the server, but the return value becomes Promise.</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.set(<span class="hljs-string">&apos;a.b&apos;</span>, <span class="hljs-number">1</span>).then(() =&gt; {
+  config.get(<span class="hljs-string">&apos;a.b&apos;</span>).then(ab =&gt; {
+    <span class="hljs-built_in">console</span>.log(ab); <span class="hljs-comment">// =&gt; 1</span>
+  });
+});
+</code></pre>
+<h3 id="schema"><a name="schema" class="anchor-navigation-ex-anchor" href="#schema"><i class="fa fa-link" aria-hidden="true"></i></a>config schema </h3>
+<p>Svrx config schema is based on <a href="https://json-schema.org/" target="_blank">JSON Schema</a></p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  root: {
+    type: <span class="hljs-string">&apos;string&apos;</span>,
+    <span class="hljs-keyword">default</span>: process.cwd(),
+    description: <span class="hljs-string">&apos;where to start svrx&apos;</span>,
+    ui: <span class="hljs-literal">false</span>
+  },
+  route: {
+    description: <span class="hljs-string">&apos;the path of routing config file&apos;</span>,
+    anyOf: [{ type: <span class="hljs-string">&apos;string&apos;</span> }, { type: <span class="hljs-string">&apos;array&apos;</span> }]
+  },
+  logger: {
+    description: <span class="hljs-string">&apos;global logger setting&apos;</span>,
+    type: <span class="hljs-string">&apos;object&apos;</span>,
+    properties: {
+      level: {
+        type: <span class="hljs-string">&apos;string&apos;</span>,
+        <span class="hljs-keyword">default</span>: <span class="hljs-string">&apos;error&apos;</span>,
+        description:
+          <span class="hljs-string">&quot;set log level, predefined values: &apos;silent&apos;,&apos;notify&apos;,&apos;error&apos;,&apos;warn&apos;, &apos;debug&apos;&quot;</span>
+      }
+    }
+  }
+};
+</code></pre>
+<p><strong>Field Details</strong></p>
+<ul>
+<li><code>type</code> [String]: <a href="https://json-schema.org/understanding-json-schema/reference/type.html" target="_blank">JSON-Schema field type</a> &#xFF0C;can be an <code>array</code>,<code>string</code>,<code>number</code>,<code>boolean</code>,<code>object</code> or <code>null</code></li>
+<li><code>default</code> [Any]: default value</li>
+<li><code>required</code> [Boolean]: whether it is required, default is <code>false</code></li>
+<li><code>properties</code> [Object]: child fields</li>
+<li><code>ui</code>: svrx extension &#xFF0C;whether show the config in <a href="https://github.com/x-orpheus/svrx-ui" target="_blank">svrx-ui</a></li>
+<li><code>anyOf</code>: Choose one of the items, such as<pre><code class="lang-of">route: {
+  description: &apos;the path of routing config file&apos;,
+  anyOf: [{ type: &apos;string&apos; }, { type: &apos;array&apos; }],
+},
+</code></pre>
+<blockquote>
+<p>For further understanding, please refer to <a href="https://json-schema.org/" target="_blank">Official Documentation</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="test"><a name="test" class="anchor-navigation-ex-anchor" href="#test"><i class="fa fa-link" aria-hidden="true"></i></a>How to test plugin? </h2>
+<p>It is not recommended that you publish the test plugin to npm.
+You can do local testing in the following ways.</p>
+<pre><code class="lang-js">svrx({
+  plugins: [
+    {
+      name: <span class="hljs-string">&apos;hello-world&apos;</span>,
+      path: <span class="hljs-string">&apos;/path/to/svrx-plugin-hello-world&apos;</span>
+    }
+  ]
+}).start();
+</code></pre>
+<p>After specifying the path parameter,
+svrx loads the local package instead of installing it from npm</p>
+<h2 id="more-easier-plugin-development"><a name="more-easier-plugin-development" class="anchor-navigation-ex-anchor" href="#more-easier-plugin-development"><i class="fa fa-link" aria-hidden="true"></i></a>More easier plugin development</h2>
+<p><strong>Use Official <a href="https://github.com/svrxjs/svrx-create-plugin" target="_blank"><code>svrx-create-plugin</code></a></strong> to help you create plugins more easily</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2019, NetEase, Inc. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-04-13 16:41:25
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../practice/" class="navigation navigation-next navigation-unique" aria-label="Next page: Practice">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"How To Write A Plugin","level":"1.3.3","depth":2,"next":{"title":"Practice","level":"1.4","depth":1,"path":"practice/README.md","ref":"./practice/README.md","articles":[{"title":"Recipes","level":"1.4.1","depth":2,"path":"practice/recipe.md","ref":"./practice/recipe.md","articles":[]},{"title":"Integrations","level":"1.4.2","depth":2,"path":"practice/integration.md","ref":"./practice/integration.md","articles":[]}]},"previous":{"title":"The List of Plugins","level":"1.3.2","depth":2,"url":"https://svrx.io/plugin?query=svrx-plugin-","ref":"https://svrx.io/plugin?query=svrx-plugin-","articles":[]},"dir":"ltr"},"config":{"plugins":["code","todo","-lunr","-search","search-pro","github","-sharing","sharing-plus","tbfed-pagefooter","anchor-navigation-ex","edit-link","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2019, NetEase, Inc."},"github":{"url":"https://github.com/svrxjs/svrx"},"todo":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"sharing":{"douban":false,"facebook":true,"twitter":true,"pocket":true,"qq":false,"qzone":false,"weibo":true,"all":["douban","facebook","twitter","instapaper","linkedin","weibo","messenger","qq","qzone","viber","whatsapp"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/svrxjs/svrx-docs/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs of Server-X","language":"en","gitbook":"*","description":"svrx(server-x) is a pluggable platform built for efficient front-end development"},"file":{"path":"plugin/contribution.md","mtime":"2020-04-13T08:41:25.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T08:42:46.711Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,678 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Routing 路由的使用 · Docs of Server-X</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="api.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于 svrx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quick-start.html">
+            
+                <a href="../quick-start.html">
+            
+                    
+                    快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../plugin/">
+            
+                <a href="../plugin/">
+            
+                    
+                    插件体系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../plugin/usage.html">
+            
+                <a href="../plugin/usage.html">
+            
+                    
+                    插件的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <a target="_blank" href="https://svrx.io/plugin?query=svrx-plugin-">
+            
+                    
+                    插件列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../plugin/contribution.html">
+            
+                <a href="../plugin/contribution.html">
+            
+                    
+                    如何写一个插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../practice/">
+            
+                <a href="../practice/">
+            
+                    
+                    项目实战
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../practice/recipe.html">
+            
+                <a href="../practice/recipe.html">
+            
+                    
+                    特定场景使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../practice/integration.html">
+            
+                <a href="../practice/integration.html">
+            
+                    
+                    结合主流脚手架使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    进阶指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="route.html">
+            
+                <a href="route.html">
+            
+                    
+                    Routing 路由的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="option.html">
+            
+                <a href="option.html">
+            
+                    
+                    Option 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../contribution.html">
+            
+                <a href="../contribution.html">
+            
+                    
+                    贡献指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    Blog
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../blog/introduction.html">
+            
+                <a href="../blog/introduction.html">
+            
+                    
+                    Server-X：一款可能提升你十倍工作效率的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../blog/mock.html">
+            
+                <a href="../blog/mock.html">
+            
+                    
+                    使用 svrx 实现更优雅的接口 Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Routing 路由的使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#routing-&#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;"><b></b>Routing &#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#start"><b></b>&#x5FEB;&#x901F;&#x8D77;&#x6B65; </a></li><ul><li><span class="title-icon "></span><a href="#&#x7279;&#x6027;"><b></b>&#x7279;&#x6027;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8BED;&#x6CD5;"><b></b>&#x8BED;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x7531;"><b></b>&#x8DEF;&#x7531;</a></li><ul><li><span class="title-icon "></span><a href="#method"><b></b>&#x8DEF;&#x7531;&#x65B9;&#x6CD5; </a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x7531;&#x5339;&#x914D;"><b></b>&#x8DEF;&#x7531;&#x5339;&#x914D;</a></li></ul><li><span class="title-icon "></span><a href="#action-&#x6E05;&#x5355;"><b></b>Action &#x6E05;&#x5355;</a></li><ul><li><span class="title-icon "></span><a href="#send"><b></b>send</a></li><li><span class="title-icon "></span><a href="#send-file"><b></b>sendFile </a></li><li><span class="title-icon "></span><a href="#json"><b></b>json</a></li><li><span class="title-icon "></span><a href="#redirecttarget-code"><b></b>redirect(target[, code])</a></li><li><span class="title-icon "></span><a href="#header"><b></b>header</a></li><li><span class="title-icon "></span><a href="#rewrite"><b></b>rewrite</a></li><li><span class="title-icon "></span><a href="#proxy"><b></b>proxy(target[, options]) </a></li><li><span class="title-icon "></span><a href="#handle"><b></b>handle </a></li></ul><li><span class="title-icon "></span><a href="#plugin"><b></b>&#x63D2;&#x4EF6;&#x63A5;&#x53E3; </a></li><li><span class="title-icon "></span><a href="#&#x5B8C;&#x6574;&#x8303;&#x4F8B;&#x6587;&#x4EF6;"><b></b>&#x5B8C;&#x6574;&#x8303;&#x4F8B;&#x6587;&#x4EF6;</a></li></ul></ul></div><a href="#routing-&#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="routing-&#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;"><a name="routing-&#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#routing-&#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>Routing &#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;</h1>
+<h2 id="start"><a name="start" class="anchor-navigation-ex-anchor" href="#start"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5FEB;&#x901F;&#x8D77;&#x6B65; </h2>
+<p>&#x4F60;&#x53EF;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x5FEB;&#x901F;&#x5C1D;&#x8BD5; svrx &#x7684;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x529F;&#x80FD;</p>
+<pre><code class="lang-bash">touch route.js <span class="hljs-comment"># create empty routing file</span>
+svrx --route route.js
+</code></pre>
+<p>&#x5728; <code>route.js</code> &#x4E2D;</p>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/blog&apos;</span>).to.json({ title: <span class="hljs-string">&apos;svrx&apos;</span> });
+</code></pre>
+<p>&#x6253;&#x5F00; <code>/blog</code>&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230; <code>{title: &apos;svrx&apos;}</code> &#x7684; json &#x8F93;&#x51FA;</p>
+<h3 id="&#x7279;&#x6027;"><a name="&#x7279;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x7279;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7279;&#x6027;</h3>
+<ul>
+<li><strong>&#x652F;&#x6301; hot reloading</strong> ( &#x901A;&#x8FC7;&#x7F16;&#x8F91; <code>route.js</code> &#x6765;&#x9A8C;&#x8BC1; )</li>
+<li>&#x7B80;&#x5355;&#x7684;&#x4E66;&#x5199;&#xFF0C;&#x76F4;&#x89C2;&#x7684;&#x9605;&#x8BFB;</li>
+<li>&#x652F;&#x6301;&#x901A;&#x8FC7;<a href="#plugin">&#x63D2;&#x4EF6;</a>&#x6765;&#x6269;&#x5C55;&#x548C;&#x5206;&#x53D1;</li>
+</ul>
+<h2 id="&#x8BED;&#x6CD5;"><a name="&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BED;&#x6CD5;</h2>
+<p><code>[method](selector).to.[action](payload)</code></p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;</p>
+<pre><code class="lang-js">post(<span class="hljs-string">&apos;/blog&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://music.163.com&apos;</span>);
+</code></pre>
+<p>&#x5206;&#x522B;&#x5BF9;&#x5E94;</p>
+<ul>
+<li>method: post</li>
+<li>selector: /blog</li>
+<li>action: proxy</li>
+<li>payload: &apos;<a href="http://music.163.com" target="_blank">http://music.163.com</a>&apos;</li>
+</ul>
+<blockquote>
+<p><em>&#x5176;&#x4E2D; to &#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x4ECB;&#x8BCD;&#xFF0C;&#x53EF;&#x4EE5;&#x7701;&#x7565;</em></p>
+</blockquote>
+<h2 id="&#x8DEF;&#x7531;"><a name="&#x8DEF;&#x7531;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;</h2>
+<h3 id="method"><a name="method" class="anchor-navigation-ex-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;&#x65B9;&#x6CD5; </h3>
+<p>svrx &#x8DEF;&#x7531;&#x652F;&#x6301; <a href="https://github.com/jshttp/methods/blob/master/index.js" target="_blank">methods</a> &#x5B9A;&#x4E49;&#x7684; http methods</p>
+<blockquote>
+<p>&#x26A0;&#xFE0F; &#x7531;&#x4E8E; delete &#x4E0E; js &#x4FDD;&#x7559;&#x5B57;&#x51B2;&#x7A81;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; del() &#x6765;&#x521B;&#x5EFA; DELETE &#x65B9;&#x6CD5;</p>
+</blockquote>
+<h3 id="&#x8DEF;&#x7531;&#x5339;&#x914D;"><a name="&#x8DEF;&#x7531;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;&#x5339;&#x914D;</h3>
+<p>svrx &#x8DEF;&#x7531;&#x57FA;&#x4E8E; <a href="https://github.com/pillarjs/path-to-regexp" target="_blank"><code>path-to-regexp</code></a> &#x5339;&#x914D;,
+&#x548C;&#x4E24;&#x5927;&#x5E73;&#x6C11; Node &#x6846;&#x67B6; <a href="https://expressjs.com/en/guide/routing.html" target="_blank">express</a> &#x548C; <a href="https://github.com/ZijianHe/koa-router" target="_blank">koa</a> &#x76F8;&#x540C;.</p>
+<p>&#x67E5;&#x770B; <a href="https://github.com/pillarjs/path-to-regexp" target="_blank"><code>path-to-regexp</code></a> &#x6765;&#x4E86;&#x89E3;&#x66F4;&#x8BE6;&#x5C3D;&#x7684;&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF0C;&#x4EE5;&#x4E0B;&#x505A;&#x7B80;&#x8981;&#x6982;&#x8FF0;</p>
+<h4 id="&#x89C4;&#x5219;&#x89E3;&#x6790;&#x4E3E;&#x4F8B;"><a name="&#x89C4;&#x5219;&#x89E3;&#x6790;&#x4E3E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x89C4;&#x5219;&#x89E3;&#x6790;&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89C4;&#x5219;&#x89E3;&#x6790;&#x4E3E;&#x4F8B;</h4>
+<ul>
+<li><code>/svrx/:id</code>: &#x5177;&#x540D;&#x5339;&#x914D;&#xFF0C;&#x89C4;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A; <code>(\w+)</code></li>
+<li><code>/svrx/:id(hello|world)</code>: &#x5177;&#x540D;&#x4E14;&#x6307;&#x5B9A;&#x5339;&#x914D;&#x89C4;&#x5219;</li>
+<li><code>/svrx(.*)</code>: &#x4E0D;&#x5177;&#x540D;&#x5339;&#x914D;</li>
+<li><code>/\/svrx\/(.*)$/</code>: <strong>&#x5BF9;&#x4E8E;&#x590D;&#x6742;&#x89C4;&#x5219;&#x7684;&#x8DEF;&#x7531;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</strong></li>
+</ul>
+<h4 id="&#x5339;&#x914D;&#x53C2;&#x6570;"><a name="&#x5339;&#x914D;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5339;&#x914D;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5339;&#x914D;&#x53C2;&#x6570;</h4>
+<ul>
+<li>&#x5177;&#x540D;&#x5339;&#x914D;&#x5982;<code>/:id</code>, &#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>ctx.params.id</code> &#x83B7;&#x5F97;</li>
+<li>&#x533F;&#x540D;&#x5339;&#x914D;&#x5982;<code>/(hello|world)/(.*).html</code>&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>ctx.params[0]</code> &#x4EE5;&#x53CA; <code>ctx.params[1]</code> &#x4F9D;&#x6B21;&#x83B7;&#x5F97;&#x5339;&#x914D;&#x53C2;&#x6570;</li>
+<li>&#x6B63;&#x5219;&#x5339;&#x914D;&#x5982;<code>/\/svrx\/(.*)$/</code>&#xFF0C;<code>ctx.params[i]</code> &#x4F9D;&#x6B21;&#x83B7;&#x5F97;&#x6B63;&#x5219;&#x7684;&#x5B50;&#x5339;&#x914D;&#x7ED3;&#x679C;</li>
+</ul>
+<h4 id="&#x53C2;&#x6570;&#x5FEB;&#x6377;&#x6620;&#x5C04;"><a name="&#x53C2;&#x6570;&#x5FEB;&#x6377;&#x6620;&#x5C04;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x5FEB;&#x6377;&#x6620;&#x5C04;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x5FEB;&#x6377;&#x6620;&#x5C04;</h4>
+<p>&#x9664; <a href="#handle">Action:handle</a> &#x5916;&#xFF0C;&#x5927;&#x90E8;&#x5206; action &#x5728;&#x8BED;&#x6CD5;&#x4E0A;&#x4E0D;&#x5177;&#x5907;&#x64CD;&#x4F5C; koa &#x4E0A;&#x4E0B;&#x6587;( context ) &#x7684;&#x80FD;&#x529B;&#xFF0C;&#x90E8;&#x5206; action &#x505A;&#x4E86; &#x53C2;&#x6570;&#x5FEB;&#x6377;&#x6620;&#x5C04; &#x7684;&#x652F;&#x6301;</p>
+<p>&#x4EE5; <a href="#send-file">sendFile</a> &#x4E3A;&#x4F8B;</p>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/html/:path.(html|htm)&apos;</span>).to.sendFile(<span class="hljs-string">&apos;./{path}.{0}&apos;</span>)
+</code></pre>
+<ul>
+<li><code>/html/index.html</code> &#x4F1A;&#x53D1;&#x9001; <code>${root}/html/index.html</code></li>
+<li><code>/html/home.htm</code> &#x4F1A;&#x53D1;&#x9001; <code>${root}/html/home.htm</code></li>
+</ul>
+<h2 id="action-&#x6E05;&#x5355;"><a name="action-&#x6E05;&#x5355;" class="anchor-navigation-ex-anchor" href="#action-&#x6E05;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>Action &#x6E05;&#x5355;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8DEF;&#x7531;&#x7684; <a href="#plugin"><strong>&#x63D2;&#x4EF6;&#x63A5;&#x53E3;</strong></a> &#x6765;&#x6269;&#x5C55; Action</p>
+<h3 id="send"><a name="send" class="anchor-navigation-ex-anchor" href="#send"><i class="fa fa-link" aria-hidden="true"></i></a>send</h3>
+<p>&#x53D1;&#x9001;&#x54CD;&#x5E94;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/blog&apos;</span>).to.send({ title: <span class="hljs-string">&apos;this is a blog&apos;</span> });
+</code></pre>
+<p>send &#x662F; koa &#x6846;&#x67B6; <code>ctx.body</code> &#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x5F53; payload &#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x65F6;&#x6709;&#x4EE5;&#x4E0B;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</p>
+<ul>
+<li><code>string</code><ul>
+<li>&#x5982;&#x679C;&#x5305;&#x542B;&#x4EE5;<code>&lt;</code>&#x5F00;&#x5934;&#x7684;&#x5B57;&#x7B26;&#x6BD4;&#x5982;<code>&lt;html&gt;</code>, <code>Content-Type</code> &#x5934;&#x4F1A;&#x8BBE;&#x7F6E;&#x4E3A; <code>text/html</code>, &#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x6E32;&#x67D3;&#x4E3A; html</li>
+<li>&#x5426;&#x5219;&#x8FD4;&#x56DE;<code>text/plain</code></li>
+</ul>
+</li>
+<li><code>object</code> or <code>array</code> or <code>number</code> or <code>boolean</code> ...<ul>
+<li>&#x8FD4;&#x56DE; <code>json</code>, <code>Content-Type</code> &#x4E3A; <code>application/json</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="send-file"><a name="send-file" class="anchor-navigation-ex-anchor" href="#send-file"><i class="fa fa-link" aria-hidden="true"></i></a>sendFile </h3>
+<p>&#x53D1;&#x9001;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x6839;&#x636E;&#x81EA;&#x52A8;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x8BBE;&#x7F6E; <code>Content-Type</code></p>
+<pre><code class="lang-js">
+get(<span class="hljs-string">&apos;/index.html&apos;</span>).to.sendFile(<span class="hljs-string">&apos;./index.html&apos;</span>);
+</code></pre>
+<ul>
+<li>&#x6839;&#x8DEF;&#x5F84; = <code>serve.base</code> || <code>root</code></li>
+<li><strong>&#x26A0;&#xFE0F;&#x652F;&#x6301;&#x53C2;&#x6570;&#x6620;&#x5C04;</strong>, &#x5982;&#x4E0B;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/file/:id.html&apos;</span>).to.sendFile(<span class="hljs-string">&apos;./assets/{id}.html&apos;</span>)
+</code></pre>
+<h3 id="json"><a name="json" class="anchor-navigation-ex-anchor" href="#json"><i class="fa fa-link" aria-hidden="true"></i></a>json</h3>
+<p>&#x65E0;&#x8BBA; payload &#x4E3A;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#xFF0C;&#x90FD;&#x53D1;&#x9001; <code>json</code> &#x54CD;&#x5E94;</p>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/blog&apos;</span>).to.json({title: <span class="hljs-string">&apos;svrx&apos;</span>});
+</code></pre>
+<h3 id="redirecttarget-code"><a name="redirecttarget-code" class="anchor-navigation-ex-anchor" href="#redirecttarget-code"><i class="fa fa-link" aria-hidden="true"></i></a>redirect(target[, code])</h3>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x8DF3;&#x8F6C;</p>
+<ul>
+<li>target: &#x76EE;&#x6807; path</li>
+<li>code: http code, default <code>302</code></li>
+</ul>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/blog&apos;</span>).to.redirect(<span class="hljs-string">&apos;/user&apos;</span>);
+</code></pre>
+<blockquote>
+<p><strong>&#x26A0;&#xFE0F;&#x652F;&#x6301;&#x53C2;&#x6570;&#x6620;&#x5C04;</strong>, &#x5982;&#x4E0B;&#x4F8B;</p>
+</blockquote>
+<p><code>get(&apos;/blog/:path(.*)&apos;).to.redirect(&apos;/user/{path}&apos;)</code></p>
+<h3 id="header"><a name="header" class="anchor-navigation-ex-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>header</h3>
+<p>&#x8BBE;&#x7F6E;&#x54CD;&#x5E94;&#x5934;&#xFF0C;&#x7531;&#x4E8E; header &#x5E76;&#x4E0D;&#x53D1;&#x9001;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4E32;&#x8054;&#x5176;&#x4ED6; action</p>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/blog&apos;</span>)
+  .to.header({ <span class="hljs-string">&apos;X-Engine&apos;</span>: <span class="hljs-string">&apos;svrx&apos;</span> })
+  .json({ code: <span class="hljs-number">200</span> });
+</code></pre>
+<h3 id="rewrite"><a name="rewrite" class="anchor-navigation-ex-anchor" href="#rewrite"><i class="fa fa-link" aria-hidden="true"></i></a>rewrite</h3>
+<p>&#x8DEF;&#x7531;&#x91CD;&#x5199;</p>
+<blockquote>
+<p><strong>&#x26A0;&#xFE0F;&#x652F;&#x6301;&#x53C2;&#x6570;&#x6620;&#x5C04;</strong></p>
+</blockquote>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/old/:path(.*)&apos;</span>).to.rewrite(<span class="hljs-string">&apos;/svrx/{path}&apos;</span>)
+get(<span class="hljs-string">&apos;/svrx(.*)&apos;</span>).to.send(<span class="hljs-string">&apos;Hello svrx&apos;</span>)
+</code></pre>
+<p>&#x5219;<code>/old/1</code>&#x548C;<code>/svrx/1</code> &#x90FD;&#x4F1A;&#x8FD4;&#x56DE;<code>Hello svrx</code></p>
+<blockquote>
+<p>&#x7531;&#x4E8E; rewrite &#x5E76;&#x4E0D;&#x53D1;&#x9001;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4E32;&#x8054;&#x5176;&#x4ED6; action</p>
+</blockquote>
+<h3 id="proxy"><a name="proxy" class="anchor-navigation-ex-anchor" href="#proxy"><i class="fa fa-link" aria-hidden="true"></i></a>proxy(target[, options]) </h3>
+<p>&#x4EE3;&#x7406;&#xFF0C;&#x5C06; path &#x4EE3;&#x7406;&#x5230; target &#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<ul>
+<li>target: &#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;</li>
+<li>options: &#x540C; <a href="api.html#proxy">proxy.options</a><ul>
+<li>changeOrigin</li>
+<li>secure</li>
+<li>pathRewrite</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/api(.*)&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://mock.server.com/&apos;</span>)
+get(<span class="hljs-string">&apos;/test(.*)&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://mock.server.com/&apos;</span>, {
+  secure: <span class="hljs-literal">false</span>,
+})
+get(<span class="hljs-string">&apos;/test/:id&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://{id}.dynamic.server.com/&apos;</span>)
+</code></pre>
+<h3 id="handle"><a name="handle" class="anchor-navigation-ex-anchor" href="#handle"><i class="fa fa-link" aria-hidden="true"></i></a>handle </h3>
+<p>handle &#x5373;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; koa &#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5C5E;&#x4E8E;&#x5168;&#x80FD;&#x529B; action&#xFF0C;&#x4EE5;&#x4E0A;&#x6240;&#x6709;&#x529F;&#x80FD;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; handle &#x6765;&#x5B9E;&#x73B0;&#xFF0C;
+&#x4EE3;&#x4EF7;&#x5C31;&#x662F;&#x53EF;&#x8BFB;&#x6027;&#x7684;&#x964D;&#x4F4E;.</p>
+<pre><code class="lang-js">
+get(<span class="hljs-string">&apos;/hello-world&apos;</span>).to.handle((ctx)=&gt;{
+  ctx.type = <span class="hljs-string">&apos;html&apos;</span>
+  ctx.body = <span class="hljs-string">&apos;&lt;body&gt;Hello World&lt;/body&gt;&apos;</span>
+});
+</code></pre>
+<p>&#x6B64;&#x5916;&#xFF0C;handle &#x4E5F;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x4E00;&#x4E2A; <code>require</code> &#x5F15;&#x5165;&#x7684; koa &#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-bodyparser&apos;</span>);
+
+post(<span class="hljs-string">&apos;/test/post&apos;</span>).to.handle(bodyParser()).handle((ctx) =&gt; {
+  ctx.type = <span class="hljs-string">&apos;html&apos;</span>;
+  ctx.body = ctx.request.body;
+});
+</code></pre>
+<blockquote>
+<p>&#x5C3D;&#x53EF;&#x80FD;&#x62BD;&#x53D6;&#x901A;&#x7528;&#x80FD;&#x529B;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49; action&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x300C;&#x63D2;&#x4EF6;&#x63A5;&#x53E3;&#x300D;&#x5C0F;&#x8282;</p>
+</blockquote>
+<h2 id="plugin"><a name="plugin" class="anchor-navigation-ex-anchor" href="#plugin"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D2;&#x4EF6;&#x63A5;&#x53E3; </h2>
+<p>&#x63D2;&#x4EF6;&#x7684; <code>hooks.onCreate</code> &#x4F1A;&#x6CE8;&#x5165;&#x540D;&#x4E3A; <code>router</code> &#x5BF9;&#x8C61;, &#x5305;&#x542B;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>action: &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4E0E; proxy&#x3001;json &#x7B49;&#x540C;&#x7EA7;&#x7684; action</li>
+<li>load: &#x52A0;&#x8F7D;&#x4E00;&#x4E2A; routing file</li>
+<li>route: &#x811A;&#x672C;&#x5F0F;&#x7684;&#x5B9A;&#x4E49; router</li>
+</ul>
+<p>&#x8BE6;&#x7EC6;&#x8BF7;&#x53C2;&#x8003; <a href="../plugin/contribution.html#router">&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x6307;&#x5357;</a></p>
+<h2 id="&#x5B8C;&#x6574;&#x8303;&#x4F8B;&#x6587;&#x4EF6;"><a name="&#x5B8C;&#x6574;&#x8303;&#x4F8B;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5B8C;&#x6574;&#x8303;&#x4F8B;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B8C;&#x6574;&#x8303;&#x4F8B;&#x6587;&#x4EF6;</h2>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/handle(.*)&apos;</span>).to.handle((ctx) =&gt; { ctx.body = <span class="hljs-string">&apos;handle&apos;</span>; });
+get(<span class="hljs-string">&apos;/blog(.*)&apos;</span>).to.json({ code: <span class="hljs-number">200</span> });
+get(<span class="hljs-string">&apos;/code(.*)&apos;</span>).to.send(<span class="hljs-string">&apos;code&apos;</span>, <span class="hljs-number">201</span>);
+get(<span class="hljs-string">&apos;/json(.*)&apos;</span>).to.send({ json: <span class="hljs-literal">true</span> });
+get(<span class="hljs-string">&apos;/text(.*)&apos;</span>).to.send(<span class="hljs-string">&apos;haha&apos;</span>);
+get(<span class="hljs-string">&apos;/html(.*)&apos;</span>).to.send(<span class="hljs-string">&apos;&lt;html&gt;haha&lt;/html&gt;&apos;</span>);
+get(<span class="hljs-string">&apos;/rewrite:path(.*)&apos;</span>).to.rewrite(<span class="hljs-string">&apos;/query{path}&apos;</span>);
+get(<span class="hljs-string">&apos;/redirect:path(.*)&apos;</span>).to.redirect(<span class="hljs-string">&apos;localhost:9002/proxy{path}&apos;</span>);
+get(<span class="hljs-string">&apos;/api(.*)&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://mock.server.com/&apos;</span>)
+get(<span class="hljs-string">&apos;/test(.*)&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://mock.server.com/&apos;</span>, {
+  secure: <span class="hljs-literal">false</span>,
+})
+get(<span class="hljs-string">&apos;/test/:id&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://{id}.dynamic.server.com/&apos;</span>)
+get(<span class="hljs-string">&apos;/query(.*)&apos;</span>).to.handle((ctx) =&gt; {
+  ctx.body = ctx.query;
+});
+get(<span class="hljs-string">&apos;/header(.*)&apos;</span>)
+  .to.header({ <span class="hljs-string">&apos;X-From&apos;</span>: <span class="hljs-string">&apos;svrx&apos;</span> })
+  .json({ user: <span class="hljs-string">&apos;svrx&apos;</span> });
+get(<span class="hljs-string">&apos;/user&apos;</span>).to.json({ user: <span class="hljs-string">&apos;svrx&apos;</span> });
+
+get(<span class="hljs-string">&apos;/sendFile/:path(.*)&apos;</span>).to.sendFile(<span class="hljs-string">&apos;./{path}&apos;</span>);
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2019, NetEase, Inc. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-04-13 16:41:25
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 进阶指南">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="api.html" class="navigation navigation-next " aria-label="Next page: API 列表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Routing 路由的使用","level":"1.5.1","depth":2,"next":{"title":"API 列表","level":"1.5.2","depth":2,"path":"guide/api.md","ref":"./guide/api.md","articles":[]},"previous":{"title":"进阶指南","level":"1.5","depth":1,"path":"guide/README.md","ref":"./guide/README.md","articles":[{"title":"Routing 路由的使用","level":"1.5.1","depth":2,"path":"guide/route.md","ref":"./guide/route.md","articles":[]},{"title":"API 列表","level":"1.5.2","depth":2,"path":"guide/api.md","ref":"./guide/api.md","articles":[]},{"title":"Option 列表","level":"1.5.3","depth":2,"path":"guide/option.md","ref":"./guide/option.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","todo","-lunr","-search","search-pro","github","-sharing","sharing-plus","tbfed-pagefooter","anchor-navigation-ex","edit-link","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2019, NetEase, Inc."},"github":{"url":"https://github.com/svrxjs/svrx"},"todo":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"sharing":{"douban":false,"facebook":true,"twitter":true,"pocket":true,"qq":false,"qzone":false,"weibo":true,"all":["douban","facebook","twitter","instapaper","linkedin","weibo","messenger","qq","qzone","viber","whatsapp"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/svrxjs/svrx-docs/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs of Server-X","language":"zh-hans","gitbook":"*","description":"svrx(server-x) is a pluggable platform built for efficient front-end development"},"file":{"path":"guide/route.md","mtime":"2020-04-13T08:41:25.236Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T08:42:46.711Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "10"
+cache:
+  directories:
+    - node_modules
+before_install:
+  - export TZ='Asia/Shanghai'
+script:
+  - npm run build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: ./_book/
+  target-branch: gh-pages
+  verbose: true
+  on:
+    branch: master
+
+

@@ -1,0 +1,1108 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>如何写一个插件 · Docs of Server-X</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../practice/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于 svrx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quick-start.html">
+            
+                <a href="../quick-start.html">
+            
+                    
+                    快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    插件体系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="usage.html">
+            
+                <a href="usage.html">
+            
+                    
+                    插件的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <a target="_blank" href="https://svrx.io/plugin?query=svrx-plugin-">
+            
+                    
+                    插件列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="contribution.html">
+            
+                <a href="contribution.html">
+            
+                    
+                    如何写一个插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../practice/">
+            
+                <a href="../practice/">
+            
+                    
+                    项目实战
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../practice/recipe.html">
+            
+                <a href="../practice/recipe.html">
+            
+                    
+                    特定场景使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../practice/integration.html">
+            
+                <a href="../practice/integration.html">
+            
+                    
+                    结合主流脚手架使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../guide/">
+            
+                <a href="../guide/">
+            
+                    
+                    进阶指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../guide/route.html">
+            
+                <a href="../guide/route.html">
+            
+                    
+                    Routing 路由的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../guide/api.html">
+            
+                <a href="../guide/api.html">
+            
+                    
+                    API 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../guide/option.html">
+            
+                <a href="../guide/option.html">
+            
+                    
+                    Option 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../contribution.html">
+            
+                <a href="../contribution.html">
+            
+                    
+                    贡献指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    Blog
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../blog/introduction.html">
+            
+                <a href="../blog/introduction.html">
+            
+                    
+                    Server-X：一款可能提升你十倍工作效率的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../blog/mock.html">
+            
+                <a href="../blog/mock.html">
+            
+                    
+                    使用 svrx 实现更优雅的接口 Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >如何写一个插件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;"><b></b>&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E00;&#x4E2A;-svrx-&#x63D2;&#x4EF6;"><b></b>&#x7B2C;&#x4E00;&#x4E2A; svrx &#x63D2;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x7ED3;&#x6784;"><b></b>&#x6587;&#x4EF6;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#&#x53D1;&#x5E03;--&#x8FD0;&#x884C;"><b></b>&apos;&#x53D1;&#x5E03;&apos; &amp;&amp; &#x8FD0;&#x884C;</a></li></ul><li><span class="title-icon "></span><a href="#server"><b></b>&#x63D2;&#x4EF6;&#x670D;&#x52A1; API </a></li><ul><li><span class="title-icon "></span><a href="#middleware"><b></b>middleware</a></li><li><span class="title-icon "></span><a href="#injector"><b></b>injector</a></li><li><span class="title-icon "></span><a href="#events"><b></b>events</a></li><li><span class="title-icon "></span><a href="#config"><b></b>config</a></li><li><span class="title-icon "></span><a href="#router"><b></b>router</a></li><li><span class="title-icon "></span><a href="#logger"><b></b>logger</a></li><li><span class="title-icon "></span><a href="#loggerlevelmsg"><b></b>logger[level](msg)</a></li><li><span class="title-icon "></span><a href="#io"><b></b>io</a></li></ul><li><span class="title-icon "></span><a href="#client"><b></b>&#x5BA2;&#x6237;&#x7AEF; API </a></li><ul><li><span class="title-icon "></span><a href="#io_1"><b></b>io</a></li><li><span class="title-icon "></span><a href="#events_1"><b></b>events</a></li><li><span class="title-icon "></span><a href="#config_1"><b></b>config</a></li><li><span class="title-icon "></span><a href="#schema"><b></b>&#x53C2;&#x6570;&#x5B9A;&#x4E49; </a></li></ul><li><span class="title-icon "></span><a href="#test"><b></b>&#x5982;&#x4F55;&#x6D4B;&#x8BD5;? </a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;-&#x2014;&#x2014;-svrx-create-plugin"><b></b>&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x63D2;&#x4EF6;&#x5F00;&#x53D1; &#x2014;&#x2014; svrx-create-plugin</a></li></ul></ul></div><a href="#&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;"><a name="&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;</h1>
+<blockquote>
+<p>&#x4F7F;&#x7528;<a href="https://github.com/svrxjs/svrx-create-plugin" target="_blank"><code>svrx-create-plugin</code></a>&#x5E2E;&#x52A9;&#x4F60;&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x5F00;&#x53D1;&#x63D2;&#x4EF6;</p>
+</blockquote>
+<h2 id="&#x7B2C;&#x4E00;&#x4E2A;-svrx-&#x63D2;&#x4EF6;"><a name="&#x7B2C;&#x4E00;&#x4E2A;-svrx-&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E00;&#x4E2A;-svrx-&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E00;&#x4E2A; svrx &#x63D2;&#x4EF6;</h2>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x7B2C;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6; &#x2014;&#x2014; <a href="https://github.com/svrxjs/svrx-plugin-hello-world" target="_blank"><code>svrx-plugin-hello-world</code></a>&#xFF0C;
+&#x5B83;&#x7528;&#x6765;&#x5728;&#x7EC8;&#x7AEF;&#x548C;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x5206;&#x522B;&#x6253;&#x5370;&#x7528;&#x6237;&#x6B22;&#x8FCE;&#x8BED;</p>
+<h3 id="&#x6587;&#x4EF6;&#x7ED3;&#x6784;"><a name="&#x6587;&#x4EF6;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x6587;&#x4EF6;&#x7ED3;&#x6784;</strong></h3>
+<pre><code class="lang-js">&#x2514;&#x2500;&#x2500; svrx-plugin-hello-world
+  &#x251C;&#x2500;&#x2500; client.js
+  &#x251C;&#x2500;&#x2500; index.js
+  &#x2514;&#x2500;&#x2500; package.json
+</code></pre>
+<blockquote>
+<p><em>&#x5176;&#x5B9E;&#x53EA;&#x6709;<code>package.json</code> &#x548C; <code>index.js</code></em>&#x662F;&#x5FC5;&#x987B;&#x7684;</p>
+</blockquote>
+<p>&#x4EE5;&#x4E0B;&#x5206;&#x522B;&#x505A;&#x4E0B;&#x4ECB;&#x7ECD;</p>
+<ul>
+<li><code>package.json</code></li>
+</ul>
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;svrx-plugin-hello-world&quot;</span>,
+  <span class="hljs-string">&quot;engines&quot;</span>: {
+    <span class="hljs-string">&quot;svrx&quot;</span> : <span class="hljs-string">&quot;0.0.x&quot;</span>
+  }
+  ...&#x7565;..
+}
+</code></pre>
+<p>&#x5728;<code>package.json</code>&#x4E2D;&#x53EA;&#x6709; 2 &#x4E2A;&#x5B57;&#x6BB5;&#x662F; svrx &#x4F9D;&#x8D56;&#x7684;</p>
+<ul>
+<li><code>name</code>: &#x5305;&#x540D;&#x8981;&#x6C42;&#x5FC5;&#x987B;&#x662F; <code>svrx-plugin</code> &#x5F00;&#x5934;&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x4F7F;&#x7528; npm &#x670D;&#x52A1;&#x6765;&#x8FDB;&#x884C;&#x63D2;&#x4EF6;&#x67E5;&#x627E;</li>
+<li><code>engines.svrx</code>: &#x5B9A;&#x4E49;&#x6B64;&#x63D2;&#x4EF6;&#x7684;&#x53EF;&#x8FD0;&#x884C; svrx &#x7248;&#x672C;&#xFF0C;svrx &#x4F1A;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x6700;&#x65B0;&#x7684;&#x5339;&#x914D;&#x63D2;&#x4EF6;&#xFF0C;
+<strong>engines.svrx</strong> &#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A; <a href="https://www.npmjs.com/package/semver" target="_blank">semver</a>&#xFF0C;&#x5982;<code>0.1.x</code>&#x6216;<code>~0.1</code>&#x7B49;</li>
+</ul>
+<h4 id="-indexjs"><a name="-indexjs" class="anchor-navigation-ex-anchor" href="#-indexjs"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>index.js</code></h4>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  configSchema: {
+    user: {
+      type: <span class="hljs-string">&apos;string&apos;</span>,
+      <span class="hljs-keyword">default</span>: <span class="hljs-string">&apos;svrx&apos;</span>,
+      description: <span class="hljs-string">&apos;username for hello world&apos;</span>
+    }
+  },
+
+  assets: {
+    script: [<span class="hljs-string">&apos;./client.js&apos;</span>]
+  },
+
+  hooks: {
+    <span class="hljs-keyword">async</span> onCreate({ logger, config }) {
+      logger.log(<span class="hljs-string">`Hello <span class="hljs-subst">${config.get(&apos;user&apos;)}</span> from server`</span>);
+    }
+  }
+};
+</code></pre>
+<p>&#x5176;&#x4E2D;</p>
+<ol>
+<li><code>configSchema</code> &#x63D2;&#x4EF6;&#x53C2;&#x6570;&#x5B9A;&#x4E49;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;<a href="#schema">&#x53C2;&#x6570;&#x5B9A;&#x4E49;</a>&#x4E86;&#x89E3;&#x66F4;&#x591A;,&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x4E3A;<code>&apos;svrx&apos;</code>&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570; <code>user</code></li>
+<li><p><code>assets</code>: &#x524D;&#x7AEF;&#x8D44;&#x6E90;&#x914D;&#x7F6E;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x5230;&#x524D;&#x7AEF;&#x811A;&#x672C;&#x4E2D;</p>
+<ul>
+<li><code>style</code>: css &#x811A;&#x672C;&#x6CE8;&#x5165;&#xFF0C;&#x9ED8;&#x8BA4;&#x6CE8;&#x5165; html &#x5934;&#x90E8;&#xFF0C;&#x672C;&#x4F8B;&#x6CA1;&#x6709;&#x4F7F;&#x7528;</li>
+<li><code>script</code>: script &#x811A;&#x672C;&#x6CE8;&#x5165;&#xFF0C;&#x9ED8;&#x8BA4;&#x6CE8;&#x5165; html &#x5C3E;&#x90E8;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#x5165;&#x524D;&#x7AEF;&#x8D44;&#x6E90;&#x90FD;&#x4F1A;&#x88AB;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;</p>
+</blockquote>
+</li>
+<li><p><code>hook.onCreate</code>: &#x63D2;&#x4EF6;&#x521B;&#x5EFA;&#x7684;&#x94A9;&#x5B50;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6CE8;&#x5165;&#x7684;&#x670D;&#x52A1;&#x7EC4;&#x4EF6;&#x6765;&#x6269;&#x5C55;&#x63D2;&#x4EF6;&#xFF0C;&#x8FD9;&#x91CC;&#x4EC5;&#x4ECB;&#x7ECD;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x670D;&#x52A1;</p>
+<ul>
+<li><code>logger</code>: &#x65E5;&#x5FD7;&#x670D;&#x52A1;</li>
+<li><p><code>config</code>: &#x83B7;&#x53D6;&#x7528;&#x6237;&#x53C2;&#x6570;&#x7684;&#x7EC4;&#x4EF6;</p>
+<p>&#x672C;&#x4F8B;&#x505A;&#x7684;&#x662F;&#x5728;&#x7EC8;&#x7AEF;&#x6253;&#x5370;&#x5173;&#x4E8E; user &#x53C2;&#x6570;&#x7684;&#x6B22;&#x8FCE;&#x8BED;</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><code>hook.onCreate</code> &#x5B9E;&#x9645;&#x4E0A;&#x8FD8;&#x63A5;&#x53D7;&#x591A;&#x79CD;&#x7EC4;&#x4EF6;&#x670D;&#x52A1;&#xFF0C;&#x5177;&#x4F53;&#x8BF7;<a href="#server">&#x53C2;&#x8003;&#x63D2;&#x4EF6;&#x670D;&#x52A1;&#x7EC4;&#x4EF6;</a></p>
+<h4 id="-clientjs"><a name="-clientjs" class="anchor-navigation-ex-anchor" href="#-clientjs"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>client.js</code></h4>
+<p>&#x524D;&#x7AEF;&#x6CE8;&#x5165;&#x811A;&#x672C;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;<strong>&#x300C;&#x5168;&#x5C40;&#x53D8;&#x91CF; svrx&#x300D;</strong>&#xFF0C; &#x6302;&#x8F7D;&#x4E86;&#x4E00;&#x4E9B; svrx &#x5728;&#x524D;&#x7AEF;&#x7684;&#x5185;&#x7F6E;&#x670D;&#x52A1;&#x3002;</p>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x5168;&#x5C40; svrx &#x4EC5;&#x5728;&#x63D2;&#x4EF6;&#x811A;&#x672C;&#x5185;&#x90E8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#xFF0C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x5168;&#x5C40;&#x6C61;&#x67D3;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { config } = svrx;
+
+config.get(<span class="hljs-string">&apos;user&apos;</span>).then(user =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Hello <span class="hljs-subst">${user}</span> from browser`</span>);
+});
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4EC5;&#x4EC5;&#x662F;&#x505A;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x76F8;&#x5173;&#x63A7;&#x5236;&#x53F0; log &#x8F93;&#x51FA;</p>
+<p>&#x4E0E;&#x670D;&#x52A1;&#x7AEF;&#x7684; config &#x7EC4;&#x4EF6;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x91CC;&#x7684; config &#x662F;&#x901A;&#x8FC7; websocket &#x4F20;&#x9012;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x662F; promise</p>
+<blockquote>
+<p>svrx &#x5176;&#x5B9E;&#x8FD8;&#x66B4;&#x9732;&#x4E86;&#x5176;&#x5B83;&#x524D;&#x7AEF;&#x670D;&#x52A1;&#xFF0C;&#x5177;&#x4F53;&#x8BF7;&#x53C2;&#x8003;<a href="#client">&#x524D;&#x7AEF; API</a></p>
+</blockquote>
+<h3 id="&#x53D1;&#x5E03;--&#x8FD0;&#x884C;"><a name="&#x53D1;&#x5E03;--&#x8FD0;&#x884C;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x5E03;--&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&apos;&#x53D1;&#x5E03;&apos; &amp;&amp; &#x8FD0;&#x884C;</h3>
+<p>&#x5728;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x8FD0;&#x884C;<code>npm publish .</code>&#x5C1D;&#x8BD5;&#x53D1;&#x5E03;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x53D1;&#x5E03;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;<code>hello-world</code>&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x88AB;<a href="https://github.com/svrxjs/svrx-plugin-hello-world" target="_blank">&#x5B98;&#x65B9;&#x53D1;&#x5E03;&#x4E86;</a>&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8DF3;&#x8FC7;&#x8FD9;&#x4E00;&#x6B65;&#xFF0C;&#x76F4;&#x63A5;&#x8FD0;&#x884C;</p>
+<pre><code class="lang-js">svrx -p hello-world
+</code></pre>
+<p>&#x68C0;&#x67E5;&#x4E0B;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x548C;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#x5C06;&#x53EF;&#x4EE5;&#x770B;&#x5230; &apos;Hello svrx from browser&apos; &#x7684;&#x7C7B;&#x4F3C;&#x65E5;&#x5FD7;&#xFF0C;&#x8BF4;&#x660E;&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x751F;&#x6548;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x811A;&#x672C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x542F;&#x52A8;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> svrx = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@svrx/svrx&apos;</span>);
+
+svrx({
+  plugins: [<span class="hljs-string">&apos;hello-world&apos;</span>]
+}).start();
+</code></pre>
+<blockquote>
+<p>&#x8FDB;&#x4E00;&#x6B65;&#x9605;&#x8BFB;: <a href="#test">&#x5982;&#x4F55;&#x672C;&#x5730;&#x6D4B;&#x8BD5;?</a></p>
+</blockquote>
+<h2 id="server"><a name="server" class="anchor-navigation-ex-anchor" href="#server"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D2;&#x4EF6;&#x670D;&#x52A1; API </h2>
+<p>&#x6240;&#x6709;&#x63D2;&#x4EF6;&#x670D;&#x52A1;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x4E24;&#x4E2A;&#x5730;&#x65B9;&#x88AB;&#x6CE8;&#x5165;</p>
+<ul>
+<li>&#x63D2;&#x4EF6;&#x5B9A;&#x4E49;&#x4E2D;&#x7684;<code>hooks.onCreate</code>&#x94A9;&#x5B50;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  hooks: {
+    <span class="hljs-keyword">async</span> onCreate({
+      middleware,
+      injector,
+      events,
+      router,
+      config,
+      logger,
+      io
+    }) {
+      <span class="hljs-comment">// use component here</span>
+    }
+  }
+};
+</code></pre>
+<ul>
+<li>svrx &#x5B9E;&#x4F8B;&#x7684;<code>plugin</code>&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#xFF0C;&#x6B64;&#x4E8B;&#x4EF6;&#x4F1A;&#x5728;&#x6240;&#x6709;&#x63D2;&#x4EF6;&#x7EC4;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#x6267;&#x884C;</li>
+</ul>
+<pre><code class="lang-js">svrx().on(<span class="hljs-string">&apos;plugin&apos;</span>, <span class="hljs-keyword">async</span> ({ logger, io }) =&gt; {
+  <span class="hljs-comment">// use component here</span>
+});
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x4F9D;&#x6B21;&#x8BF4;&#x660E;&#x8FD9; 7 &#x4E2A;&#x7EC4;&#x4EF6;</p>
+<h3 id="middleware"><a name="middleware" class="anchor-navigation-ex-anchor" href="#middleware"><i class="fa fa-link" aria-hidden="true"></i></a>middleware</h3>
+<p>middleware &#x8D1F;&#x8D23;&#x6DFB;&#x52A0;&#x6EE1;&#x8DB3; <a href="https://koajs.com/" target="_blank">koa &#x98CE;&#x683C;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;</a> &#x5B8C;&#x6210;&#x540E;&#x7AEF;&#x903B;&#x8F91;&#x7684;&#x6CE8;&#x5165;</p>
+<h4 id="-middlewareaddname-definition"><a name="-middlewareaddname-definition" class="anchor-navigation-ex-anchor" href="#-middlewareaddname-definition"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>middleware.add(name, definition)</code></h4>
+<p>&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;</p>
+<p><em>Usage</em></p>
+<pre><code class="lang-js">middleware.add(<span class="hljs-string">&apos;hello-world-middleware&apos;</span>, {
+  priority: <span class="hljs-number">100</span>,
+  <span class="hljs-keyword">async</span> onRoute(ctx, next) {}
+});
+</code></pre>
+<p><em>Param</em></p>
+<ul>
+<li><p><code>name</code> [String]: &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x540D;</p>
+<blockquote>
+<p>debug &#x6A21;&#x5F0F;&#x4E0B;&#x6839;&#x636E;&#x6B64;&#x547D;&#x540D;&#x53EF;&#x4EE5; track &#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x7684;&#x7BA1;&#x7EBF;</p>
+</blockquote>
+</li>
+<li><p><code>definition.priority</code> [Number]: &#x9ED8;&#x8BA4;&#x4E3A; 10. svrx &#x4F1A;&#x6839;&#x636E; priority &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x7684;&#x7EC4;&#x88C5;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5373;&#x8BF7;&#x6C42;&#x4F1A;&#x5148;&#x7ECF;&#x8FC7;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x63D2;&#x4EF6;</p>
+</li>
+<li><code>definition.onRoute</code> [Function]: &#x6EE1;&#x8DB3; koa &#x89C4;&#x8303;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x5B9A;&#x4E49;&#xFF0C;&#x5982;&#x679C; <code>definition</code> &#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x6210;&#x4E3A; <code>definition.onRoute</code></li>
+</ul>
+<h4 id="-middlewaredelname"><a name="-middlewaredelname" class="anchor-navigation-ex-anchor" href="#-middlewaredelname"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>middleware.del(name)</code></h4>
+<p>&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;</p>
+<p><em>Usage</em></p>
+<pre><code class="lang-js">middleware.del(<span class="hljs-string">&apos;hello-world-middleware&apos;</span>);
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code>: &#x4F20;&#x5165;<code>add</code>&#x7684;&#x540D;&#x79F0;</li>
+</ul>
+<h3 id="injector"><a name="injector" class="anchor-navigation-ex-anchor" href="#injector"><i class="fa fa-link" aria-hidden="true"></i></a>injector</h3>
+<p><code>injector</code>&#x7528;&#x6765;&#x6539;&#x5199;&#x54CD;&#x5E94;&#x6D41;&#x6216;&#x6CE8;&#x5165;&#x524D;&#x7AEF;&#x8D44;&#x6E90;</p>
+<h4 id="-injectoraddtype-definition"><a name="-injectoraddtype-definition" class="anchor-navigation-ex-anchor" href="#-injectoraddtype-definition"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>injector.add(type, definition)</code></h4>
+<p>&#x589E;&#x52A0;&#x4E00;&#x79CD;&#x6CE8;&#x5165;&#x8D44;&#x6E90;, &#x76EE;&#x524D;&#x652F;&#x6301;&#x539F;&#x751F;&#x7684; js &#x548C; css &#x6CE8;&#x5165;&#xFF0C;&#x4ED6;&#x4EEC;&#x6CE8;&#x5165;&#x89C4;&#x5219;&#x5982;&#x4E0B;</p>
+<ul>
+<li>&#x6837;&#x5F0F;&#x4F1A;&#x5408;&#x5E76;&#x5230;<code>/svrx/svrx-client.css</code>&#x4E0B;&#xFF0C;&#x5E76;&#x6CE8;&#x5165;&#x5230; html &#x7684;<code>head</code>&#x95ED;&#x5408;&#x6807;&#x7B7E;&#x524D;</li>
+<li>&#x811A;&#x672C;&#x4F1A;&#x5408;&#x5E76;&#x5230;<code>/svrx/svrx-client.js</code>&#xFF0C;&#x5E76;&#x6CE8;&#x5165;&#x5230; html &#x7684;<code>body</code>&#x95ED;&#x5408;&#x6807;&#x7B7E;&#x524D;</li>
+</ul>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">injector.add(<span class="hljs-string">&apos;script&apos;</span>, {
+  content: <span class="hljs-string">`
+    console.log(&apos;hello world&apos;)
+  `</span>
+});
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4F1A;&#x5F80;<code>/svrx/svrx-client.js</code> &#x6CE8;&#x5165; content &#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x811A;&#x672C;&#x5185;&#x5BB9;</p>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: &#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;<code>script</code>&#x4EE5;&#x53CA;<code>style</code></li>
+<li><code>definition.content</code> [String]: &#x8D44;&#x6E90;&#x7684;&#x5185;&#x5BB9;</li>
+<li><code>definition.filename</code> [String]: &#x8D44;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x7EDD;&#x5BF9;&#x5730;&#x5740;</li>
+</ul>
+<blockquote>
+<p>content &#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E; filename&#xFF0C;&#x4E8C;&#x8005;&#x53D6;&#x5176;&#x4E00;&#x5373;&#x53EF;</p>
+</blockquote>
+<h4 id="-injectorreplacepattern-replacement"><a name="-injectorreplacepattern-replacement" class="anchor-navigation-ex-anchor" href="#-injectorreplacepattern-replacement"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>injector.replace(pattern, replacement)</code></h4>
+<p>&#x81EA;&#x5B9A;&#x4E49; html &#x7684;&#x66FF;&#x6362;&#x89C4;&#x5219;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">injector.replace(<span class="hljs-regexp">/svrx/g</span>, <span class="hljs-string">&apos;server-x&apos;</span>);
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x5C06; html &#x4E2D;&#x7684; svrx &#x66FF;&#x6362;&#x4E3A; server-x</p>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>pattern</code> [String|RegExp]</li>
+<li><code>replacement</code> [String|Function]</li>
+</ul>
+<blockquote>
+<p><code>injector.replace</code>&#x7684;&#x4F7F;&#x7528;&#x4E0E;<code>String.prototype.replace</code>&#x5B8C;&#x5168;&#x4E00;&#x81F4;
+&#x8D44;&#x6E90;&#x6CE8;&#x5165;&#x5C31;&#x662F;&#x901A;&#x8FC7;<code>injector.replace</code>&#x5B9E;&#x73B0;&#x7684;</p>
+</blockquote>
+<h3 id="events"><a name="events" class="anchor-navigation-ex-anchor" href="#events"><i class="fa fa-link" aria-hidden="true"></i></a>events</h3>
+<p>&#x5185;&#x7F6E;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x652F;&#x6301; async sorted emitter&#xFF0C;&#x5373;&#x53EF;&#x4EE5;&#x4F9D;&#x6B21;&#x8C03;&#x7528;&#x76D1;&#x542C;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x53EF;&#x5728;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x4E2D;&#x7EC8;&#x6B62;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;</p>
+<h4 id="-eventsontype-fn"><a name="-eventsontype-fn" class="anchor-navigation-ex-anchor" href="#-eventsontype-fn"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>events.on(type, fn)</code></h4>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">events.on(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-keyword">async</span> payload =&gt; {});
+
+events.on(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-keyword">async</span> (payload, ctrl) =&gt; {
+  ctrl.stop(); <span class="hljs-comment">// stop events emit, only works in sorted emit mode</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code> [String]: &#x4E8B;&#x4EF6;&#x540D;</li>
+<li><code>fn(payload, ctrl)</code>: &#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#xFF0C;&#x5B83;&#x5305;&#x542B; 2 &#x4E2A;&#x5165;&#x53C2;<ul>
+<li><code>payload</code> [String]: &#x4E8B;&#x4EF6;&#x53C2;&#x6570;, &#x901A;&#x8FC7; emit &#x4F20;&#x5165;</li>
+<li><code>ctrl</code> [Object]: &#x63A7;&#x5236;&#x5668;, &#x8C03;&#x7528;<code>ctrl.stop()</code>&#x53EF;&#x7EC8;&#x6B62; sorted emit</li>
+</ul>
+</li>
+</ul>
+<p>&#x5982;&#x679C;&#x56DE;&#x8C03;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Promise</code>(&#x6BD4;&#x5982; async function)&#xFF0C;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x56DE;&#x8C03;</p>
+<h4 id="-eventsemittype-param-sorted"><a name="-eventsemittype-param-sorted" class="anchor-navigation-ex-anchor" href="#-eventsemittype-param-sorted"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>events.emit(type, param, sorted)</code></h4>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-comment">// sorted emit, handler will be called one by one</span>
+events.emit(<span class="hljs-string">&apos;hello&apos;</span>, { param1: <span class="hljs-string">&apos;world&apos;</span> }, <span class="hljs-literal">true</span>).then(() =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;emit is done&apos;</span>);
+});
+<span class="hljs-comment">// parallel emit</span>
+events.emit(<span class="hljs-string">&apos;hello&apos;</span>, { param1: <span class="hljs-string">&apos;world&apos;</span> }).then(() =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;emit is done&apos;</span>);
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code> [String]: &#x4E8B;&#x4EF6;&#x540D;</li>
+<li><code>payload</code>: &#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#xFF0C;&#x88AB;<code>on</code>&#x4E2D;&#x6CE8;&#x518C;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x63A5;&#x6536;</li>
+<li><code>sorted</code> [Boolean]: &#x9ED8;&#x8BA4;<code>false</code>, &#x662F;&#x5426;&#x4E32;&#x884C;&#x963B;&#x585E;&#x7684;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;</li>
+</ul>
+<p><strong>Return</strong></p>
+<p><code>Promise</code></p>
+<h4 id="-eventsoffname-handler"><a name="-eventsoffname-handler" class="anchor-navigation-ex-anchor" href="#-eventsoffname-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>events.off(name, handler)</code></h4>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">events.off(<span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">// remove all hello&apos;s handler</span>
+events.off(<span class="hljs-string">&apos;hello&apos;</span>, handler); <span class="hljs-comment">// remove specific handler</span>
+</code></pre>
+<h4 id="&#x5185;&#x7F6E;&#x4E8B;&#x4EF6;"><a name="&#x5185;&#x7F6E;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x7F6E;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5185;&#x7F6E;&#x4E8B;&#x4EF6;</h4>
+<ul>
+<li><code>plugin</code>: &#x5F53;&#x63D2;&#x4EF6;&#x51C6;&#x5907;&#x5B8C;&#x6BD5;&#x540E;&#x89E6;&#x53D1;</li>
+<li><code>file:change</code>: &#x5F53;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x53D8;&#x66F4;&#x65F6;&#x88AB;&#x89E6;&#x53D1;</li>
+<li><code>ready</code>: &#x5F53;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x5904;&#x7406;&#x90E8;&#x5206;&#x903B;&#x8F91;(&#x5982;&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x7AEF;&#x53E3;)&#xFF0C;&#x8BF7;&#x6CE8;&#x518C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;</li>
+</ul>
+<h3 id="config"><a name="config" class="anchor-navigation-ex-anchor" href="#config"><i class="fa fa-link" aria-hidden="true"></i></a>config</h3>
+<p>&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x7BA1;&#x7406;</p>
+<h4 id="-configgetpath"><a name="-configgetpath" class="anchor-navigation-ex-anchor" href="#-configgetpath"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.get(path)</code></h4>
+<p>&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;</p>
+<p><strong>config &#x5185;&#x90E8;&#x7EF4;&#x62A4;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E3A;&#x4E0D;&#x53D8;&#x6570;&#x636E;</strong>&#xFF0C;&#x5BF9;&#x4E8E;&#x914D;&#x7F6E;&#x6709;&#x5B9E;&#x65F6;&#x6027;&#x8981;&#x6C42;&#x7684;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>config.get</code> &#x6765;&#x53D6;&#x503C;&#xFF0C;&#x786E;&#x4FDD;&#x83B7;&#x5F97;&#x6700;&#x65B0;&#x914D;&#x7F6E;&#x9879;&#x76EE;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.get(<span class="hljs-string">&apos;user&apos;</span>); <span class="hljs-comment">// get the user param  of plugin</span>
+config.get(<span class="hljs-string">&apos;user.name&apos;</span>); <span class="hljs-comment">// get the user.name param  of plugin</span>
+</code></pre>
+<p><strong>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5168;&#x5C40;&#x53C2;&#x6570;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x52A0;<code>$.</code>&#x524D;&#x7F00;</strong></p>
+<pre><code class="lang-js">config.get(<span class="hljs-string">&apos;$.port&apos;</span>); <span class="hljs-comment">// get the server&apos;s port</span>
+config.get(<span class="hljs-string">&apos;$.root&apos;</span>); <span class="hljs-comment">// get the svrx working directory</span>
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>field</code>: &#x914D;&#x7F6E;&#x540D;&#xFF0C;&#x6DF1;&#x5C42;&#x914D;&#x7F6E;&#x7528;<code>.</code>&#x5206;&#x5272;&#xFF0C;&#x6BD4;&#x5982;<code>user.name</code></li>
+</ul>
+<p><strong>Return</strong></p>
+<p>&#x914D;&#x7F6E;&#x503C;</p>
+<h4 id="-configsetfield-value"><a name="-configsetfield-value" class="anchor-navigation-ex-anchor" href="#-configsetfield-value"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.set(field, value)</code></h4>
+<p>&#x8BBE;&#x7F6E;&#x914D;&#x7F6E;&#x9879;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.set(<span class="hljs-string">&apos;a.b.c&apos;</span>, <span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">// deep set</span>
+config.get(<span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">// =&gt; { b: { c: &apos;hello&apos; } }</span>
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>field</code>: &#x914D;&#x7F6E;&#x540D;&#xFF0C;&#x6DF1;&#x5C42;&#x914D;&#x7F6E;&#x7528;<code>.</code>&#x5206;&#x5272;&#xFF0C;&#x6BD4;&#x5982;<code>user.name</code></li>
+<li><code>value</code> &#x914D;&#x7F6E;&#x503C;</li>
+</ul>
+<h4 id="-configwatchfield-handler"><a name="-configwatchfield-handler" class="anchor-navigation-ex-anchor" href="#-configwatchfield-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.watch([field, ]handler)</code></h4>
+<p>&#x76D1;&#x542C;&#x914D;&#x7F6E;&#x53D8;&#x5316;, &#x914D;&#x7F6E;&#x53D8;&#x5316;&#x68C0;&#x67E5;&#x4F1A;&#x5728;<code>set</code>&#x3001;<code>del</code>&#x3001;<code>splice</code>&#x65B9;&#x6CD5;&#x540E;&#x88AB;&#x89E6;&#x53D1;</p>
+<pre><code class="lang-js">config.watch( (evt)=&gt;{
+  <span class="hljs-built_in">console</span>.log(evt.affect(<span class="hljs-string">&apos;a.b.c&apos;</span>)) =&gt; <span class="hljs-literal">true</span>
+  <span class="hljs-built_in">console</span>.log(evt.affect(<span class="hljs-string">&apos;a&apos;</span>)) <span class="hljs-comment">// =&gt; true</span>
+  <span class="hljs-built_in">console</span>.log(evt.affect(<span class="hljs-string">&apos;a.c&apos;</span>)) <span class="hljs-comment">// =&gt; false</span>
+})
+config.set(<span class="hljs-string">&apos;a.b.c&apos;</span>, <span class="hljs-string">&apos;hello&apos;</span>);
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>field</code>: &#x5B57;&#x6BB5;&#x540D;, <code>field</code>&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x5982;&#x4E0D;&#x4F20;&#x5165;&#x5219;&#x6240;&#x6709; config &#x53D8;&#x66F4;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;</li>
+<li>handler(evt): &#x76D1;&#x542C;&#x56DE;&#x8C03;<ul>
+<li>evt.affect [Function]: &#x5224;&#x65AD;&#x672C;&#x6B21;&#x53D8;&#x66F4;&#x662F;&#x5426;&#x5F71;&#x54CD;&#x67D0;&#x5B57;&#x6BB5;</li>
+</ul>
+</li>
+</ul>
+<h4 id="-configdelfield"><a name="-configdelfield" class="anchor-navigation-ex-anchor" href="#-configdelfield"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.del(field)</code></h4>
+<p>&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x914D;&#x7F6E;&#x9879;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.del(<span class="hljs-string">&apos;a.b.c&apos;</span>);
+config.get(<span class="hljs-string">&apos;a.b.c&apos;</span>); <span class="hljs-comment">//=&gt; undefined</span>
+</code></pre>
+<p><strong>Param</strong></p>
+<p>&#x914D;&#x7F6E;&#x540D;</p>
+<h4 id="-configsplicefield-start-delcount-items"><a name="-configsplicefield-start-delcount-items" class="anchor-navigation-ex-anchor" href="#-configsplicefield-start-delcount-items"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.splice(field, start[, delCount[, items...])</code></h4>
+<p>&#x6570;&#x7EC4; splice &#x7684; config &#x7248;&#x672C;</p>
+<p>&#x9664;&#x4E86;<code>field</code>&#x5916;&#xFF0C;<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x4E0E; Array.prototype.splice &#x4E00;&#x81F4;</a></p>
+<h3 id="router"><a name="router" class="anchor-navigation-ex-anchor" href="#router"><i class="fa fa-link" aria-hidden="true"></i></a>router</h3>
+<p>&#x4ECE;&#x63D2;&#x4EF6;&#x5C42;&#x9762;&#x6269;&#x5C55;&#x6216;&#x6CE8;&#x518C;<a href="../guide/route.html#plugin">Routing &#x6A21;&#x5757;</a></p>
+<h4 id="-routerrouteregister"><a name="-routerrouteregister" class="anchor-navigation-ex-anchor" href="#-routerrouteregister"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>router.route(register)</code></h4>
+<p>&#x5FEB;&#x6377;&#x6CE8;&#x518C;&#x8DEF;&#x7531;&#xFF0C;&#x4E0E;<a href="../guide/route.html">Routing DSL</a>&#x4E00;&#x81F4;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {route} = router;
+
+route(({all, get, post})=&gt;{
+
+  all(<span class="hljs-string">&apos;/blog&apos;</span>).to.send(<span class="hljs-string">&apos;Hi, Blog&apos;</span>)
+  get(<span class="hljs-string">&apos;/user&apos;</span>).to.send(<span class="hljs-string">&apos;Hi, user&apos;</span>)
+  post(<span class="hljs-string">&apos;/user&apos;</span>).to.send({code: <span class="hljs-number">200</span>, data: <span class="hljs-string">&apos;Success!&apos;</span>})
+
+})
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li>register({...methods}): &#x6CE8;&#x518C;&#x56DE;&#x8C03;<ul>
+<li>methods: &#x5BF9;&#x5E94;<a href="../guide/route.html#method">HTTP methods</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="-routeractionname-builder"><a name="-routeractionname-builder" class="anchor-navigation-ex-anchor" href="#-routeractionname-builder"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>router.action(name, builder)</code></h4>
+<p>&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4E0E; <code>proxy</code>&#x3001;<code>json</code> &#x7C7B;&#x4F3C;&#x7684; action</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { action, route } = router;
+action(<span class="hljs-string">&apos;hello&apos;</span>, user =&gt; ctx =&gt; {
+  ctx.body = <span class="hljs-string">`hello <span class="hljs-subst">${user}</span>`</span>;
+});
+route(({ all }) =&gt; {
+  all(<span class="hljs-string">&apos;/blog&apos;</span>).hello(<span class="hljs-string">&apos;svrx&apos;</span>); <span class="hljs-comment">//=&gt; response &apos;hello svrx&apos;</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: action &#x540D;&#xFF0C;&#x5373;&#x540E;&#x7EED;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x540D;</li>
+<li><code>builder(payload)</code><ul>
+<li>payload: &#x5373;&#x4F20;&#x5165; action &#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x4E0A;&#x6817;&#x7684;<code>&apos;svrx&apos;</code></li>
+<li>Return: builder &#x8FD4;&#x56DE;&#x6807;&#x51C6;&#x7684;<a href="https://koajs.com" target="_blank">koa &#x4E2D;&#x95F4;&#x4EF6;</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="-routerloadfilename"><a name="-routerloadfilename" class="anchor-navigation-ex-anchor" href="#-routerloadfilename"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>router.load(filename)</code></h4>
+<p>&#x624B;&#x52A8;&#x52A0;&#x8F7D;&#x4E00;&#x4E2A; route &#x6587;&#x4EF6;&#xFF0C;&#x4E0E;<a href="../guide/route#start">&#x542F;&#x52A8;&#x53C2;&#x6570; route &#x4E00;&#x81F4;</a></p>
+<p><em>&#x52A0;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x540C;&#x6837;&#x652F;&#x6301; hot reloading</em></p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">await</span> router.load(<span class="hljs-string">&apos;/path/to/route.md&apos;</span>);
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>filename</code>: &#x8DEF;&#x7531;&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</li>
+</ul>
+<p><strong>Return</strong></p>
+<p><code>Promise</code></p>
+<h3 id="logger"><a name="logger" class="anchor-navigation-ex-anchor" href="#logger"><i class="fa fa-link" aria-hidden="true"></i></a>logger</h3>
+<p>&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#xFF0C;&#x5B83;&#x7684;&#x5206;&#x7EA7;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>logger.level</code>&#x6765;&#x63A7;&#x5236;(&#x9ED8;&#x8BA4;&#x4E3A;<code>warn</code>)</p>
+<pre><code class="lang-js">svrx({
+  logger: {
+    level: <span class="hljs-string">&apos;error&apos;</span>
+  }
+});
+</code></pre>
+<p>&#x6216;&#x4ECE; cli &#x7AEF;</p>
+<pre><code class="lang-bash">svrx --logger.level error
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x5C06;&#x4F1A;&#x8F93;&#x51FA;<code>warn</code>&#x4EE5;&#x4E0A;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x5982;<code>notify</code>&#x3001;<code>error</code></p>
+<h3 id="loggerlevelmsg"><a name="loggerlevelmsg" class="anchor-navigation-ex-anchor" href="#loggerlevelmsg"><i class="fa fa-link" aria-hidden="true"></i></a><code>logger[level](msg)</code></h3>
+<p>svrx &#x63D0;&#x4F9B;&#x4E86;&#x591A;&#x79CD;&#x7EA7;&#x522B;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x5206;&#x522B;&#x662F;<code>silent</code>, <code>notify</code>, <code>error</code> , <code>warn</code>(&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x5206;&#x7EA7;), <code>info</code>, <code>debug</code></p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">logger.notify(<span class="hljs-string">&apos;notify&apos;</span>); <span class="hljs-comment">// show `notify`</span>
+logger.error(<span class="hljs-string">&apos;error&apos;</span>); <span class="hljs-comment">// show `error` and `notify`</span>
+logger.warn(<span class="hljs-string">&apos;warn&apos;</span>); <span class="hljs-comment">// show `warn`&#x3001;`error` and `notify`</span>
+</code></pre>
+<blockquote>
+<p><code>logger.notify</code> &#x7531;&#x4E8E;&#x4F1A;&#x975E;&#x5E38;&#x5E38;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x6709;&#x4E00;&#x4E2A; alias <code>logger.log</code></p>
+</blockquote>
+<h3 id="io"><a name="io" class="anchor-navigation-ex-anchor" href="#io"><i class="fa fa-link" aria-hidden="true"></i></a>io</h3>
+<p>io &#x8D1F;&#x8D23;&#x63D2;&#x4EF6;&#x540E;&#x7AEF;&#x4E0E;&#x524D;&#x7AEF;&#x7684;&#x901A;&#x4FE1;&#xFF0C; &#x8BF7;&#x7ED3;&#x5408; <a href="#client-io">client &#x7AEF;&#x7684; io</a> &#x67E5;&#x770B;</p>
+<h4 id="-ioon-type-handler-"><a name="-ioon-type-handler-" class="anchor-navigation-ex-anchor" href="#-ioon-type-handler-"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.on( type, handler )</code></h4>
+<p>&#x76D1;&#x542C;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x53D1;&#x9001;&#x6D88;&#x606F;(&#x5373;&#x901A;&#x8FC7;<a href="#client-io">&#x6D4F;&#x89C8;&#x5668;&#x7AEF;<code>io.emit</code>&#x53D1;&#x9001;</a>)</p>
+<pre><code class="lang-js">io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload =&gt; {
+  <span class="hljs-built_in">console</span>.log(payload); <span class="hljs-comment">// =&gt;1</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: &#x4E8B;&#x4EF6;&#x540D;</li>
+<li><code>handler(payload)</code>: &#x4E8B;&#x4EF6;&#x56DE;&#x8C03;<ul>
+<li><code>payload</code>: &#x4E8B;&#x4EF6;&#x53C2;&#x6570;</li>
+</ul>
+</li>
+</ul>
+<h4 id="server-io"><a name="server-io" class="anchor-navigation-ex-anchor" href="#server-io"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.emit(type, payload)</code> </h4>
+<p>&#x53D1;&#x9001; io &#x4E8B;&#x4EF6;&#x5230;&#x5BA2;&#x6237;&#x7AEF;</p>
+<p><strong>Usage</strong></p>
+<p>server side</p>
+<pre><code class="lang-js">io.emit(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>client side</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io } = svrx;
+io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload =&gt; {
+  <span class="hljs-built_in">console</span>.log(payload); <span class="hljs-comment">//=&gt;1</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: &#x4E8B;&#x4EF6;&#x540D;</li>
+<li><code>payload</code>: &#x4E8B;&#x4EF6;&#x53C2;&#x6570;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8981;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;</p>
+</blockquote>
+<h4 id="-ioofftype-handler"><a name="-ioofftype-handler" class="anchor-navigation-ex-anchor" href="#-ioofftype-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.off(type[, handler])</code></h4>
+<p>&#x89E3;&#x9664;&#x76D1;&#x542C;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.off(<span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">//=&gt; remove all hello handlers</span>
+io.off(<span class="hljs-string">&apos;hello&apos;</span>, handler); <span class="hljs-comment">//=&gt; remove specific handler</span>
+</code></pre>
+<h4 id="-ioregistername-handler"><a name="-ioregistername-handler" class="anchor-navigation-ex-anchor" href="#-ioregistername-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.register(name, handler)</code></h4>
+<p>&#x6CE8;&#x518C;&#x4E00;&#x4E2A; io &#x670D;&#x52A1;&#xFF0C; &#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x670D;&#x52A1;&#x7AEF;&#x4EE5;<code>io.call</code>&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.register(<span class="hljs-string">&apos;hello.world&apos;</span>, <span class="hljs-keyword">async</span> payload =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">${payload}</span>`</span>;
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: &#x670D;&#x52A1;&#x540D;&#xFF0C;<code>call</code> &#x4E2D;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;</li>
+<li><code>handler</code>: &#x670D;&#x52A1;&#x903B;&#x8F91;&#x5B9E;&#x73B0;&#xFF0C;&#x5F02;&#x6B65;&#x8BF7;&#x8FD4;&#x56DE; Promise &#x6216;&#x4F7F;&#x7528; async/await</li>
+</ul>
+<h4 id="call"><a name="call" class="anchor-navigation-ex-anchor" href="#call"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.call(name, payload)</code> </h4>
+<p>&#x8C03;&#x7528;&#x6CE8;&#x518C;&#x7684;&#x670D;&#x52A1;</p>
+<p><strong>Usage</strong></p>
+<p>&#x4E0A;&#x4F8B;&#x5982;&#x4E0B;&#x8C03;&#x7528;&#x4F1A;&#x8FD4;&#x56DE; &apos;Hello svrx&apos;</p>
+<pre><code class="lang-js">io.call(<span class="hljs-string">&apos;hello.world&apos;</span>, <span class="hljs-string">&apos;svrx&apos;</span>).then(data =&gt; {
+  <span class="hljs-built_in">console</span>.log(data); <span class="hljs-comment">// =&gt; Hello svrx</span>
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: &#x670D;&#x52A1;&#x540D;</li>
+<li><code>payload</code> [Any]: &#x670D;&#x52A1;&#x5165;&#x53C2;</li>
+</ul>
+<p><strong>Return</strong></p>
+<p>Promise</p>
+<h2 id="client"><a name="client" class="anchor-navigation-ex-anchor" href="#client"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF; API </h2>
+<p>&#x5BA2;&#x6237;&#x7AEF; API &#x7EDF;&#x4E00;&#x901A;&#x8FC7; svrx &#x5168;&#x5C40;&#x53D8;&#x91CF;&#x66B4;&#x9732;&#xFF0C;&#x5982;&#x4E0B;&#x4F8B;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io, events, config } = svrx;
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x4F9D;&#x6B21;&#x8BF4;&#x660E;</p>
+<h3 id="io_1"><a name="io_1" class="anchor-navigation-ex-anchor" href="#io_1"><i class="fa fa-link" aria-hidden="true"></i></a>io</h3>
+<p>&#x901A;&#x4FE1;&#x6A21;&#x5757;&#xFF0C;&#x8D1F;&#x8D23;&#x4E0E;&#x670D;&#x52A1;&#x7AEF;&#x901A;&#x4FE1;</p>
+<h4 id="-ioontype-handler"><a name="-ioontype-handler" class="anchor-navigation-ex-anchor" href="#-ioontype-handler"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.on(type, handler)</code></h4>
+<p>&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF; io &#x4E8B;&#x4EF6;</p>
+<p><strong>Usage</strong></p>
+<p>server side</p>
+<pre><code class="lang-js">io.emit(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>client side</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io } = svrx;
+io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload =&gt; {
+  <span class="hljs-built_in">console</span>.log(payload); <span class="hljs-comment">//=&gt;1</span>
+});
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x540E;&#x7AEF; <code>io.emit</code> &#x5C5E;&#x4E8E;&#x5E7F;&#x64AD;&#xFF0C;&#x6240;&#x6709;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x90FD;&#x4F1A;&#x6536;&#x5230;&#x4FE1;&#x606F;</p>
+</blockquote>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: &#x4E8B;&#x4EF6;&#x540D;</li>
+<li><code>handler(payload)</code>: &#x4E8B;&#x4EF6;&#x56DE;&#x8C03;<ul>
+<li><code>payload</code>: &#x4E8B;&#x4EF6;&#x53C2;&#x6570;</li>
+</ul>
+</li>
+</ul>
+<h4 id="client-io"><a name="client-io" class="anchor-navigation-ex-anchor" href="#client-io"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.emit(type, payload)</code> </h4>
+<p>&#x53D1;&#x9001; io &#x4E8B;&#x4EF6;&#x5230;&#x670D;&#x52A1;&#x7AEF;</p>
+<p><strong>Usage</strong></p>
+<p>client side</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { io } = svrx;
+io.emit(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>server side</p>
+<pre><code class="lang-js">{
+  hooks: {
+    <span class="hljs-keyword">async</span> onCreate({io}){
+      io.on(<span class="hljs-string">&apos;hello&apos;</span>, payload=&gt;{
+        <span class="hljs-built_in">console</span>.log(payload) <span class="hljs-comment">// =&gt;1</span>
+      })
+    }
+  }
+}
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>type</code>: &#x4E8B;&#x4EF6;&#x540D;</li>
+<li><code>payload</code>: &#x4E8B;&#x4EF6;&#x53C2;&#x6570;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8981;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;</p>
+</blockquote>
+<h4 id="-ioofftype-handler_1"><a name="-ioofftype-handler_1" class="anchor-navigation-ex-anchor" href="#-ioofftype-handler_1"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.off(type[, handler])</code></h4>
+<p>&#x89E3;&#x9664;&#x76D1;&#x542C;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.off(<span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">//=&gt; remove all hello handlers</span>
+io.off(<span class="hljs-string">&apos;hello&apos;</span>, handler); <span class="hljs-comment">//=&gt; remove specific handler</span>
+</code></pre>
+<h4 id="-iocallname-payload"><a name="-iocallname-payload" class="anchor-navigation-ex-anchor" href="#-iocallname-payload"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>io.call(name, payload)</code></h4>
+<p>&#x5728; client &#x7AEF;&#x7684; <a href="#call">io.call</a> &#x4E0E;&#x670D;&#x52A1;&#x7AEF;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;<strong>&#x4F46;&#x8981;&#x786E;&#x4FDD; payload &#x662F;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684;</strong>,&#x56E0;&#x4E3A;&#x4F1A;&#x7ECF;&#x8FC7;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">io.call(<span class="hljs-string">&apos;hello.world&apos;</span>, <span class="hljs-string">&apos;svrx&apos;</span>).then(data =&gt; {
+  <span class="hljs-built_in">console</span>.log(data);
+});
+</code></pre>
+<p><strong>Param</strong></p>
+<ul>
+<li><code>name</code> [String]: &#x670D;&#x52A1;&#x540D;</li>
+<li><code>payload</code> [Any]: &#x670D;&#x52A1;&#x5165;&#x53C2;</li>
+</ul>
+<p><strong>Return</strong></p>
+<p>Promise</p>
+<h3 id="events_1"><a name="events_1" class="anchor-navigation-ex-anchor" href="#events_1"><i class="fa fa-link" aria-hidden="true"></i></a>events</h3>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x5185;&#x90E8;&#x7684;&#x4E8B;&#x4EF6;&#x53D1;&#x5C04;&#x5668;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x548C;<a href="#events">&#x670D;&#x52A1;&#x7AEF; events</a>&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x4E0D;&#x505A;&#x8D58;&#x8FF0;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { events } = svrx;
+events.on(<span class="hljs-string">&apos;type&apos;</span>, handler);
+events.emit(<span class="hljs-string">&apos;type&apos;</span>, <span class="hljs-number">1</span>);
+events.off(<span class="hljs-string">&apos;type&apos;</span>);
+</code></pre>
+<blockquote>
+<p>events &#x4E0E; io &#x7684;&#x4E0D;&#x540C;&#x5728;&#x4E8E; io &#x662F; &#x670D;&#x52A1;&#x7AEF;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x901A;&#x4FE1;&#xFF0C;&#x800C; events &#x662F;&#x5355;&#x7AEF;&#x7684;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x5668;</p>
+</blockquote>
+<h3 id="config_1"><a name="config_1" class="anchor-navigation-ex-anchor" href="#config_1"><i class="fa fa-link" aria-hidden="true"></i></a>config</h3>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x7684;<code>config</code>&#x6A21;&#x5757;&#x4E0E;&#x670D;&#x52A1;&#x7AEF;&#x51E0;&#x4E4E;&#x4E00;&#x81F4;&#xFF0C;&#x552F;&#x4E00;&#x533A;&#x522B;&#x662F;&#x4ECE;&#x540C;&#x6B65;&#x63A5;&#x53E3;&#x53D8;&#x6210;&#x4E86; Promise &#x5316;&#x7684;&#x5F02;&#x6B65;&#x63A5;&#x53E3;(&#x56E0;&#x4E3A; socket &#x7684;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;)</p>
+<h4 id="-configgetfield"><a name="-configgetfield" class="anchor-navigation-ex-anchor" href="#-configgetfield"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.get(field)</code></h4>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.get(<span class="hljs-string">&apos;$.port&apos;</span>).then(port =&gt; {
+  <span class="hljs-comment">// get the server port</span>
+});
+
+config.get(<span class="hljs-string">&apos;user&apos;</span>).then(user =&gt; {
+  <span class="hljs-comment">//get the param belongs to current plugin</span>
+});
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x83B7;&#x53D6;&#x7684;&#x53C2;&#x6570;&#x662F;&#x5C5E;&#x4E8E;&#x811A;&#x672C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x83B7;&#x53D6;&#x5168;&#x5C40;&#x8BF7;&#x52A0;<code>$.</code>&#x524D;&#x7F00;</p>
+</blockquote>
+<h4 id="-configset&#x3001;configsplice&#x3001;configdel"><a name="-configset&#x3001;configsplice&#x3001;configdel" class="anchor-navigation-ex-anchor" href="#-configset&#x3001;configsplice&#x3001;configdel"><i class="fa fa-link" aria-hidden="true"></i></a>- <code>config.set</code>&#x3001;<code>config.splice</code>&#x3001;<code>config.del</code></h4>
+<p>&#x4E0A;&#x8FF0;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#x548C;<code>get</code>&#x4E00;&#x6837;&#xFF0C;&#x4E0E;&#x670D;&#x52A1;&#x7AEF;&#x8868;&#x73B0;&#x4E00;&#x81F4;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD4;&#x56DE;&#x503C;&#x53D8;&#x4E3A; Promise</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js">config.set(<span class="hljs-string">&apos;a.b&apos;</span>, <span class="hljs-number">1</span>).then(() =&gt; {
+  config.get(<span class="hljs-string">&apos;a.b&apos;</span>).then(ab =&gt; {
+    <span class="hljs-built_in">console</span>.log(ab); <span class="hljs-comment">// =&gt; 1</span>
+  });
+});
+</code></pre>
+<h3 id="schema"><a name="schema" class="anchor-navigation-ex-anchor" href="#schema"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x5B9A;&#x4E49; </h3>
+<p>svrx &#x652F;&#x6301;&#x4E00;&#x79CD;&#x57FA;&#x4E8E; <a href="https://json-schema.org/" target="_blank">json-schema</a> &#x6269;&#x5C55;&#x7684;&#x53C2;&#x6570;&#x5B9A;&#x4E49;&#xFF0C;&#x4EE5;&#x5185;&#x90E8;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x4F8B;</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  root: {
+    type: <span class="hljs-string">&apos;string&apos;</span>,
+    <span class="hljs-keyword">default</span>: process.cwd(),
+    description: <span class="hljs-string">&apos;where to start svrx&apos;</span>,
+    ui: <span class="hljs-literal">false</span>
+  },
+  route: {
+    description: <span class="hljs-string">&apos;the path of routing config file&apos;</span>,
+    anyOf: [{ type: <span class="hljs-string">&apos;string&apos;</span> }, { type: <span class="hljs-string">&apos;array&apos;</span> }]
+  },
+  logger: {
+    description: <span class="hljs-string">&apos;global logger setting&apos;</span>,
+    type: <span class="hljs-string">&apos;object&apos;</span>,
+    properties: {
+      level: {
+        type: <span class="hljs-string">&apos;string&apos;</span>,
+        <span class="hljs-keyword">default</span>: <span class="hljs-string">&apos;error&apos;</span>,
+        description:
+          <span class="hljs-string">&quot;set log level, predefined values: &apos;silent&apos;,&apos;notify&apos;,&apos;error&apos;,&apos;warn&apos;, &apos;debug&apos;&quot;</span>
+      }
+    }
+  }
+};
+</code></pre>
+<p><strong>Field &#x8BE6;&#x89E3;</strong></p>
+<ul>
+<li><code>type</code> [String]: <a href="https://json-schema.org/understanding-json-schema/reference/type.html" target="_blank">JSON-Schema &#x5141;&#x8BB8;&#x7684;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</a> &#xFF0C;&#x53EF;&#x4EE5;&#x662F;<code>array</code>&#x3001;<code>string</code>&#x3001;<code>number</code>&#x3001;<code>boolean</code>&#x3001;<code>object</code>&#x3001;<code>null</code></li>
+<li><code>default</code> [Any]: &#x9ED8;&#x8BA4;&#x503C;</li>
+<li><code>required</code> [Boolean]: &#x662F;&#x5426;&#x662F;&#x5FC5;&#x987B;&#x7684;, &#x9ED8;&#x8BA4;&#x662F;<code>false</code></li>
+<li><code>properties</code> [Object]: &#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#xFF0C;&#x6BCF;&#x5C42;&#x5C5E;&#x6027;&#x53C8;&#x662F;&#x4E00;&#x5C42; schema &#x5B9A;&#x4E49;</li>
+<li><code>ui</code>: svrx &#x7684;&#x6269;&#x5C55;&#x5B57;&#x6BB5;&#xFF0C;&#x662F;&#x5426;&#x8981;&#x5728; <a href="https://github.com/x-orpheus/svrx-ui" target="_blank">svrx-ui</a> &#x4E2D;&#x88AB;&#x5C55;&#x793A;</li>
+<li><code>anyOf</code>: &#x5C5E;&#x6027;&#x4EFB;&#x9009;&#x5176;&#x4E00;&#xFF0C;&#x5982;<pre><code class="lang-of">route: {
+  description: &apos;the path of routing config file&apos;,
+  anyOf: [{ type: &apos;string&apos; }, { type: &apos;array&apos; }],
+},
+</code></pre>
+<blockquote>
+<p>&#x8FDB;&#x4E00;&#x6B65;&#x7684; JSON Schema &#x5B9A;&#x4E49;&#x8BF7;&#x53C2;&#x8003;<a href="https://json-schema.org/" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="test"><a name="test" class="anchor-navigation-ex-anchor" href="#test"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x6D4B;&#x8BD5;? </h2>
+<p>&#x4E0D;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x53D1;&#x5E03;&#x6D4B;&#x8BD5;&#x63D2;&#x4EF6;&#x5230; npm, &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x6765;&#x8FDB;&#x884C;&#x672C;&#x5730;&#x6D4B;&#x8BD5;</p>
+<pre><code class="lang-js">svrx({
+  plugins: [
+    {
+      name: <span class="hljs-string">&apos;hello-world&apos;</span>,
+      path: <span class="hljs-string">&apos;/path/to/svrx-plugin-hello-world&apos;</span>
+    }
+  ]
+}).start();
+</code></pre>
+<p>&#x6307;&#x5B9A; path &#x53C2;&#x6570;&#x540E;&#xFF0C;svrx &#x4F1A;&#x52A0;&#x8F7D;&#x672C;&#x5730;&#x5305;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE; npm &#x4E2D;&#x83B7;&#x53D6;</p>
+<h2 id="&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;-&#x2014;&#x2014;-svrx-create-plugin"><a name="&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;-&#x2014;&#x2014;-svrx-create-plugin" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;-&#x2014;&#x2014;-svrx-create-plugin"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x63D2;&#x4EF6;&#x5F00;&#x53D1; &#x2014;&#x2014; <a href="https://github.com/x-orpheus/svrx-create-plugin" target="_blank"><code>svrx-create-plugin</code></a></h2>
+<p>svrx &#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x811A;&#x624B;&#x67B6;&#x5E2E;&#x52A9;&#x4F60;&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x5F00;&#x53D1;&#x548C;&#x53D1;&#x5E03;&#x4F60;&#x7684;&#x63D2;&#x4EF6;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2019, NetEase, Inc. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-04-13 16:41:25
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../practice/" class="navigation navigation-next navigation-unique" aria-label="Next page: 项目实战">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"如何写一个插件","level":"1.3.3","depth":2,"next":{"title":"项目实战","level":"1.4","depth":1,"path":"practice/README.md","ref":"./practice/README.md","articles":[{"title":"特定场景使用","level":"1.4.1","depth":2,"path":"practice/recipe.md","ref":"./practice/recipe.md","articles":[]},{"title":"结合主流脚手架使用","level":"1.4.2","depth":2,"path":"practice/integration.md","ref":"./practice/integration.md","articles":[]}]},"previous":{"title":"插件列表","level":"1.3.2","depth":2,"url":"https://svrx.io/plugin?query=svrx-plugin-","ref":"https://svrx.io/plugin?query=svrx-plugin-","articles":[]},"dir":"ltr"},"config":{"plugins":["code","todo","-lunr","-search","search-pro","github","-sharing","sharing-plus","tbfed-pagefooter","anchor-navigation-ex","edit-link","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2019, NetEase, Inc."},"github":{"url":"https://github.com/svrxjs/svrx"},"todo":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"sharing":{"douban":false,"facebook":true,"twitter":true,"pocket":true,"qq":false,"qzone":false,"weibo":true,"all":["douban","facebook","twitter","instapaper","linkedin","weibo","messenger","qq","qzone","viber","whatsapp"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/svrxjs/svrx-docs/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs of Server-X","language":"zh-hans","gitbook":"*","description":"svrx(server-x) is a pluggable platform built for efficient front-end development"},"file":{"path":"plugin/contribution.md","mtime":"2020-04-13T08:41:25.236Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T08:42:46.711Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

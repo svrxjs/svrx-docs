@@ -1,0 +1,709 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Server-X：An Introduction · Docs of Server-X</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    What is svrx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quick-start.html">
+            
+                <a href="../quick-start.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../plugin/">
+            
+                <a href="../plugin/">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../plugin/usage.html">
+            
+                <a href="../plugin/usage.html">
+            
+                    
+                    How To Use Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <a target="_blank" href="https://svrx.io/plugin?query=svrx-plugin-">
+            
+                    
+                    The List of Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../plugin/contribution.html">
+            
+                <a href="../plugin/contribution.html">
+            
+                    
+                    How To Write A Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../practice/">
+            
+                <a href="../practice/">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../practice/recipe.html">
+            
+                <a href="../practice/recipe.html">
+            
+                    
+                    Recipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../practice/integration.html">
+            
+                <a href="../practice/integration.html">
+            
+                    
+                    Integrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../guide/">
+            
+                <a href="../guide/">
+            
+                    
+                    Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../guide/route.html">
+            
+                <a href="../guide/route.html">
+            
+                    
+                    How To Use Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../guide/api.html">
+            
+                <a href="../guide/api.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../guide/option.html">
+            
+                <a href="../guide/option.html">
+            
+                    
+                    Option Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../contribution.html">
+            
+                <a href="../contribution.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Blog
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    Server-X：An Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Server-X：An Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#server-x-a-pluggable-platform-for-local-frontend-development"><b></b>Server-X: A Pluggable Platform For Local Frontend Development</a></li><ul><li><span class="title-icon "></span><a href="#what-is-server-x"><b></b>What is server-x</a></li><li><span class="title-icon "></span><a href="#init-a-new-project-and-start"><b></b>Init A New Project And Start</a></li><li><span class="title-icon "></span><a href="#advanced-usage-1-configure-your-svrx"><b></b>Advanced Usage 1: Configure Your Svrx</a></li><li><span class="title-icon "></span><a href="#advanced-usage-2-try-other-plugins"><b></b>Advanced Usage 2: Try Other Plugins</a></li><ul><li><span class="title-icon "></span><a href="#localtunnel---expose-your-local-service"><b></b>localtunnel - Expose Your Local Service</a></li><li><span class="title-icon "></span><a href="#weinre---debug-your-code-remotely"><b></b>weinre - Debug Your Code Remotely</a></li><li><span class="title-icon "></span><a href="#customize-your-plugin"><b></b>Customize Your Plugin</a></li></ul><li><span class="title-icon "></span><a href="#advanced-usage-3-route-with-hot-reloading"><b></b>Advanced Usage 3: Route With Hot Reloading</a></li><li><span class="title-icon "></span><a href="#in-the-last"><b></b>In The Last</a></li><li><span class="title-icon "></span><a href="#links"><b></b>Links</a></li></ul></ul></div><a href="#server-x-a-pluggable-platform-for-local-frontend-development" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="server-x-a-pluggable-platform-for-local-frontend-development"><a name="server-x-a-pluggable-platform-for-local-frontend-development" class="anchor-navigation-ex-anchor" href="#server-x-a-pluggable-platform-for-local-frontend-development"><i class="fa fa-link" aria-hidden="true"></i></a>Server-X: A Pluggable Platform For Local Frontend Development</h1>
+<p><a href="https://svrx.io/" target="_blank"><img src="https://svrx.io/assets/images/banner.png" alt=""></a></p>
+<blockquote>
+<p>This page will introduce a brand-new frontend devtool, 
+hope it can save you from switching among dev tools, 
+while still bring you the same  experience.</p>
+</blockquote>
+<p>I know what you are thinking, we&apos;re not newbies, 
+as <del>bald</del> experienced frontend programmers, 
+we all have several sets of development environment on our computers. 
+So why should we change to another devtool?</p>
+<p>Look, you are almost there!</p>
+<p>So let&apos;s do a count game together. 
+For the better frontend development experience, 
+what exactly is the number of tools and apps you have installed on your computer? 
+I guess there&apos;re local server, remote debug tool, proxy tool, broswer plugins and etc.
+It must cost you a long period of time, 
+and must be a hard choice to finallly decide to compose them as a stable development envelopment. </p>
+<p><img src="https://p1.music.126.net/9zJIuS5vYEV5jgNe0qEubw==/109951164432299270.png" alt="20 Tools You MUST Use"></p>
+<p>Besides, most of those tools require a global installation, which means, 
+if you got a new computer, you have to install all of those tools back.
+And your devtools cannot configure projects separately, usually, 
+you have to change your devtool&apos;s configuration after switching projects. </p>
+<p>Let&apos;s sum up those trouble scenes we&apos;re used to during project development:  </p>
+<ul>
+<li>You have to install kinds of tools and apps for local development envelopment</li>
+<li>The local development envelopment is hard to copy or share between computers</li>
+<li>You need to configure tools one by one, and most of them are not isolated among projects</li>
+<li>Sometimes you find NO tools to meet your requests, and it&apos;s troublesome to write your own tools</li>
+<li>During developing, you have to start many tools at same time: dev server, mock server and so on</li>
+<li>And you often need to restart those tools to refesh configuration</li>
+<li>... ...</li>
+</ul>
+<p>Based on the pain points above, here comes server-x.</p>
+<h2 id="what-is-server-x"><a name="what-is-server-x" class="anchor-navigation-ex-anchor" href="#what-is-server-x"><i class="fa fa-link" aria-hidden="true"></i></a>What is server-x</h2>
+<p>Like the first half of the name, <code>server</code>, you can say, server-x(short as &apos;svrx&apos;) is just a local server,
+and it&apos;s a powerful, handy and light-weighted server.</p>
+<p>Before everything, let&apos;s have a look at the simplest use case:</p>
+<p>Firstly you need to install the CLI tool of svrx,</p>
+<pre><code class="lang-bash">npm install -g @svrx/cli
+</code></pre>
+<p>And create a simple page, then start svrx at the root path,</p>
+<pre><code class="lang-bash">mkdir example &amp;&amp; <span class="hljs-built_in">cd</span> example
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;&lt;html&gt;&lt;body&gt;Hello svrx!&lt;/body&gt;&lt;/html&gt;&apos;</span> &gt; index.html
+svrx
+</code></pre>
+<p>Visit <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>, you can see your page.</p>
+<p><img src="https://p1.music.126.net/Pq_Ck_EyFtW8lXfgTN09Mg==/109951164417568606.png" alt="start demo"></p>
+<p>It&apos;s convenient to install, quick to start, and except NodeJS, <strong>it doesn&apos;t depend on any environment</strong>.
+Of course, that&apos;s the key feature of any independent and basic dev servers.</p>
+<p>So can svrx do more? The answer is yes. 
+Svrx also has some practical built-in features like broswer auto openning, page livereloading, proxy and so on.
+Ok, you might say, some dev servers can do this too.</p>
+<p>Actually, the biggest difference between svrx and other local servers is, 
+as the other half of its name <code>server-x</code>: <code>x</code>.
+According to the Internet, <code>x</code> can represent &quot;unknown and infinity&quot;, 
+you can say svrx is a server with infinite possibilities. 
+Why? Because there&apos;s a most outstanding feature in svrx: it&apos;s a platform of plugins.</p>
+<p>Through plugins, your svrx can have any function in theory.
+Every small function here is an independent plugin, 
+you just need to declare them before use, like this: </p>
+<pre><code class="lang-bash">svrx --webpack --qrcode --markdown
+</code></pre>
+<p>It&apos;s very clear, and with no redundant configuration. 
+After your declaration, svrx will help you install and load plugins, then start the service directly.</p>
+<p>As you see, svrx is a platform that aggregates plenty of plugins. 
+It can be a whole development environment itself. 
+The only difference is, <strong>you don&apos;t need to care about the plugin installation at all</strong>.
+Except the CLI of svrx, <strong>you don&apos;t need to install any other tools</strong>.</p>
+<p>And what&apos;s more, none of plugins is installed globally. 
+Svrx installs plugins into the <code>node_modules</code> directory of your project&apos;, 
+so <strong>everything is truly independent</strong>, 
+you can customize the development environment for each project 
+without concerning about the installation or uninstallation, 
+there&apos;s no contamination, and your system can keep clean at the same time.</p>
+<p>Actually, there&apos;re many local dev servers published.
+But nearly none of them is like svrx, 
+which is light-weighted, easy to use, with complete plugin system and not rely on any project environment. 
+Next, let&apos;s keep exploring the development experience of svrx through creating a simple frontend project.
+You&apos;ll see some advanced usages and black-techs, 
+that&apos;s the most charming part of svrx.</p>
+<h2 id="init-a-new-project-and-start"><a name="init-a-new-project-and-start" class="anchor-navigation-ex-anchor" href="#init-a-new-project-and-start"><i class="fa fa-link" aria-hidden="true"></i></a>Init A New Project And Start</h2>
+<p>Now, we will use <a href="https://github.com/facebook/create-react-app" target="_blank">Create React App</a> to create a new project.
+(As mentioned before, svrx does not rely on any project environment, it&apos;s only for the convenience we choose CRA)</p>
+<pre><code class="lang-bash">npm init react-app svrx-example
+<span class="hljs-built_in">cd</span> svrx-example
+</code></pre>
+<p>By default the new project uses <code>webpack</code> to bundle code, to start projects like this, 
+we need a plugin named <a href="https://github.com/svrxjs/svrx-plugin-webpack" target="_blank">svrx-plugin-webpack</a>.
+The purpose of this plugin is to make your <code>webpack</code> project work in svrx.
+Basically it will read project webpack config, 
+and then call <a href="https://github.com/webpack/webpack-dev-middleware" target="_blank">webpack-dev-middleware</a>.</p>
+<p>But our new project here is not exposed the config of <code>webpack</code>, 
+so firstly we need a <code>webpack.config.js</code> at the root:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;react-scripts/config/webpack.config&apos;</span>)(<span class="hljs-string">&apos;development&apos;</span>);
+</code></pre>
+<p>And now we can start our project successfully:</p>
+<pre><code class="lang-bash">svrx --webpack
+</code></pre>
+<p>Your broswer will auto open <a href="http://localhost:8000/" target="_blank">http://localhost:8000/</a>  for you: </p>
+<p><img src="https://p1.music.126.net/ObArEQVEbjajRBkeOaJldQ==/109951164429015297.png" alt="start svrx"></p>
+<p>Try edit <code>src/App.css</code>, check if the page auto reloaded?</p>
+<p><img src="https://p1.music.126.net/yIQ1lg2pOhA1ETmGKvQvIQ==/109951164430535611.gif" alt="livereload"></p>
+<h2 id="advanced-usage-1-configure-your-svrx"><a name="advanced-usage-1-configure-your-svrx" class="anchor-navigation-ex-anchor" href="#advanced-usage-1-configure-your-svrx"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Usage 1: Configure Your Svrx</h2>
+<p>By default, svrx will enable some built-in plugins when start, such as 
+static serve, proxy service, page livereloading and etc. 
+All of those plugins have some default configuration which ensure that svrx can be quickly started. 
+Of cource, if you want to make some custom decision, there&apos;re two ways.</p>
+<p>Firstly, you can pass some params to CLI when starting svrx:</p>
+<pre><code class="lang-bash">svrx --port 3000 --https --no-livereload
+</code></pre>
+<p>And also, you can create a <code>.svrxrc.js</code> or a <code>svrx.config.js</code> at the root path of your project, 
+then run <code>svrx</code> to start your project directly:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// .svrxrc.js</span>
+<span class="hljs-built_in">module</span>.exports = {
+  port: <span class="hljs-number">3000</span>,
+  https: <span class="hljs-literal">true</span>,
+  livereload: <span class="hljs-literal">false</span>
+};
+</code></pre>
+<p>All of the options and details can be found at <a href="https://docs.svrx.io/en/guide/option.html" target="_blank">svrx docs - options</a>.</p>
+<h2 id="advanced-usage-2-try-other-plugins"><a name="advanced-usage-2-try-other-plugins" class="anchor-navigation-ex-anchor" href="#advanced-usage-2-try-other-plugins"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Usage 2: Try Other Plugins</h2>
+<p>Besides built-in plugins, there&apos;re also many other independent plugins, 
+like <code>svrx-plugin-webpack</code> mentioned before.<br>When you need other development function(such as remote debug, mock and so on),
+all you have to do is just declare the plugin name. 
+In fact, it is the independent plugins that provides feature-rich experience.
+Next, we will introduce several useful and interesting plugins:</p>
+<h3 id="localtunnel---expose-your-local-service"><a name="localtunnel---expose-your-local-service" class="anchor-navigation-ex-anchor" href="#localtunnel---expose-your-local-service"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/svrxjs/svrx-plugin-localtunnel" target="_blank">localtunnel</a> - Expose Your Local Service</h3>
+<p>Image that you&apos;re working on your page developing intently, suddenly there&apos;s a message toast from your boss:</p>
+<blockquote>
+<p>Let me see how&apos;s the page going on?</p>
+</blockquote>
+<p>What do you gonna do? 
+I guess you might commit your code first, 
+deploy a local service, and give your IP address of LAN to your boss.
+Hold on, what if your boss is on a business trip right now, he doesn&apos;t have access to your LAN! 
+Ok, there&apos;s still a plan. You find a server and deploy a test environment for your boss, 
+though the deploy might be slow and your boss has to wait for a long while.</p>
+<p>Any other solution? Yes, you need <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a> plugin of svrx!
+It exposes your local service to <code>localtunnel.me</code>, 
+so that you can test and share your local code with others easily.
+You don&apos;t need to deploy your test environment over and over again just for a little code change.</p>
+<p>To start <code>localtunnel</code>, just add the plugin name at the end:</p>
+<pre><code class="lang-bash">svrx --webpack --localtunnel
+</code></pre>
+<p>This command will auto install plugin localtunnel and start svrx, 
+other people(yes, you don&apos;t have to be in a same LAN) 
+now can visit the url <a href="https://*.localtunnel.me" target="_blank">https://*.localtunnel.me</a> printed by terminal to see your local service:</p>
+<p><img src="https://p1.music.126.net/0tnJ_DkmfTEl_jFdRGepbQ==/109951164429088111.png" alt="localtunnel"></p>
+<p>Besides, every local changes made by you can be seen by others, don&apos;t worry about the boss anymore.</p>
+<p><img src="https://p1.music.126.net/Wc2rVrS4qNiUWSl1avHc9Q==/109951164430527349.gif" alt="localtunnel-livereload"></p>
+<h3 id="weinre---debug-your-code-remotely"><a name="weinre---debug-your-code-remotely" class="anchor-navigation-ex-anchor" href="#weinre---debug-your-code-remotely"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/svrxjs/svrx-plugin-weinre" target="_blank">weinre</a> - Debug Your Code Remotely</h3>
+<p>How do you debug your code on the phone? Many developers will choose chrome remote debugging.
+But to use it, you need to connect your computer and your mobile phone with a USB first.</p>
+<p>Is there a better way? Try plugin <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html" target="_blank">weinre</a> of svrx.
+It is used to debug your code remotely, and it&apos;s wireless.</p>
+<p>Let&apos;s be back to our example peoject, this time we add two new plugins: </p>
+<pre><code class="lang-bash">svrx --open=external --webpack --weinre --qrcode
+</code></pre>
+<p>Now we start svrx with weinre and qrcode,
+and use your phone to visit the project page, 
+plugin <a href="https://github.com/svrxjs/svrx-plugin-qrcode" target="_blank">qrcode</a> here is just to make it easier for your phone to visit the page:</p>
+<p><img src="https://p1.music.126.net/xIVX3rkv1dsvrUOlFRXldQ==/109951164430529750.gif" alt="qrcode"></p>
+<p>Then open the debug page of weinre using your computer, the default url is <a href="http://${your_ip}:8001" target="_blank">http://${your_ip}:8001</a>,
+find the record of your phone, and you can debug your page on the phone now.</p>
+<p><img src="https://p1.music.126.net/KaBNi-_EDelz8kE75i5gSg==/109951164429434114.png" alt="weinre debug tool"></p>
+<h3 id="customize-your-plugin"><a name="customize-your-plugin" class="anchor-navigation-ex-anchor" href="#customize-your-plugin"><i class="fa fa-link" aria-hidden="true"></i></a>Customize Your Plugin</h3>
+<p>Besides those we mentioned, there&apos;re many other useful plugins in svrx, 
+you can search plugin at the <a href="https://svrx.io/plugin?query=svrx-plugin-" target="_blank">official site of svrx</a>,
+and then compose different plugins to get your own development environment.</p>
+<p><img src="https://p1.music.126.net/IZDarDVC9sHj69lxWuhljg==/109951164417587560.png" alt="part of plugin list"></p>
+<p>Of course, if you don&apos;t find a proper plugin, you can try to write one yourself.</p>
+<p>What can you do with the plugin?
+Take the plugin <code>qrcode</code> as an example, to print a qrcode on the page, 
+you can inject some js and css scripts to the frontend page.
+And like the plugin <code>webpack</code>, 
+you can inject some koa style middlewares to the backend service,
+here is the <code>webpack-dev-middleware</code>,
+intercept requests and modify the responses.</p>
+<p>With the greate power of scripts and middlewares injection, 
+you can do nearly any thing during local development by creating svrx plugins.
+And <strong>it&apos;s extremely easy to create a new plugin</strong>! 
+Can you believe it? The code size of plugins we mentioned is only 50 lines in average!
+Moreover, svrx also provides a command line scaffolding tool for quick plugin development, see <a href="https://docs.svrx.io/en/plugin/contribution.html" target="_blank">How To Write A Plugin</a> for more detail.</p>
+<h2 id="advanced-usage-3-route-with-hot-reloading"><a name="advanced-usage-3-route-with-hot-reloading" class="anchor-navigation-ex-anchor" href="#advanced-usage-3-route-with-hot-reloading"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Usage 3: Route With Hot Reloading</h2>
+<p>Usually, as a frontend developer, you need to mock api response datas at the very beginning of the project.
+So you must have run into situations like:</p>
+<ul>
+<li>change mock data, restart the mock server</li>
+<li>enable / disable api proxy, restart the service</li>
+<li>edit project source code, restart</li>
+<li>... ...</li>
+</ul>
+<p>Ok, even if the mock services are good enough that they don&apos;t need to restart now, 
+you still need to start a mock server along side your local dev server, or,
+you put your mock data into your source code, that&apos;s really NOT a good idea! </p>
+<p>So, here comes our dynamic route.
+Besides the powerful plugin system, there&apos;s another useful and magic feature in svrx: the dynamic route.
+Let&apos;s get back to our example project, you can have a try on dynamic route like:</p>
+<pre><code class="lang-bash">touch route.js <span class="hljs-comment"># create empty routing file</span>
+svrx --webpack --route route.js
+</code></pre>
+<p>In <code>route.js</code>:</p>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/blog&apos;</span>).to.json({ title: <span class="hljs-string">&apos;svrx&apos;</span> });
+</code></pre>
+<p>Now open <code>/blog</code>, you&apos;ll see the output <code>{ title: &apos;svrx&apos; }</code>.</p>
+<p>With dynamic route, you can <strong>quickly and clearly create your mock data</strong> without intruding into your source code.
+And it supports <strong>hot reload</strong>, everytime after editing <code>route.js</code>, you don&apos;t need to restart svrx, the data will update automatically.</p>
+<p><img src="https://p1.music.126.net/SJNCky1nh6RF_RIi2_kkLw==/109951164418247220.gif" alt="demo of dynamic route"></p>
+<p>Of course, the dynamic route can do more than data mocking.
+There&apos;re some examples of dynamic route:</p>
+<pre><code class="lang-js">get(<span class="hljs-string">&apos;/index.html&apos;</span>).to.sendFile(<span class="hljs-string">&apos;./index.html&apos;</span>);
+get(<span class="hljs-string">&apos;/blog&apos;</span>).to.redirect(<span class="hljs-string">&apos;/user&apos;</span>);
+get(<span class="hljs-string">&apos;/old/rewrite:path(.*)&apos;</span>).to.rewrite(<span class="hljs-string">&apos;/svrx/{path}&apos;</span>);
+get(<span class="hljs-string">&apos;/api(.*)&apos;</span>).to.proxy(<span class="hljs-string">&apos;http://mock.server.com/&apos;</span>);
+get(<span class="hljs-string">&apos;/blog&apos;</span>)
+  .to.header({ <span class="hljs-string">&apos;X-Engine&apos;</span>: <span class="hljs-string">&apos;svrx&apos;</span> })
+  .json({ code: <span class="hljs-number">200</span> });
+</code></pre>
+<p>As you can see, the syntax of route is very simple, 
+you can directly read every actions and clearly know what they gonna do: send files, refirect, rewrite, proxy and etc.
+Moreover, if the built-in route actions cannot fit your need, you can expand the route action through plugin by yourself.
+Read <a href="https://docs.svrx.io/en/guide/route.html" target="_blank">How To Use Routes</a> for more detail.</p>
+<h2 id="in-the-last"><a name="in-the-last" class="anchor-navigation-ex-anchor" href="#in-the-last"><i class="fa fa-link" aria-hidden="true"></i></a>In The Last</h2>
+<blockquote>
+<p>A pluggable frontend server, it just works.</p>
+</blockquote>
+<p>This is the slogan of svrx, which is sufficient to reveal the location of svrx:</p>
+<ul>
+<li>svrx is a useful local dev server, which contains some built-in plugins like static serve, proxy, livereload and etc</li>
+<li>svrx has a powerful plugin system, you can customize your dev environment through plugins</li>
+</ul>
+<p>Svrx is trying to bring an elegant development experience to all frontend developers, at the same time, 
+we also offer you a platform to quickly create your own feature plugin.
+As a svrx user, you can pick suitable plugins to compose a better development environment, 
+which can be quickly started without any installation. 
+If there&apos;s no plugin meet your need, you can also turn to a plugin developer and write your own plugin. 
+Surely your ideas can solve many other developer&apos;s problems and improve their development experience.</p>
+<p>Later, svrx will keep working on more features and plugins of high quality, and your contributions are also welcomed!</p>
+<h2 id="links"><a name="links" class="anchor-navigation-ex-anchor" href="#links"><i class="fa fa-link" aria-hidden="true"></i></a>Links</h2>
+<ul>
+<li><a href="https://svrx.io/" target="_blank">svrx - the official site</a> docs, API, plugin list</li>
+<li><a href="https://github.com/svrxjs/svrx" target="_blank">svrx - Github</a> source code, issue, pr</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2019, NetEase, Inc. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-04-13 16:41:25
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Blog">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Server-X：An Introduction","level":"1.7.1","depth":2,"previous":{"title":"Blog","level":"1.7","depth":1,"path":"blog/README.md","ref":"./blog/README.md","articles":[{"title":"Server-X：An Introduction","level":"1.7.1","depth":2,"path":"blog/introduction.md","ref":"./blog/introduction.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","todo","-lunr","-search","search-pro","github","-sharing","sharing-plus","tbfed-pagefooter","anchor-navigation-ex","edit-link","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2019, NetEase, Inc."},"github":{"url":"https://github.com/svrxjs/svrx"},"todo":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"sharing":{"douban":false,"facebook":true,"twitter":true,"pocket":true,"qq":false,"qzone":false,"weibo":true,"all":["douban","facebook","twitter","instapaper","linkedin","weibo","messenger","qq","qzone","viber","whatsapp"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/svrxjs/svrx-docs/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs of Server-X","language":"en","gitbook":"*","description":"svrx(server-x) is a pluggable platform built for efficient front-end development"},"file":{"path":"blog/introduction.md","mtime":"2020-04-13T08:41:25.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T08:42:46.711Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

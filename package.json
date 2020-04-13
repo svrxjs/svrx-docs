@@ -1,0 +1,40 @@
+{
+  "name": "svrx-docs",
+  "version": "1.0.0",
+  "description": "Documents for svrx",
+  "scripts": {
+    "start": "gitbook serve",
+    "build": "gitbook build",
+    "lint": "lint-md zh en",
+    "fix": "lint-md zh en --fix",
+    "postinstall": "gitbook install"
+  },
+  "keywords": [
+    "svrx",
+    "docs",
+    "gitbook"
+  ],
+  "author": "svrxjs",
+  "license": "MIT",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "husky": "^3.0.0",
+    "lint-md": "^0.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-edit-link": "^2.0.2",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-hide-published-with": "^1.0.3",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-sharing-plus": "0.0.2",
+    "gitbook-plugin-tbfed-pagefooter": "0.0.1",
+    "gitbook-plugin-todo": "^0.1.3"
+  }
+}
