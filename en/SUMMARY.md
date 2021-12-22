@@ -4,7 +4,7 @@
 * [Getting Started](./quick-start.md)
 * [Plugins](./plugin/README.md)
   * [How To Use Plugins](./plugin/usage.md)
-  * [The List of Plugins](https://svrx.io/plugin?query=svrx-plugin-)
+  * [The List of Plugins](https://svrxjs.github.io/svrx-www/plugin?query=svrx-plugin-)
   * [How To Write A Plugin](./plugin/contribution.md)
 * [Practice](./practice/README.md)
   * [Recipes](./practice/recipe.md)

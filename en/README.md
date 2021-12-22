@@ -76,6 +76,6 @@ View [quick start](./quick-start.md) for more details.
     
 ### More 
 
-- See [plugin list](https://svrx.io/plugin?query=svrx-plugin-) for more plugins that available in community.
+- See [plugin list](https://svrxjs.github.io/svrx-www/plugin?query=svrx-plugin-) for more plugins that available in community.
 - Reading [plugin development guide](./plugin/contribution.md)，
 It’s not difficult to publish your own plugin

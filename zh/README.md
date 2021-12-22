@@ -68,7 +68,7 @@ svrx(server-x) 是一个渐进且易于使用的、插件化的前端开发工�
 
 ### More
 
-- 来[插件集合](https://svrx.io/plugin?query=svrx-plugin-) 看看是否有你感兴趣的插件吧!
+- 来[插件集合](https://svrxjs.github.io/svrx-www/plugin?query=svrx-plugin-) 看看是否有你感兴趣的插件吧!
 
 - 阅读下[插件开发手册吧](./plugin/contribution.md)，发布属于你的插件其实一点都不难。
 
