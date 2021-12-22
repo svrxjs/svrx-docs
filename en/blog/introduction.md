@@ -1,6 +1,6 @@
 # Server-X: A Pluggable Platform For Local Frontend Development 
 
-[![](https://svrx.io/assets/images/banner.png)](https://svrx.io/)
+[![](https://svrxjs.github.io/svrx-www/assets/images/banner.png)](https://svrxjs.github.io/svrx-www/)
 
 > This page will introduce a brand-new frontend devtool, 
 hope it can save you from switching among dev tools, 
@@ -170,7 +170,7 @@ module.exports = {
 };
 ```
 
-All of the options and details can be found at [svrx docs - options](https://docs.svrx.io/en/guide/option.html).
+All of the options and details can be found at [svrx docs - options](https://svrxjs.github.io/svrx-docs/en/guide/option.html).
 
 ##  Advanced Usage 2: Try Other Plugins
 
@@ -243,7 +243,7 @@ find the record of your phone, and you can debug your page on the phone now.
 ### Customize Your Plugin
 
 Besides those we mentioned, there're many other useful plugins in svrx, 
-you can search plugin at the [official site of svrx](https://svrx.io/plugin?query=svrx-plugin-),
+you can search plugin at the [official site of svrx](https://svrxjs.github.io/svrx-www/plugin?query=svrx-plugin-),
 and then compose different plugins to get your own development environment.
 
 ![part of plugin list](https://p1.music.126.net/IZDarDVC9sHj69lxWuhljg==/109951164417587560.png)
@@ -262,7 +262,7 @@ With the greate power of scripts and middlewares injection,
 you can do nearly any thing during local development by creating svrx plugins.
 And **it's extremely easy to create a new plugin**! 
 Can you believe it? The code size of plugins we mentioned is only 50 lines in average!
-Moreover, svrx also provides a command line scaffolding tool for quick plugin development, see [How To Write A Plugin](https://docs.svrx.io/en/plugin/contribution.html) for more detail.
+Moreover, svrx also provides a command line scaffolding tool for quick plugin development, see [How To Write A Plugin](https://svrxjs.github.io/svrx-docs/en/plugin/contribution.html) for more detail.
 
 ## Advanced Usage 3: Route With Hot Reloading
 
@@ -316,7 +316,7 @@ get('/blog')
 As you can see, the syntax of route is very simple, 
 you can directly read every actions and clearly know what they gonna do: send files, refirect, rewrite, proxy and etc.
 Moreover, if the built-in route actions cannot fit your need, you can expand the route action through plugin by yourself.
-Read [How To Use Routes](https://docs.svrx.io/en/guide/route.html) for more detail.
+Read [How To Use Routes](https://svrxjs.github.io/svrx-docs/en/guide/route.html) for more detail.
 
 ## In The Last
 
@@ -338,5 +338,5 @@ Later, svrx will keep working on more features and plugins of high quality, and 
 
 ## Links
 
-- [svrx - the official site](https://svrx.io/) docs, API, plugin list
+- [svrx - the official site](https://svrxjs.github.io/svrx-www/) docs, API, plugin list
 - [svrx - Github](https://github.com/svrxjs/svrx) source code, issue, pr

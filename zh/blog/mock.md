@@ -8,7 +8,7 @@
 **接口 mock** 在此时就发挥出了巨大价值，它磨平了这个时间差，最终实现高效的前后端分离开发。
 
 具体到接口 mock 方案就多种多样了，但大体不外乎 「硬编码」 、 「前端拦截」和「后端拦截」这三种。
-本文会尝试简单分析这三种常见方案的优劣，然后引出主要议题：基于 **[svrx](https://docs.svrx.io/zh/)** 的接口 mock 方案。
+本文会尝试简单分析这三种常见方案的优劣，然后引出主要议题：基于 **[svrx](https://svrxjs.github.io/svrx-docs/zh/)** 的接口 mock 方案。
 
 ## 硬编码方案
 
@@ -200,13 +200,13 @@ _(专业的 dev server 用预设的配置代替了手工的代码逻辑，显著
 ## 使用 svrx 实现高效的接口 mock
 
 从以上分析可以得出：前端拦截与后端拦截，都存在一些本质缺陷。
-那是否有一种方式是同时拥有前后端接口 mock 的优势呢？答案就是 [**svrx**](https://docs.svrx.io/zh/)。
+那是否有一种方式是同时拥有前后端接口 mock 的优势呢？答案就是 [**svrx**](https://svrxjs.github.io/svrx-docs/zh/)。
 
 > _广告高能预警，看到这一步了，相信你已经是 svrx 的潜在客户了_
 
 ### svrx 简介
 
-[svrx](https://docs.svrx.io/zh/)(音：Server-X) 是一个微内核架构、插件化的前端开发服务器，内部功能模块主要包含三个部分：
+[svrx](https://svrxjs.github.io/svrx-docs/zh/)(音：Server-X) 是一个微内核架构、插件化的前端开发服务器，内部功能模块主要包含三个部分：
 
 - **前端注入模块**： svrx 劫持所有 html 响应注入种子脚本，此脚本会集成管理所注册的前端资源（JS、CSS）。
 - **后端注入模块**： svrx 内置一个带有优先级的中间件注册模块。
@@ -238,7 +238,7 @@ svrx
 
 ### svrx Routing DSL 实现接口 mock
 
-具体到接口 mock 的需求，我们可以直接使用内置的[动态路由功能](https://docs.svrx.io/zh/guide/route.html)：
+具体到接口 mock 的需求，我们可以直接使用内置的[动态路由功能](https://svrxjs.github.io/svrx-docs/zh/guide/route.html)：
 
 ```js
 touch route.js
@@ -255,7 +255,7 @@ get('/api/user/:id').to.json({ name: 'svrx' });
 
 浏览器打开`/api/user/1`，可以看到对应的 JSON 响应。所有在`route.js`的改动都是支持 **hot reload** 的，我们无需重启服务器。
 
-> 更多 [svrx Routing DSL 的使用指南请点击这里](https://docs.svrx.io/zh/guide/route.html)
+> 更多 [svrx Routing DSL 的使用指南请点击这里](https://svrxjs.github.io/svrx-docs/zh/guide/route.html)
 
 如果你使用 svrx 路由来代替上面的其他 dev-server，除了路由写法更直观高效外，还有一个作用就是可以更细粒度地管理路由的优先级，比如 mock 和 proxy 的优先级：
 
@@ -293,7 +293,7 @@ get('/api/user/:id').to.mock({
 });
 ```
 
-_mock 插件注册了一个名为 mock 的[路由 Action](https://docs.svrx.io/zh/guide/route.html#action-%E6%B8%85%E5%8D%95)，可在 Routing DSL 中被使用_
+_mock 插件注册了一个名为 mock 的[路由 Action](https://svrxjs.github.io/svrx-docs/zh/guide/route.html#action-%E6%B8%85%E5%8D%95)，可在 Routing DSL 中被使用_
 
 再次访问`/api/user/1`，你会得到以下满足一定模式的随机响应，比如：
 
@@ -347,7 +347,7 @@ svrx 的 mock 插件加上内置的动态路由功能基本上能高效的处理
 svrx -p json-server --route route.js
 ```
 
-与 mock 类似，json-server 插件会注册一个名为 `jsonServer` 的[路由 Action](https://docs.svrx.io/zh/guide/route.html#action-%E6%B8%85%E5%8D%95)。
+与 mock 类似，json-server 插件会注册一个名为 `jsonServer` 的[路由 Action](https://svrxjs.github.io/svrx-docs/zh/guide/route.html#action-%E6%B8%85%E5%8D%95)。
 
 在`route.js` 加入以下配置：
 
@@ -473,7 +473,7 @@ svrx --route route.js \
   -p "localtunnel?host=https://tunnel.svrx.io"
 ```
 
-> - _参数过长时可以使用 [svrx 配置文件](https://docs.svrx.io/zh/quick-start.html#%E9%85%8D%E7%BD%AE%E6%8C%81%E4%B9%85%E5%8C%96)中_
+> - _参数过长时可以使用 [svrx 配置文件](https://svrxjs.github.io/svrx-docs/zh/quick-start.html#%E9%85%8D%E7%BD%AE%E6%8C%81%E4%B9%85%E5%8C%96)中_
 > - tunnel.svrx.io 是属于福利性设施，不确保稳定性，请大家悠着点使用以避免服务因为各种原因不可用。
 
 ![](https://p1.music.126.net/mh0fszeEfluJ5Ocp_JVEcQ==/109951164485983063.png)
@@ -481,7 +481,7 @@ svrx --route route.js \
 上图类似 https://fast-dragon-86.tunnel.svrx.io 的随机地址即可用于外网访问的域名了，这种即开即走的使用体验是碎片化的各种 dev server 平台无法提供给你的。
 
 更重要的是，接口 mock 其实仅仅只是我们日常开发中的一环，**svrx 的定位是一个通用开发服务器**，它内置集成了`serve`、`proxy`、`livereload`、`route`等等日常前端开发中必不可少的功能，
-并且可以通过社区[不断增加的插件池](https://svrx.io/plugin?query=svrx-plugin-)来进行自由组合使用，这个我们从上述接口 mock 这一场景的描述中应该已经看到。
+并且可以通过社区[不断增加的插件池](https://svrxjs.github.io/svrx-www/plugin?query=svrx-plugin-)来进行自由组合使用，这个我们从上述接口 mock 这一场景的描述中应该已经看到。
 
 完全可以这么说，**围绕 dev-server 的设施越多，svrx 存在的价值就越大**
 
@@ -493,7 +493,7 @@ svrx --route route.js \
 
 ## Links
 
-- [**svrx（读音:Server-X）**](https://docs.svrx.io/zh/) 是一个渐进且易于使用的、插件化的前端开发服务器。
+- [**svrx（读音:Server-X）**](https://svrxjs.github.io/svrx-docs/zh/) 是一个渐进且易于使用的、插件化的前端开发服务器。
 - [Server-X：一款可能提升你十倍工作效率的工具](https://juejin.im/post/5dad208ef265da5b7d692340)
 - [mock.js](http://mockjs.com/)(前端 mock 工具库)以及对应的[svrx-plugin-mock](https://github.com/svrxjs/svrx-plugin-mock)插件
 - [json-server](https://github.com/typicode/json-server): Get a full fake REST API with zero coding in less than 30 seconds (seriously)

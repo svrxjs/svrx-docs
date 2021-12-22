@@ -1,6 +1,6 @@
 # Server-X：一款可能提升你十倍工作效率的工具
 
-[![](https://svrx.io/assets/images/banner.png)](https://svrx.io/)
+[![](https://svrxjs.github.io/svrx-www/assets/images/banner.png)](https://svrxjs.github.io/svrx-www/)
 
 > 本文将介绍一款全新的前端开发工具，希望它能给你的前端开发带来看起来和现在一样但其实又不那么一样的体验。
 
@@ -150,7 +150,7 @@ module.exports = {
 };
 ```
 
-svrx 的全部配置项及描述可以在[官方文档-内置项](https://docs.svrx.io/zh/guide/option.html)中查看。
+svrx 的全部配置项及描述可以在[官方文档-内置项](https://svrxjs.github.io/svrx-docs/zh/guide/option.html)中查看。
 
 ## 进阶 2：开始尝试使用其它插件
 
@@ -211,7 +211,7 @@ svrx --open=external --webpack --weinre --qrcode
 
 ### 定制你的插件
 
-除了上述的，svrx 还有很多有趣好用的插件，你可以在[svrx 的官网](https://svrx.io/plugin?query=svrx-plugin-) 查询目前所有的插件，并从中挑选使用。
+除了上述的，svrx 还有很多有趣好用的插件，你可以在[svrx 的官网](https://svrxjs.github.io/svrx-www/plugin?query=svrx-plugin-) 查询目前所有的插件，并从中挑选使用。
 通过不同插件的组合，你就可以自由定制你的开发环境啦！
 
 ![部分插件列表](https://p1.music.126.net/IZDarDVC9sHj69lxWuhljg==/109951164417587560.png)
@@ -224,7 +224,7 @@ svrx --open=external --webpack --weinre --qrcode
 
 有了强大的前后端注入能力，几乎所有的本地开发需求，都可以通过创建一个 svrx 插件来解决。
 而且**插件的开发异常简单**！刚刚介绍的一些插件的核心代码几乎都只有 50 行左右！
-此外，svrx 还提供了快速创建插件的脚手架工具，可以去[官方文档-如何写一个插件](https://docs.svrx.io/zh/plugin/contribution.html)查看更多插件开发的细节，在这里就不赘述了。
+此外，svrx 还提供了快速创建插件的脚手架工具，可以去[官方文档-如何写一个插件](https://svrxjs.github.io/svrx-docs/zh/plugin/contribution.html)查看更多插件开发的细节，在这里就不赘述了。
 
 ## 进阶 3：可以热更新的快捷路由
 
@@ -270,7 +270,7 @@ get('/blog')
   .json({ code: 200 });
 ```
 
-如你所见，svrx 的路由语法非常简单，你可以清晰直观地阅读出每一条规则，比如发送文件、重定向、路由重写、proxy 等等。并且除了官方提供的一些路由操作外，你也可以通过插件来对路由操作进行扩展。关于 svrx 路由的语法规则、扩展等详情可以参阅[官方文档-路由的使用](https://docs.svrx.io/zh/guide/route.html)。
+如你所见，svrx 的路由语法非常简单，你可以清晰直观地阅读出每一条规则，比如发送文件、重定向、路由重写、proxy 等等。并且除了官方提供的一些路由操作外，你也可以通过插件来对路由操作进行扩展。关于 svrx 路由的语法规则、扩展等详情可以参阅[官方文档-路由的使用](https://svrxjs.github.io/svrx-docs/zh/guide/route.html)。
 
 ## 写在最后
 
@@ -289,6 +289,6 @@ get('/blog')
 
 ## Links
 
-- [svrx 官网](https://svrx.io/) 官方使用文档、API、插件查询
+- [svrx 官网](https://svrxjs.github.io/svrx-www/) 官方使用文档、API、插件查询
 - [Github - svrx](https://github.com/svrxjs/svrx) 核心源码、讨论交流、bug report
 

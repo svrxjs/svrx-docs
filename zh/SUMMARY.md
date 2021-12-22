@@ -4,7 +4,7 @@
 * [快速上手](./quick-start.md)
 * [插件体系](./plugin/README.md)
   * [插件的使用](./plugin/usage.md)
-  * [插件列表](https://svrx.io/plugin?query=svrx-plugin-)
+  * [插件列表](https://svrxjs.github.io/svrx-www/plugin?query=svrx-plugin-)
   * [如何写一个插件](./plugin/contribution.md)
 * [项目实战](./practice/README.md)
   * [特定场景使用](./practice/recipe.md)
